@@ -4,6 +4,9 @@
 (DONE) AV Behavior initially: Baseline HV Like
 
 Simulation terminates when:
-AV makes 10 cycles 
-
+(WIP) AV makes 10 cycles 
+> from car record AV travel distance
+>   if distance > 10 cycle distance
+>   return boolean to road.py
+>   transmit boolean to simManager.py to terminate simulation
 

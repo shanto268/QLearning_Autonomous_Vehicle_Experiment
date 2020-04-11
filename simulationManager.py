@@ -80,7 +80,7 @@ class SimulationManager:
         return manySteps
     
     def endSimulation(self):
-        if (self.road.updates == simTime):
+        if (self.road.TerminateSimulation()):
             self.running = False
             
     def endSim_fd(self):

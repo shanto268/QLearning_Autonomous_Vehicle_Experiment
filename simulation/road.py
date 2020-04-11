@@ -133,6 +133,7 @@ class Road:
         self.speedLimits.update()   
         self.lane_form()
         self.cluster()
+        self.TerminateSimulation()
         r1 = lambda x: x.updateLane()  #for hetero only
         speedupdate = lambda x: x.updateX()
         vupdate = lambda x: x._updateX()
@@ -155,7 +156,8 @@ class Road:
       #  print(self.avee)
    #     print(self.avg)    
    #     print("update: " + str(self.updates))
-  #      print("")
+        print("")
+
     def lanechangenum(self, num): 
         return num
     
@@ -562,7 +564,24 @@ class Road:
                     total += entity.velocity #include further if conditions to calculate the number of AVs and RVs and caclulate their speed seperately
                                                            
         return (cars, total/cars if cars > 0 else 0)
+   
+    def getCarType(self):
+        for lane in self.lanes:
+            for entity in lane:
+                if entity != None:
+                        if entity.vtype == 2: #if AV
+                                return 2
+                        else:
+                                return 1
+                else:
+                        return 0
     
+    def TerminateSimulation(self):
+        for lane in self.lanes:
+            for entity in lane:
+                if entity != None and entity.vtype == 2:
+                        return entity.terminate
+
     def flow(self):
         self.vcount += 1 
      #   return self.vcount

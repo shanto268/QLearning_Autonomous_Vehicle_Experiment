@@ -10,13 +10,13 @@
 # $9 = Probability of braking of AV
 # $10 = Probability of braking of HV
 # $11 = Number of AVs
-#
+# $12 = Limit Cycle
 #           NOT IMPLEMENTED YET
 # ~~~~~~~~~~~~~~~~~ Optional ~~~~~~~~~~~~~~~~
-# $12 = Probability of AV
-# $13 = Number of lanes
-# $14 = Number of Cells in a lane
-# $15 = Simulation time
+# $13 = Probability of AV
+# $14 = Number of lanes
+# $15 = Number of Cells in a lane
+# $16 = Simulation time
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #change car.py
@@ -27,7 +27,7 @@ cd ..
 #different density simulations
 echo "The initial AV model is Base Scenario (HV Like)"
 echo Numbers of vehicles in simulation is $2
-python3 nagel.py trial.txt 100 5 3 3 3 0.6 0.6 0.4 0.4 1
+python3 nagel.py trial.txt 100 5 3 3 3 0.6 0.6 0.4 0.4 1 10
 echo Simultation is complete!
 
 #change back car files

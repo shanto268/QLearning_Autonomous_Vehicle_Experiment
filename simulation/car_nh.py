@@ -6,6 +6,7 @@ import random, sys
 max_hv = int(sys.argv[6])  #SAS 2020
 max_av_av = int(sys.argv[4])  #SAS 2020
 max_av_hv = int(sys.argv[5])  #SAS 2020
+limitCycle = int(sys.argv[12])*100 #SAS 2020
 
 class Car:
     #LOOK INTO UPDATE X CODES --> UPDATE LANE --> ROAD.PY
@@ -35,7 +36,9 @@ class Car:
         self.clustersize = 0 #size of clusters
         self.freq = 0
         self.freqtot = 0
-        
+        self.CAVdist = 0
+        self.terminate = False # SAS 2020
+
     def cluster(self):
         if self.seen == False:
             if self.vtype == 2 and self.road.ncvtype2(self.pos) == 2 and self.road.distanceToNextThing(self.pos) < 5:
@@ -213,6 +216,13 @@ class Car:
                 self.pos = (self.pos[0] + self.velocity) % self.road.getLength(), self.pos[1]
         return self.pos
            
+    def didAVfinish(self,moved):    
+        self.CAVdist += moved
+        if (self.CAVdist < limitCycle):
+                self.terminate = False
+        else:
+                self.terminate = True
+
     def updateX(self): #stochastic slowing down
      #   print(self.vlead(self.pos))      
     #    print(self.road.ncvtype(self.pos))
@@ -220,13 +230,12 @@ class Car:
         else: Car.slowDownProbability = float(sys.argv[9]) #SAS 2020
         if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
             self.velocity = self.calcNewVelocity()
-            self.cluster()   # need to use distancetonextthing
-       #     if self.velocity >= max_hv and self.vtype == 1: 
-        #        self.velocity = max_hv                                                                  
+            self.cluster()   # need to use distancetonextthing                                                                  
             if self.velocity > 0 and random.random() <= Car.slowDownProbability:
                 self.velocity -= 1
-            self.pos = self.pos[0] + self.velocity, self.pos[1]  
-           # print("inner case")
+            self.pos = self.pos[0] + self.velocity, self.pos[1] 
+            if self.vtype == 2:
+                self.didAVfinish(self.velocity) #SAS new Add 2020
         elif self.pos[0] < self.road.getLength() and self.pos[0] >= (self.road.getLength() - 5):
             self.velocity = self.newvelocity()
             self.cluster_loop()    #need to use d2n
@@ -235,7 +244,9 @@ class Car:
             if (self.pos[0] + self.velocity) >= self.road.getLength():
                 self.pos = (self.pos[0] + self.velocity) % self.road.getLength(), self.pos[1]
             else:
-                self.pos = self.pos[0] + self.velocity, self.pos[1] 
+                self.pos = self.pos[0] + self.velocity, self.pos[1]
+            if self.vtype == 2:
+                self.didAVfinish(self.velocity) #SAS new add 2020
         return self.pos    
 
     def newvelocity(self): 
@@ -370,7 +381,6 @@ class Car:
         else:
             distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 1
             return distanceToPrevCar > prevCar.velocity #True only if no collision
-    
     
     
     

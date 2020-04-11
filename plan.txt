@@ -1,0 +1,9 @@
+#========= Sim set up ===========
+
+Car distribution: 100 HVs, 1 AV
+AV Behavior initially: Baseline HV Like
+
+Simulation terminates when:
+AV makes 10 cycles 
+
+

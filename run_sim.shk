@@ -21,24 +21,15 @@
 #change car.py
 cd simulation
 mv car_nh.py car.py
-echo The chosen AV model is Opportunistic
+echo "The chosen AV model is Base Scenario (HV Like)"
 echo
 cd ..
 
 #different density simulations
 echo Low density regime: 0.08
-python3 nagel.py low_density_oppo.txt 24 5 4 4 3 1 0.6 0 0.4 
+python3 nagel.py trial.txt 100 5 3 3 3 0.6 0.6 0.4 0.4
 echo 
 echo Simultation is complete!
-echo Critical density regime: 0.2
-python3 nagel.py crit_density_oppo.txt 60 5 4 4 3 1 0.6 0 0.4 
-echo 
-echo Simultation is complete!
-echo High density regime: 0.6
-python3 nagel.py high_density_oppo.txt 180 5 4 4 3 1 0.6 0 0.4 
-echo 
-echo Simultation is complete!
-echo
 
 #change back car files
 cd simulation
@@ -46,7 +37,7 @@ mv car.py car_nh.py
 echo Simulation files restored
 echo
 cd ..
-echo All simulation cases for Opportunistic model is over
+echo All simulation cases for Base Scenario - HV like - model is over
 
 #echo Executing analysis files now....
 # execute plot files

@@ -4,9 +4,15 @@
 (DONE) AV Behavior initially: Baseline HV Like
 
 Simulation terminates when:
-(WIP) AV makes 10 cycles 
-> from car record AV travel distance
->   if distance > 10 cycle distance
->   return boolean to road.py
->   transmit boolean to simManager.py to terminate simulation
+(DONE) AV makes 10 cycles 
 
+Implement Reinforcement Learning Regime 1:
+-> optimize P(lc)
+-> reward fastest time taken to finish (record sim time)
+-> allow AV to change its own P(lc)
+
+
+Implement Reinforcement Learning Regime 2:
+-> optimize v
+-> penalize if speed less than average speed
+-> allow AV to change its own v_max

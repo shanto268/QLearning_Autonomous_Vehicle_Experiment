@@ -11,7 +11,7 @@ class SimulationManager:
         self.trafficGenerator = trafficGenerator
         self.updateFrame = updateFrame
         self.acc = 0
-        self.timeFactor = 20.0
+        self.timeFactor = 0.0
         self.prevTimeFactor = 1.0
         self.running = True
         self.stepsMade = 0

@@ -1,4 +1,4 @@
-ey#Only change name
+#Only change name
 import pygame
 import matplotlib.pyplot as plt
 import numpy as np
@@ -137,9 +137,9 @@ class InfoDisplayer():
         
         name = "results/" + str(sys.argv[1])  #SAS 2020 Update: change 1 for exp 1 and 2 for exp 2
                 
-        file1 = open(name,"a+")            
-        file1.write(str(density) + ", " + str(flow) + ","  + str(updates)  + ", "  + str(densityrv)  + ", "   + str(flowrv)  + ", "  + str(densityav)  + ", " + str(flowav)  + ", "   + str(cluster) + ", " + str(avgclus) + ", " + str(freq) + ", " + str(numlanechng) + ", " + str(avlane) + ", " + str(rvlane)+ ", " + str(car_in_clus) + "\n")                             
-        file1.close()
+       # file1 = open(name,"a+")            
+       # file1.write(str(density) + ", " + str(flow) + ","  + str(updates)  + ", "  + str(densityrv)  + ", "   + str(flowrv)  + ", "  + str(densityav)  + ", " + str(flowav)  + ", "   + str(cluster) + ", " + str(avgclus) + ", " + str(freq) + ", " + str(numlanechng) + ", " + str(avlane) + ", " + str(rvlane)+ ", " + str(car_in_clus) + "\n")                             
+       # file1.close()
 
 
       

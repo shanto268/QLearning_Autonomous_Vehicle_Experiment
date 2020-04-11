@@ -5,6 +5,7 @@ from simulation.car import Car
 import math as mp
 import numpy as np
 import sys
+import random
 #import nagel
 #import scipy.stats as stats
 
@@ -13,6 +14,10 @@ import sys
 c1 = 12
 maxSpeed = int(sys.argv[3])    #change maxSpeed for exp1 (3 for base, 5 for aware, 4 for oppo)
 time_period = 100
+numAV = int(sys.argv[11]) 
+totCars = int(sys.argv[2])
+numHV = totCars - numAV
+
 
 class Road:
     
@@ -71,8 +76,9 @@ class Road:
         self.triggerbin = 0
         self.cluster_num_car = 0 #number of cars in cluster
         self.avpercent = 18    #case: AV   12 -  20%    9 - 15% ; 18 - 30%  ; 30 - 50%;  45 - 75%  
-        
-        
+        self.carStack = [] 
+        self.typecar = 2
+
     def __updateCars(self, action):
         for lane in self.lanes:
             for entity in lane:
@@ -179,15 +185,18 @@ class Road:
         return self.__dpushCars(amount)
     
     def __dpushCars(self, amount): #if car pushed then return 1, if not then 0 -->HETERO
+        #vtype = 1 HV ; VTYPE = 2 AV
         if not amount: return 0
         else:
             for index in range(amount):
                 lane = random.randint(0,2)
-                car = Car(self, (random.randint(0,self.getLength()-1), lane), self.speedLimits.maxSpeed, self.assigntype())
+                car = Car(self, (random.randint(0,self.getLength()-1), lane), self.speedLimits.maxSpeed, self.typecar)
+                self.typecar = 1
                 if(self.placeObject(car)): #if true --> object in desired position is not blocked
                     return 1 + self.__dpushCars(amount - 1)
                 else: 
                     return 0 +  self.__dpushCars( amount )
+
 
     def pushCarsRandomly(self, amount): #does what the name suggests
         lanes = [x for x in range(self.getLanesCount())] 
@@ -292,7 +301,7 @@ class Road:
         else:
             lane = random.randint(0,2)
             #lane = lanes.pop()
-            car = Car(self, (random.randint(0,self.getLength()-1), lane), self.speedLimits.maxSpeed, self.assigntype())
+            car = Car(self, (random.randint(0,self.getLength()-1), lane), self.speedLimits.maxSpeed, stackAcars.pop())
             if(self.placeObject(car)): #if true --> object in desired position is not blocked
                 return 1 + self.__pushCars(amount - 1, lanes) #recursive condition that counts number of cars enterring
             else:

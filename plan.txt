@@ -11,8 +11,15 @@ Implement Reinforcement Learning Regime 1:
 -> reward fastest time taken to finish (record sim time)
 -> allow AV to change its own P(lc)
 
-
 Implement Reinforcement Learning Regime 2:
 -> optimize v
 -> penalize if speed less than average speed
 -> allow AV to change its own v_max
+
+============== PLAN =============
+1) think of simulation scheme (state, actions, rewards, termination, outputs)
+2) implement changes to current software to incorporte Qlearning
+3) use VI to populate Qtable
+4) get results
+5) learn CNN and Deep Qlearning
+6) change VI to NN system

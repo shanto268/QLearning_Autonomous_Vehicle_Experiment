@@ -17,9 +17,14 @@ Implement Reinforcement Learning Regime 2:
 -> allow AV to change its own v_max
 
 ============== PLAN =============
-1) think of simulation scheme (state, actions, rewards, termination, outputs)
+1) think of simulation scheme (state, actions, rewards, termination, outputs) -> Done!
 2) implement changes to current software to incorporte Qlearning
+    > create environment from current softwarei
+    > set up/think about simulation in episodic learning format
+    > implement changes to agent in car.py (add agent_car.py)
+    > create a running model
 3) use VI to populate Qtable
 4) get results
-5) learn CNN and Deep Qlearning
-6) change VI to NN system
+5) write report and interpretations
+6) learn CNN and Deep Qlearning
+7) change VI to NN system

@@ -155,7 +155,7 @@ class Road:
        # if self.updates > 100: self.av = 0 
       #  print(self.avee)
    #     print(self.avg)    
-   #     print("update: " + str(self.updates))
+        print("update: " + str(self.updates))
         print("")
 
     def lanechangenum(self, num): 

@@ -38,6 +38,8 @@ class Car:
         self.freqtot = 0
         self.CAVdist = 0
         self.terminate = False # SAS 2020
+        self.numer = 0  #P(lanechange) = numer / denumer 2020
+        self.denumer = 0 #SAS 2020
 
     def cluster(self):
         if self.seen == False:
@@ -56,7 +58,7 @@ class Car:
         self.prevPos = self.pos
         if self.vtype == 1: Car.laneChangeProbability = (1 -float(sys.argv[8]))  #SAS 2020
         else: Car.laneChangeProbability = (1 - float(sys.argv[7]))  #SAS 2020
-        self.updatelanelogic()
+        self.updateLaneLogic()
         return self.pos    
     
     def lanecountup(self):
@@ -78,20 +80,25 @@ class Car:
         Car.L0.append(self.lanechngL0)
     
     
-    def updatelanelogic(self):
+    def updateLaneLogic(self):
         if self.willingToChangeUp():
+            self.denumer += 1
             x = random.random()
             if x >= Car.laneChangeProbability:
+                self.numer +=1
                 self.lanecountup()
                 self.pos = self.pos[0], self.pos[1]-1
         elif self.willingToChangeDown():
+            self.denumer += 1
             y = random.random()
             if y >= Car.laneChangeProbability:
+                self.numer +=1
                 self.lanecountdwn()
                 self.pos = self.pos[0], self.pos[1]+1
                 if self.pos[1] == 2:
                     self.lanecountL0()
-        
+        if self.denumer != 0 and self.vtype == 2: #SAS 2020
+            print("P(lc): " + str(float(self.numer /self.denumer)))
     ''' new code '''
     def dynamicupdateLane(self):
         self.prevPos = self.pos
@@ -181,7 +188,7 @@ class Car:
             return self.pos     
         else:
             self.road.triggerplot2()
-            self.updatelanelogic()          #Or self.updateLane() --> Case for regular heteregeneous flow
+            self.updateLaneLogic()          #Or self.updateLane() --> Case for regular heteregeneous flow
             
             return self.pos
 

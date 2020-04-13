@@ -14,7 +14,7 @@ size = width, heigth = 1250, 500
 # in miliseconds
 updateFrame = 500 #default = 500, fast = 10 , nice 500
 
-seed = 20
+seed = 4
 
 lanes = 3
 length = 100
@@ -39,6 +39,12 @@ names = ["Output file name: ","Total Number of cars: ", "Maximum speed on road: 
 
 for i in range(1, len(sys.argv)):
     print(str(names[i-1]) + str(sys.argv[i]))
+if seed == None:
+    print("No random seed")
+else:
+    print("Random seed is fixed at ", seed)
+
+         
 print("\n\n")
 
 #traffic lights

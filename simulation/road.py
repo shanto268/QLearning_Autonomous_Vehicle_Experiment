@@ -21,7 +21,7 @@ numHV = totCars - numAV
 class Road:
 
     def __init__(self, lanesCount, length, speedLimits):
-        self.lanes = Road.generateEmptyLanes(lanesCount, length) #functional call to create empty lanes using user input -> returns desired number of lanes with desired number of length with None values as elements
+        self.lanes = Road.generateEmptyLanes(lanesCount, length)
         self.updatedLanes = Road.generateEmptyLanes(lanesCount, length) #same as above but used to update the elements of the created structure
         self.speedLimits = speedLimits if speedLimits != None else simulation.speedLimits.SpeedLimits([], 5) #refers to speedlimits.py to set speedlimits
         self.deadAV = 0 # cars that are gone
@@ -77,7 +77,12 @@ class Road:
         self.avpercent = 18    #case: AV   12 -  20%    9 - 15% ; 18 - 30%  ; 30 - 50%;  45 - 75%  
         self.carStack = [] 
         self.typecar = 2
-    
+        self.stateSpaceSize = self.lanesCount * self.length #2020 SAS
+        self.actionSpaceSize = 2
+
+    def getStateSpace(self):
+        pass
+        
     def __updateCars(self, action):
         for lane in self.lanes:
             for entity in lane:

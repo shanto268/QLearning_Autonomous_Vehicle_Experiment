@@ -21,9 +21,7 @@ Implement Reinforcement Learning Regime 2:
 > qlearning.py -> uses batch mode and environment file to train agents
 
 ============== PLAN =============
-1) think of simulation scheme (state, actions, rewards, termination, outputs) -> Done!
-2) implement changes to current software to incorporte Qlearning
-
+1) think of simulation scheme (state, actions, rewards, termination, outputs)
 > set up/think about simulation in episodic learning format
     gameEngine = nagel.py
     driver = startLearning.py

@@ -22,10 +22,6 @@ screen = pygame.display.set_mode(config.size)
 
 clock = pygame.time.Clock() #object created to keep track of time
 
-#simulation.car.Car.slowDownProbability = config.slowDownProbability 
-#simulation.car.Car.laneChangeProbability = config.laneChangeProbability
-
-
 speedLimits = simulation.speedLimits.SpeedLimits(config.speedLimits, config.maxSpeed) #takes speedLimits and maxSpeed input from source file
 road = simulation.road.Road(config.lanes, config.length, speedLimits) #road takes lane and length input from source file and speed limit from ^
 simulation = SimulationManager(road, config.trafficGenerator, config.updateFrame) #simulation takes input from road, trafficgen from source file, and update frame from source file

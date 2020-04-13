@@ -1,12 +1,12 @@
 # No selective headway case
-
-import random, sys
+from config.case import *
+import random
 
 #constants 
-max_hv = int(sys.argv[6])  #SAS 2020
-max_av_av = int(sys.argv[4])  #SAS 2020
-max_av_hv = int(sys.argv[5])  #SAS 2020
-limitCycle = int(sys.argv[12])*100 #SAS 2020
+max_hv = int(data[5])  #SAS 2020
+max_av_av = int(data[3])  #SAS 2020
+max_av_hv = int(data[2])  #SAS 2020
+limitCycle = int(data[11])*100 #SAS 2020
 
 class Car:
     #LOOK INTO UPDATE X CODES --> UPDATE LANE --> ROAD.PY
@@ -56,8 +56,8 @@ class Car:
 
     def updateLane(self):
         self.prevPos = self.pos
-        if self.vtype == 1: Car.laneChangeProbability = (1 -float(sys.argv[8]))  #SAS 2020
-        else: Car.laneChangeProbability = (1 - float(sys.argv[7]))  #SAS 2020
+        if self.vtype == 1: Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
+        else: Car.laneChangeProbability = (1 - float(data[6]))  #SAS 2020
         self.updateLaneLogic()
         return self.pos    
     
@@ -102,8 +102,8 @@ class Car:
     ''' new code '''
     def dynamicupdateLane(self):
         self.prevPos = self.pos
-        if self.vtype == 1: Car.laneChangeProbability = (1 -float(sys.argv[8]))  #SAS 2020 
-        else: Car.laneChangeProbability = (1 -float(sys.argv[7]))  #SAS 2020
+        if self.vtype == 1: Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020 
+        else: Car.laneChangeProbability = (1 -float(data[6]))  #SAS 2020
         if True: #dedicated case
       #  if self.trigger1() and self.trigger2():  #dynamic case
      #   if self.trigger2():  #dynamic case
@@ -233,8 +233,8 @@ class Car:
     def updateX(self): #stochastic slowing down
      #   print(self.vlead(self.pos))      
     #    print(self.road.ncvtype(self.pos))
-        if self.vtype == 1: Car.slowDownProbability = float(sys.argv[10]) #SAS 2020
-        else: Car.slowDownProbability = float(sys.argv[9]) #SAS 2020
+        if self.vtype == 1: Car.slowDownProbability = float(data[9]) #SAS 2020
+        else: Car.slowDownProbability = float(data[8]) #SAS 2020
         if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
             self.velocity = self.calcNewVelocity()
             self.cluster()   # need to use distancetonextthing                                                                  

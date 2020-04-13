@@ -4,7 +4,7 @@ from simulation.trafficGenerators import *
 import math as mp
 
 class Representation():
-    def __init__(self, screen, road, simulationManager):
+    def __init__(self, screen, road, simulationManager, data):
         self.screen = screen
         self.width, self.heigth = screen.get_width(), screen.get_height()
         self.road = road
@@ -13,7 +13,8 @@ class Representation():
         self.cellSize = 12 #the height of road
         self.acc = 0
         self.theta = 0
-        self.infoDisplayer = InfoDisplayer(screen, road, simulationManager)
+        self.data = data
+        self.infoDisplayer = InfoDisplayer(screen, road, simulationManager, data)
         self.colors = [ (255, 0, 0), (180, 20, 0), (80, 60, 0), (100, 80, 0), (0, 180, 0), (0, 255, 0), (80, 120, 0), (60, 140, 0), (40, 160, 0) ]
         self.colors1 = [(39,64,139), (205,0,0)] #hv blue
 

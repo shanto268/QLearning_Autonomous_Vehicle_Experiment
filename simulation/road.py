@@ -1,26 +1,25 @@
 #change made in maxSpeed
-import simulation.speedLimits, random
+import random
+import simulation.speedLimits
 from functools import reduce
 from simulation.car import Car
 import math as mp
 import numpy as np
 import sys
 import random
-#import nagel
-#import scipy.stats as stats
+from config.case import *
 
 #changes made in inbounds and simulationmanager --> problem in update x and pos[0] function conditions.. dead when coincide and glides
 
 c1 = 12
-maxSpeed = int(sys.argv[3])    #change maxSpeed for exp1 (3 for base, 5 for aware, 4 for oppo)
+maxSpeed = int(data[2])    #change maxSpeed for exp1 (3 for base, 5 for aware, 4 for oppo)
 time_period = 100
-numAV = int(sys.argv[11]) 
-totCars = int(sys.argv[2])
+numAV = int(data[10]) 
+totCars = int(data[1])
 numHV = totCars - numAV
 
-
 class Road:
-    
+
     def __init__(self, lanesCount, length, speedLimits):
         self.lanes = Road.generateEmptyLanes(lanesCount, length) #functional call to create empty lanes using user input -> returns desired number of lanes with desired number of length with None values as elements
         self.updatedLanes = Road.generateEmptyLanes(lanesCount, length) #same as above but used to update the elements of the created structure
@@ -78,7 +77,7 @@ class Road:
         self.avpercent = 18    #case: AV   12 -  20%    9 - 15% ; 18 - 30%  ; 30 - 50%;  45 - 75%  
         self.carStack = [] 
         self.typecar = 2
-
+    
     def __updateCars(self, action):
         for lane in self.lanes:
             for entity in lane:

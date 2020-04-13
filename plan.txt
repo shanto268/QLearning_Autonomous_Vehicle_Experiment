@@ -19,13 +19,23 @@ Implement Reinforcement Learning Regime 2:
 ============== PLAN =============
 1) think of simulation scheme (state, actions, rewards, termination, outputs) -> Done!
 2) implement changes to current software to incorporte Qlearning
-    > create environment from current software
-    > think about control flow and file structure
-    > set up/think about simulation in episodic learning format
+
+> set up/think about simulation in episodic learning format
+    gameEngine = nagel.py
+    driver = startLearning.py
+
+(DONE) task 1) make nagel.py in class format
+task 2) nagel.py -> environment format
+task 3) gameEngine in batch mode
+
     > implement changes to agent in car.py (add agent_car.py)
     > create a running model
+    > batch mode functionality
+
+Try taxiSim set up
+
 3) use VI to populate Qtable
-4) get results
+4i) get results
 5) write report and interpretations
 6) learn CNN and Deep Qlearning
 7) change VI to NN system

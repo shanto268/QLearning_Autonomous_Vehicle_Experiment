@@ -2,13 +2,12 @@
 import pygame
 import matplotlib.pyplot as plt
 import numpy as np
-import sys
 from collections import Counter
 import os
 pwd = os.getcwd()
 
 class InfoDisplayer():
-    def __init__(self, screen, road, simulationManager):
+    def __init__(self, screen, road, simulationManager,data):
         self.screen = screen
         self.road = road
         self.simulationManager = simulationManager
@@ -19,6 +18,7 @@ class InfoDisplayer():
         self.keysInfo = "Space - pause, M - 2x faster, N - 2x slower, S - step, D - 500 steps"
         self.text = [self.keysInfo]
         self.renderLabels()
+        self.data = data
 
     def renderLabels(self):
         self.labels = list(map(lambda x: self.font.render(x, 1, (255, 255, 0)), self.text))
@@ -135,7 +135,7 @@ class InfoDisplayer():
         nameiiia = "draft_2/experiment_1/data_files/mid_dens_base_hv_hway.txt"
         """
         
-        name = "results/" + str(sys.argv[1])  #SAS 2020 Update: change 1 for exp 1 and 2 for exp 2
+        name = "results/" + str(self.data[0])  #SAS 2020 Update: change 1 for exp 1 and 2 for exp 2
                 
        # file1 = open(name,"a+")            
        # file1.write(str(density) + ", " + str(flow) + ","  + str(updates)  + ", "  + str(densityrv)  + ", "   + str(flowrv)  + ", "  + str(densityav)  + ", " + str(flowav)  + ", "   + str(cluster) + ", " + str(avgclus) + ", " + str(freq) + ", " + str(numlanechng) + ", " + str(avlane) + ", " + str(rvlane)+ ", " + str(car_in_clus) + "\n")                             

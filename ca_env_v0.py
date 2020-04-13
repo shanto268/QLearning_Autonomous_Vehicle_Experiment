@@ -17,18 +17,3 @@ Rendering: graphics and sim of each episode
 state space is represented by: (agent_row, agent_col)
 """
 
-
-"""
-Format of environment:
-
-class FooEnv():
-
-  def __init__(self):
-    ...
-  def step(self, action):
-    ...
-  def reset(self):
-    ...
-  def render(self, mode='human', close=False):
-    ...
-"""

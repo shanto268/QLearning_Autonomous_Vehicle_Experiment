@@ -62,19 +62,6 @@ for episode in range(num_episodes):
         
         if done == True:
             break
-     """
-        if done:
-            clear_output(wait=True)
-            env.render()
-            if reward == 1:
-                print("****You reached the goal!****")
-                time.sleep(3)
-            else:
-                print("****You fell through a hole!****")
-                time.sleep(3)
-                clear_output(wait=True)
-            break
-    """
     # Exploration rate decay
     exploration_rate = min_exploration_rate + (max_exploration_rate - min_exploration_rate) * np.exp(-exploration_decay_rate*episode)
     rewards_all_episodes.append(rewards_current_episode)

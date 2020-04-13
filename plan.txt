@@ -16,6 +16,10 @@ Implement Reinforcement Learning Regime 2:
 -> penalize if speed less than average speed
 -> allow AV to change its own v_max
 
+============= to do =============
+> environment from road.py
+> qlearning.py -> uses batch mode and environment file to train agents
+
 ============== PLAN =============
 1) think of simulation scheme (state, actions, rewards, termination, outputs) -> Done!
 2) implement changes to current software to incorporte Qlearning

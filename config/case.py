@@ -10,9 +10,9 @@ from simulation.trafficGenerators import *
 data = ["trial.txt",100,5,3,3,3,0.6,0.6,0.4,0.4,1,10]    
 
 #constants
-maxFps= 500 #default = 40 , fast = 10, nice = 500
+maxFps= 2000 #default = 40 , fast = 10, nice = 500
 size = width, heigth = 1250, 500
-updateFrame = 500 #default = 500, fast = 10 , nice 500
+updateFrame = 2000 #default = 500, fast = 10 , nice 500
 seed = 4
 lanes = 3
 length = 100

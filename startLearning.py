@@ -17,8 +17,8 @@ for episode in range(num_episodes):
     # Exploration rate decay   
     # Add current episode reward to total rewards list
 """
-import gameEngine
+import gameEngine, importlib
 
-config = importlib.import_module('config.case') #sys.argv[1] = e.g. .case or .trafficlight
+config = importlib.import_module('config.case') 
 env = caEnv_v0(config)                                                                                                                                  
-env.run()
+env.runInteractive()

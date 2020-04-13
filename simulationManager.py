@@ -1,5 +1,4 @@
 # comment/uncomment for different experiment
-
 import pygame
 
 time_period = 100 
@@ -11,7 +10,7 @@ class SimulationManager:
         self.trafficGenerator = trafficGenerator
         self.updateFrame = updateFrame
         self.acc = 0
-        self.timeFactor = 0.0
+        self.timeFactor = 2000.0
         self.prevTimeFactor = 1.0
         self.running = True
         self.stepsMade = 0

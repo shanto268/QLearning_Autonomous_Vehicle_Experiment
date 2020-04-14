@@ -42,19 +42,20 @@ for episode in range(num_episodes):
 """
 for episode in range(num_episodes):
     state = env.reset() #starting state of agent
- #   print("Initial state ",state)
     done = False
     rewards_current_episode = 0
     for step in range(max_steps_per_episode):     # Exploration-exploitation trade-off
         exploration_rate_threshold = random.uniform(0, 1)
         if exploration_rate_threshold > exploration_rate:
-            action = np.argmax(q_table[state,:]) 
+            action = np.argmax(q_table[state,:])
         else:
             action = env.action_space.sample() #returns a random number from action_space
-
         new_state, reward, done, info = env.step(action)
-     #   print("New state ", new_state)
-
+        print("state ", new_state)
+        print("reward ", reward)
+        print("done ", done)
+        print("action ", action)
+        print("max q: ",  np.max(q_table[new_state, :]))
         # Update Q-table for Q(s,a)
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state

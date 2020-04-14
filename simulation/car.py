@@ -40,7 +40,59 @@ class Car:
         self.terminate = False # SAS 2020
         self.numer = 0  #P(lanechange) = numer / denumer 2020
         self.denumer = 0 #SAS 2020
+        self.reward = 0 #SAS 2020   
 
+    #pos tuple for agent to state
+    def pos2state(self):
+        if self.vtype == 2:
+            x = self.pos[0]
+            y = self.pos[1]
+            return y+3*x
+
+    def qUpdateLane(self,act):
+        self.prevPos = self.pos
+        if self.vtype == 1: 
+            Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
+            self.updateLaneLogic()
+            return self.pos   
+        else:
+            return self.agentLaneChange(act)
+ 
+    #lane change decision to action convert
+    #action to lane change decision
+    #reward allocation based on lane changes
+    def agentLaneChange(self, act):
+        if act == 1 and self.AgentLaneChangePossibleUp(): #lane change up
+            self.pos = self.pos[0], max(0,self.pos[1]-1)   
+        elif act == 2 and self.AgentLaneChangePossibleDown(): #lane change down
+            self.pos = self.pos[0], min(2,self.pos[1]+2)
+        else: #no lane change and not safe to change lane
+            self.pos = self.pos[0], self.pos[1]
+        print("pos: " ,self.pos)
+        self.allocateReward() 
+        return self.pos
+
+    def allocateReward(self):
+        if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
+            self.reward = min(max_hv,self.road.distanceToNextThing(self.pos))
+        elif self.pos[0] < self.road.getLength() and self.pos[0] >= (self.road.getLength() - 5):
+            self.reward = min(max_hv, self.road.d2n(self.pos))
+
+    def AgentLaneChangePossibleUp(self):
+        return self.road.possibleLaneChangeUp(self.pos) and self.safeToChangeLane(self.pos[1], self.pos[1] - 1)
+
+    def AgentLaneChangePossibleDown(self):
+        return self.road.possibleLaneChangeDown(self.pos) and self.safeToChangeLane(self.pos[1], self.pos[1] + 1)
+
+    def safeToChangeLane(self, sourceLane, destLane):                           
+        srcLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], sourceLane) )  #gets max speed at sourcelane
+        destLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], destLane) )#gets max speed at destlane
+        prevCar = self.road.findPrevCar( (self.pos[0], destLane) )  #NaSch lane change rule safety
+        if prevCar == None: return True #safety check 1
+        else:
+            distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 2
+            return distanceToPrevCar > prevCar.velocity #True only if no collision
+        
     def cluster(self):
         if self.seen == False:
             if self.vtype == 2 and self.road.ncvtype2(self.pos) == 2 and self.road.distanceToNextThing(self.pos) < 5:
@@ -59,7 +111,7 @@ class Car:
         if self.vtype == 1: Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
         else: Car.laneChangeProbability = (1 - float(data[6]))  #SAS 2020
         self.updateLaneLogic()
-        return self.pos    
+        return self.pos
     
     def lanecountup(self):
         self.lanechngup += 1
@@ -99,99 +151,7 @@ class Car:
                     self.lanecountL0()
         if self.denumer != 0 and self.vtype == 2: #SAS 2020
             print("P(lc): " + str(float(self.numer /self.denumer)))
-    ''' new code '''
-    def dynamicupdateLane(self):
-        self.prevPos = self.pos
-        if self.vtype == 1: Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020 
-        else: Car.laneChangeProbability = (1 -float(data[6]))  #SAS 2020
-        if True: #dedicated case
-      #  if self.trigger1() and self.trigger2():  #dynamic case
-     #   if self.trigger2():  #dynamic case
-            #'''RV case'''    
-            self.road.triggerplot1()
-            if self.vtype == 1 and self.pos[1] == 2: #lane 2
-                if self._safetycheck(self.pos[1],self.pos[1]-1):
-                    self.lanecountup()
-                    self.pos = self.pos[0], self.pos[1]-1          
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= Car.laneChangeProbability:
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1
-                        
-            elif self.vtype == 1 and self.pos[1] == 1: #lane 1
-                if self.willingToChangeUp():
-                    x = random.random()
-                    if x >= Car.laneChangeProbability:
-                        self.lanecountup()
-                        self.pos = self.pos[0], self.pos[1]-1
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= 2: #not a possibility #include slowing down instead 
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1 
-                        if self.pos[1] == 2:
-                            self.lanecountL0()
-                
-            elif self.vtype == 1 and self.pos[1] == 0: #lane 0
-                if self.willingToChangeUp():
-                    x = random.random()
-                    if x >= Car.laneChangeProbability:
-                        self.lanecountup()
-                        self.pos = self.pos[0], self.pos[1]-1
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= Car.laneChangeProbability:
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1
-    #'''AV case'''                
-            elif self.vtype == 2 and self.pos[1] == 2: #lane 2
-                self.pos = self.pos[0], self.pos[1]   
-                if self.willingToChangeUp():
-                    x = random.random()
-                    if x >= Car.laneChangeProbability:
-                        self.lanecountup()
-                        self.pos = self.pos[0], self.pos[1]-1
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= Car.laneChangeProbability:
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1
-                
-            elif self.vtype == 2 and self.pos[1] == 1: #lane 1
-                if self.willingToChangeUp():
-                    x = random.random()
-                    if x >= Car.laneChangeProbability:
-                        self.lanecountup()
-                        self.pos = self.pos[0], self.pos[1]-1
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= Car.laneChangeProbability:
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1     
-                        if self.pos[1] == 2:
-                            self.lanecountL0()
-                            
-            elif self.vtype == 2 and self.pos[1] == 0: #lane 0
-                if self.willingToChangeUp():
-                    x = random.random()
-                    if x >= Car.laneChangeProbability:
-                        self.lanecountup()
-                        self.pos = self.pos[0], self.pos[1]-1
-                elif self.willingToChangeDown():
-                    y = random.random()
-                    if y >= Car.laneChangeProbability:
-                        self.lanecountdwn()
-                        self.pos = self.pos[0], self.pos[1]+1  
-                        
-            
-            return self.pos     
-        else:
-            self.road.triggerplot2()
-            self.updateLaneLogic()          #Or self.updateLane() --> Case for regular heteregeneous flow
-            
-            return self.pos
-
+    
     def trigger1(self):
         if ((self.road.avee / self.road.amount) * 100) >= 15:
             return True
@@ -336,7 +296,6 @@ class Car:
     
     def willingToChangeDown(self):
         return self.road.possibleLaneChangeDown(self.pos) and self.__willingToChangeLane(self.pos[1], self.pos[1] + 1)
-    #regular 
 
     def __willingToChangeLane(self, sourceLane, destLane):                           
         srcLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], sourceLane) )  #gets max speed at sourcelane
@@ -348,46 +307,5 @@ class Car:
             distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 2
             return distanceToPrevCar > prevCar.velocity #True only if no collision
            
-    
-    def _safetycheck(self,sourceLane, destLane):
-        prevCar = self.road.findPrevCar( (self.pos[0], destLane) )  #NaSch lane change rule safety
-        if prevCar == None: return True #safety check 1
-        else:
-            distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 1
-            return distanceToPrevCar > prevCar.velocity
-        
-    
-    def dyn_willingToChangeUp(self):
-        return self.road.dyn_possibleLaneChangeUp(self.pos) and self.dyn__willingToChangeLane(self.pos[1], self.pos[1] - 1)
-    
-    def dyn_willingToChangeDown(self):
-        return self.road.dyn_possibleLaneChangeDown(self.pos) and self.dyn__willingToChangeLane(self.pos[1], self.pos[1] + 1)
-    
-    def dyn__willingToChangeLane(self, sourceLane, destLane):                          
-        srcLaneSpeed = self.road.getMaxSpeedAt( (self.pos[0], sourceLane) ) #gets speed
-        destLaneSpeed = self.road.getMaxSpeedAt( (self.pos[0], destLane) ) #gets speed
-        if destLaneSpeed <= srcLaneSpeed or destLane == 0: return False #no incentive
-        prevCar = self.road.findPrevCar( (self.pos[0], destLane) )  #NaSch lane change rule safety
-        if prevCar == None: return True #safety check 1
-        else:
-            distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 1
-            return distanceToPrevCar > prevCar.velocity #True only if no collision    
-        
-    def dynav_willingToChangeUp(self):
-        return self.road.dynav_possibleLaneChangeUp(self.pos) and self.dynav__willingToChangeLane(self.pos[1], self.pos[1] - 1)
-    
-    def dynav_willingToChangeDown(self):
-        return self.road.dynav_possibleLaneChangeDown(self.pos) and self.dynav__willingToChangeLane(self.pos[1], self.pos[1] + 1)
-    
-    def dynav__willingToChangeLane(self, sourceLane, destLane):                          
-        srcLaneSpeed = self.road.getMaxSpeedAt( (self.pos[0], sourceLane) ) #gets speed
-        destLaneSpeed = self.road.getMaxSpeedAt( (self.pos[0], destLane) ) #gets speed
-        if destLaneSpeed <= srcLaneSpeed: return False #no incentive --> Might need to change this
-        prevCar = self.road.findPrevCar( (self.pos[0], destLane) )  #NaSch lane change rule safety
-        if prevCar == None or destLane == 0: return True #safety check 1
-        else:
-            distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 1
-            return distanceToPrevCar > prevCar.velocity #True only if no collision
-    
-    
+
     

@@ -14,36 +14,31 @@ class SimulationManager:
         self.prevTimeFactor = 1.0
         self.running = True
         self.stepsMade = 0
+        self.result = [] 
 
-    def update(self, dt): #updates the traffic input and the car-road interplay
+    def update(self, dt,act): #updates the traffic input and the car-road interplay
         self.acc += dt * self.timeFactor
         limit = 0
         if self.acc >= self.updateFrame:
             self.acc = self.acc % (self.updateFrame + 0)
-            self.makeStep_constant_density()  #comment this for increasing density
-          #  self.makeStep_increasing_density()  #uncomment this for increasing density
+            self.result = self.makeStep_constant_density(act)  #comment this for increasing density
+            print(self.result)
         self.endSimulation() #comment for increasing density
-   #     self.endSim_fd() #uncomment for increasing density
-
+        return self.result
         
     def makeSteps(self, steps): #makes multiple steps
         for x in range(steps): self.makeStep_constant_density()  #comment this for increasing density
       #  for x in range(steps): self.makeStep_increasing_density()  #uncomment this for increasing density
         
-    def makeStep_constant_density(self):  #for constant density
+    def makeStep_constant_density(self,act):  #for constant density
         if self.stepsMade == 0:
             self.trafficGenerator.generate(self.road) #generates traffic
-        self.road.update(); 
+        #self.road.update(); 
+        results = self.road.step(act);
         self.stepsMade += 1
-    """     
-    def makeStep_increasing_density(self): #for increasing density
-        if self.stepsMade == 0:
-            self.trafficGenerator.generate(self.road) #generates traffic
-        if self.stepsMade >= time_period and (self.stepsMade % time_period) == 1 : #increases density every 100 updates
-            self.trafficGenerator.generate(self.road)
-        self.road.update(); 
-        self.stepsMade += 1    
-    """
+        return results
+   
+
     def processKey(self, key):
         {
             pygame.K_ESCAPE: self.__exit,
@@ -79,9 +74,9 @@ class SimulationManager:
         return manySteps
     
     def endSimulation(self):
-        if (self.road.TerminateSimulation()):
+        if self.road.TerminateSimulation() or self.road.updates == 2000:
             self.running = False
-            
+        
     def endSim_fd(self):
         if self.road.carCount() == 300:
             self.running = False

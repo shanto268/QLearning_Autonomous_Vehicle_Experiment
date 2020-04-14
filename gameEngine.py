@@ -61,11 +61,40 @@ class caEnv_v0():
         speedLimits = simulation.speedLimits.SpeedLimits(config.case.speedLimits, config.case.maxSpeed)
         road = simulation.road.Road(config.case.lanes, config.case.length, speedLimits)
         simulation_ = SimulationManager(road, config.case.trafficGenerator, config.case.updateFrame) 
-        return road, simulation_
+        return road, simulation_, clock
 
-#    def getStateSpace(self):
-#    def getActionSpace(self):
-#    def getStateSpaceSize(self, state_space):
-#    def getActionSpaceSize(self, action_space):
+    def newRun(self):
+        self.displayInitialize(True) #batch
+        random.seed(config.case.seed)
+        clock = pygame.time.Clock()
+        speedLimits = simulation.speedLimits.SpeedLimits(config.case.speedLimits, config.case.maxSpeed)
+        road = simulation.road.Road(config.case.lanes, config.case.length, speedLimits)
+        simulation_ = SimulationManager(road, config.case.trafficGenerator, config.case.updateFrame) 
+        while simulation_.running:
+            action = random.randint(0,2)
+            clock.tick_busy_loop(config.case.maxFps)#
+            dt = clock.get_time()# —	time used in the previous tick
+            simulation_.update(dt,action) #updates logistics
+        print("\nSimulation ended...")
 
-
+        
+        
+    def qrender_interactive(self):
+        self.displayInitialize(False) #interactive
+        random.seed(config.case.seed) 
+        screen = pygame.display.set_mode(config.case.size)
+        clock = pygame.time.Clock()
+        speedLimits = simulation.speedLimits.SpeedLimits(config.case.speedLimits, config.case.maxSpeed)
+        road = simulation.road.Road(config.case.lanes, config.case.length, speedLimits) 
+        simulation_ = SimulationManager(road, config.case.trafficGenerator, config.case.updateFrame) 
+        representation = Representation(screen, road, simulation_, config.case.data)
+        while simulation_.running:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    simulation_.processKey(event.key)
+            action = random.randint(0,2)
+            clock.tick_busy_loop(config.case.maxFps)#.tick_busy_loop = updates the clock
+            dt = clock.get_time()# —	time used in the previous tick
+            simulation_.update(dt,action) #updates logistics
+            representation.draw(dt * simulation_.timeFactor) #updates graphics
+            pygame.display.flip()  

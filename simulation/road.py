@@ -78,10 +78,11 @@ class Road:
         self.carStack = [] 
         self.typecar = 2
         self.stateSpaceSize = self.lanesCount * self.length #2020 SAS
-        self.actionSpaceSize = 2
+        self.actions = [0,1,2] #2020 SAS #0 same lane, 1 up lane, 2 bottom lane
+        self.actionSpaceSize = len(self.actions) #2020 SAS
 
-    def getStateSpace(self):
-        pass
+    def sampleAction(self):
+        return self.actions[random.randint(0,2)]
         
     def __updateCars(self, action):
         for lane in self.lanes:
@@ -113,57 +114,63 @@ class Road:
             for entity in lane:
                 if entity != None:       
                     newPos = list(action(entity)) #tuple --> (x + v, lane)     
-            #        print("moving at at: "+str(newPos))
                     if self.inBounds(newPos):
                         self.updatedLanes[newPos[1]][newPos[0]-self.getLength()] = entity 
-                     #   print(entity)
                         self.lanechange = self.lanechangenum(entity.feedlaneroadpy()) #total number of lane changes
                         self.avlane = self.lanechangenum(entity.feedav()) #total number of av lane change
                         self.rvlane = self.lanechange - self.avlane #total number of av lane change
-                   #     self.L0c = self.lanechangenum(entity.feedlaneroadLO())
                         self.numer += entity.freq
                         self.denom += entity.freqtot
                         if self.denom == 0:
                             self.freqAV = 0
                         else:            
                             self.freqAV = self.numer / self.denom
-                    #    print("freq: " + str(self.numer))
-                    #    print("freqtot: " + str(self.denom))
-                      #  print("moving at: "+str(newPos))
 
         self.flipLanes()            
-    
+
+    def step(self, act):
+        self.speedLimits.update()   
+        done = self.TerminateSimulation()
+        state = self.getState()
+        qlearn = lambda x: x.qUpdateLane(act)  
+        speedupdate = lambda x: x.updateX()
+        self._updateCars(qlearn) 
+        self._updateCars(speedupdate)
+        reward = self.getReward()
+        print("update: " + str(self.updates))
+        print("")
+        if self.updates == 2000: #need to manually change ugly fix SAS 2020
+            done = True
+        self.updates += 1   
+        return state, reward, done
+
+    def getReward(self):
+        for lane in self.lanes:
+            for entity in lane:
+                if entity != None and entity.vtype == 2:
+                    return entity.reward      
+
+    def getState(self):
+        for lane in self.lanes:
+            for entity in lane:
+                if entity != None and entity.vtype == 2:
+                    return entity.pos2state()
+
     def update(self): #updates speedlimits and car movements
         self.speedLimits.update()   
-        self.lane_form()
-        self.cluster()
         self.TerminateSimulation()
         r1 = lambda x: x.updateLane()  #for hetero only
         speedupdate = lambda x: x.updateX()
         vupdate = lambda x: x._updateX()
-        r2 = lambda x: x.dynamicupdateLane()
         self._updateCars(r1) #pass lanechange for just regular heteregenous flow 
         self._updateCars(speedupdate)
-       # print(self.av) 
-      #  print("Update: " + str(self.updates))
-        if (self.updates % 100) == 1:
-            self.avee = self.av     
-        elif self.updates <= 100: self.avee = self.av 
-        self.avgspeed = self.getAvgCarSpeed()[1]
-        self.avgveloc.append(self.avgspeed)
-        if self.updates > 0 and (self.updates % 100) == 0:
-            self.vcount = 0
-            self.avg = (sum(self.avgveloc[self.start:self.updates - 1]) / 100)
-            self.start = self.updates
-        self.updates += 1    
-       # if self.updates > 100: self.av = 0 
-      #  print(self.avee)
-   #     print(self.avg)    
         print("update: " + str(self.updates))
         print("")
+        self.updates += 1    
+
 
     def lanechangenum(self, num): 
-        return num
+        return num 
     
     '''
     def triggerdyn(self):
@@ -174,9 +181,24 @@ class Road:
     def flipLanes(self):#makes the road empty for new cars to enter and propagates existing cars in the lanes
         self.lanes = self.updatedLanes
         self.updatedLanes = Road.generateEmptyLanes(self.getLanesCount(), self.getLength())
-        
+    
+    def reset(self):
+        self.speedLimits.update()   
+        self.TerminateSimulation()
+        r1 = lambda x: x.updateLane()  #for hetero only
+        speedupdate = lambda x: x.updateX()
+        vupdate = lambda x: x._updateX()
+        self._updateCars(r1) #pass lanechange for just regular heteregenous flow 
+        self._updateCars(speedupdate)
+        if self.updates == 0:
+            for lane in self.lanes:
+                for entity in lane:
+                    if entity != None and entity.vtype == 2:
+                        return entity.pos2state()
+
     def triggerplot1(self):
         self.triggerbin = 1
+
     def triggerplot2(self):
         self.triggerbin = 0
         
@@ -245,26 +267,6 @@ class Road:
         return self.t__pushCars(amount, lanes)
     
     def assigntype(self):   
-        '''
-        mu, sigma = .15, .05                        # mean and standard deviation 
-        avprob = np.random.normal(mu, sigma, 100) 
-        x =random.randint(0,99)
-        prob_av = avprob[x]
-     #   print("Prob(AV): " + str(prob_av))
-        prob_rv = 1 - prob_av
-   #     print("Prob(RV): " + str(prob_rv))
-        y = random.uniform(0, 1)
-        z = random.uniform(0.38,0.4)
-        d_av = abs(y - prob_av + z)
-        d_rv = abs(y - prob_rv)
-        print("d(AV): " + str(d_av))
-        print("d(RV): " + str(d_rv))
-        w = min(d_rv,d_av)  
-      #  print("Choice: " + str(w))
-       # print("")
-       '''
-     #  d_rv = 
-     #  d_av = 
         w = random.randint(1,60)
         if w > int(self.avpercent):                       #   case: RV   9 - 15% ; 18 - 30% ; 30 - 50%;  45 - 75%
           vtype = 1
@@ -306,7 +308,6 @@ class Road:
         if not amount or not lanes: return 0
         else:
             lane = random.randint(0,2)
-            #lane = lanes.pop()
             car = Car(self, (random.randint(0,self.getLength()-1), lane), self.speedLimits.maxSpeed, stackAcars.pop())
             if(self.placeObject(car)): #if true --> object in desired position is not blocked
                 return 1 + self.__pushCars(amount - 1, lanes) #recursive condition that counts number of cars enterring
@@ -585,7 +586,7 @@ class Road:
             for entity in lane:
                 if entity != None and entity.vtype == 2:
                         return entity.terminate
-
+        
     def flow(self):
         self.vcount += 1 
      #   return self.vcount

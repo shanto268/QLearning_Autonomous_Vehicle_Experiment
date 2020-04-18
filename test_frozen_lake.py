@@ -42,6 +42,8 @@ for episode in range(num_episodes):
 """
 for episode in range(num_episodes):
     state = env.reset() #starting state of agent
+    print("============================================= NEW EPISODE ==================================")
+    print("default state: ",state)
     done = False
     rewards_current_episode = 0
     for step in range(max_steps_per_episode):     # Exploration-exploitation trade-off
@@ -51,7 +53,7 @@ for episode in range(num_episodes):
         else:
             action = env.action_space.sample() #returns a random number from action_space
         new_state, reward, done, info = env.step(action)
-        print("state ", new_state)
+        print("new state ", new_state)
         print("reward ", reward)
         print("done ", done)
         print("action ", action)
@@ -60,7 +62,8 @@ for episode in range(num_episodes):
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state
         rewards_current_episode += reward 
-        
+        print("step ",step)
+        print() 
         if done == True:
             break
     # Exploration rate decay

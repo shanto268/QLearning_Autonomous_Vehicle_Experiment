@@ -1,0 +1,20 @@
+For episode in episodes:
+    initiliaze car-road grid to same state
+    state = initial_agent_state
+    set done to False
+    rewards_per_episode = 0
+    for update in max_updates:
+        set exploration_threshold value = {0,1}
+        if exploration_threshold > expolation_rate:
+            action = max(qtable value)
+        else:
+            action = random value from action space
+        new_state, reward, done, info = road.step(action) 
+        update qtable
+        state = new_state
+        rewards_per_episode += reward
+        if done == True:
+            break
+        update exploration_rate
+        all_rewards.append(rewards_per_episode)
+        

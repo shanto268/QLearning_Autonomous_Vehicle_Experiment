@@ -26,5 +26,5 @@ q_table = np.zeros((state_space_size, action_space_size))
 
 #game.newRun()
 #game.runBatch()
-game.qrender_interactive()
-#game.runInteractive()
+#game.qrender_interactive()
+game.runInteractive()

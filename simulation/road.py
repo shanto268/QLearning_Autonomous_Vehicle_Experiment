@@ -181,15 +181,13 @@ class Road:
     def flipLanes(self):#makes the road empty for new cars to enter and propagates existing cars in the lanes
         self.lanes = self.updatedLanes
         self.updatedLanes = Road.generateEmptyLanes(self.getLanesCount(), self.getLength())
-    
+   
+    #needs to return the starting pos of agent
+
+    def hi(self):
+        return 0
+
     def reset(self):
-        self.speedLimits.update()   
-        self.TerminateSimulation()
-        r1 = lambda x: x.updateLane()  #for hetero only
-        speedupdate = lambda x: x.updateX()
-        vupdate = lambda x: x._updateX()
-        self._updateCars(r1) #pass lanechange for just regular heteregenous flow 
-        self._updateCars(speedupdate)
         if self.updates == 0:
             for lane in self.lanes:
                 for entity in lane:

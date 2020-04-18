@@ -1,3 +1,10 @@
+TO DO:
+> learn sim program control flow
+> make changes to simManager and driver
+> make changes to road
+> make change to car to implement better reward functions/policies
+
+
 =================================================================
 #Q LEARNING ALGO:
 

@@ -1,3 +1,6 @@
+=================================================================
+#Q LEARNING ALGO:
+
 For episode in episodes:
     initiliaze car-road grid to same state
     state = initial_agent_state
@@ -16,5 +19,25 @@ For episode in episodes:
         if done == True:
             break
         update exploration_rate
-        all_rewards.append(rewards_per_episode)
-        
+        all_rewards.append(rewards_per_episode) 
+
+=================================================================
+#DRIVER CODE UPDATE PLAN:
+
+> must pass max_updates to the sim program
+
+=================================================================
+#SIM PROGRAM UPDATE PLAN:
+
+> must be able to take inputs from Driver and send outputs back to driver
+> either get rid of simManager and change sim style to make driver as simManager
+> road must be able to communicate with driver 
+> road must have the following methods:
+    restart sim
+    return step params
+
+=================================================================
+#IMPLEMENT GOOD REWARD FUNCTIONS
+
+> Once communication between road and driver is fixed
+> Look back at reward functions and improve it

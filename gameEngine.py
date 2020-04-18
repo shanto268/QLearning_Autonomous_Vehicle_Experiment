@@ -78,7 +78,7 @@ class caEnv_v0():
         print("\nSimulation ended...")
 
         
-        
+    #working version 
     def qrender_interactive(self):
         self.displayInitialize(False) #interactive
         random.seed(config.case.seed) 

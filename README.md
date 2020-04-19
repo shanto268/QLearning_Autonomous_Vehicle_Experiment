@@ -41,6 +41,10 @@ The default parameters used for qlearning are as below:
   exploration_decay_rate = 0.001
 ```
 
+## QState 
+
+## Reward Function Logic
+
 ## Customization
 In order to change the simulation condition, edit the file "config\case.py". 
 ```python
@@ -67,7 +71,6 @@ Important methods in car.py:
 self.qUpdateLane(act) , self.agentLaneChange(act), self.allocateReward() and 
 the constructor
 ```
-## Reward Function Logic
 
 ## Usage
 In your shell, execute the following code

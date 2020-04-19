@@ -18,7 +18,7 @@ print("Initializing batch simulation....")
 print("Starting simulation...\n")
 
 #define parameters
-num_episodes = 20
+num_episodes = 100
 max_steps_per_episode = 2000 
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -72,8 +72,8 @@ rewards_all_episodes = []
 for episode in range(num_episodes):
     road = reset() 
     state = road.ogstate()       
-    print("============================================= NEW EPISODE ==================================")
-    print("default state: ",state)
+  #  print("============================================= NEW EPISODE ==================================")
+  #  print("default state: ",state)
     done = False
     rewards_current_episode = 0
     print("episode: ", episode) 
@@ -92,18 +92,18 @@ for episode in range(num_episodes):
         if done == True:
             break
 
-    print("step : ",step)
-    print()
+ #   print("step : ",step)
+ #   print()
     # Exploration rate decay
     exploration_rate = min_exploration_rate + (max_exploration_rate - min_exploration_rate) * np.exp(-exploration_decay_rate*episode)
     rewards_all_episodes.append(rewards_current_episode-step)
 
 print("Simulation is over!")
 # Calculate and print the average reward per thousand episodes
-rewards_per_two_episodes = np.split(np.array(rewards_all_episodes),num_episodes/2)
-count = 2
-print("********Average reward per 2 episodes********\n")
-for r in rewards_per_two_episodes:
+rewards_stats = np.split(np.array(rewards_all_episodes),num_episodes/10)
+count = 10
+print("********Average reward per " + str(count) + " episodes********\n")
+for r in rewards_stats:
     print(count, ": ", str(sum(r/2)))
     count += 2
 print("\n\n********Q-table********\n")

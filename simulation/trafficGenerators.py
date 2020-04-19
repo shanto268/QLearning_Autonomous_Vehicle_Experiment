@@ -34,7 +34,14 @@ class TrafficGenerator():
         added = road.pushCars(prob_in)
         road.inflow(added)
 
-            
+
+class EnvironmentSetup():
+    def __init__(self,totalCars,agentNum):
+        self.tcars = totalCars
+        self.numAgent = agentNum
+
+    def placeCars(self, road):
+        road.setEnvironment(self.tcars, self.numAgent)
         
         
         

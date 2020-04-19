@@ -32,17 +32,28 @@ config = importlib.import_module('config.case')
 random.seed(config.seed)
 clock = pygame.time.Clock() 
 speedLimits = simulation.speedLimits.SpeedLimits(config.speedLimits, config.maxSpeed) 
-road = simulation.road.Road(config.lanes, config.length, speedLimits, config.trafficGenerator) 
-tg = config.trafficGenerator
+road = simulation.road.Road(config.lanes, config.length, speedLimits) 
+totalCars = 100
+numAgent = 1
+"""
+#tg = config.trafficGenerator
 #simulation = SimulationManager(road, config.trafficGenerator, config.updateFrame)
 def startOver(config):
     random.seed(config.seed)
     clock = pygame.time.Clock() 
     speedLimits = simulation.speedLimits.SpeedLimits(config.speedLimits, config.maxSpeed) 
-    road = simulation.road.Road(config.lanes, config.length, speedLimits, config.trafficGenerator) 
-    tg.generate(road)
+    road = simulation.road.Road(config.lanes, config.length, speedLimits) 
+ #   tg.generate(road)
     return road
-
+"""
+def reset():
+    config = importlib.import_module('config.case') 
+    random.seed(config.seed)
+    clock = pygame.time.Clock() 
+    speedLimits = simulation.speedLimits.SpeedLimits(config.speedLimits, config.maxSpeed) 
+    road = simulation.road.Road(config.lanes, config.length, speedLimits) 
+    road.setEnvironment(totalCars,numAgent)
+    return road
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
@@ -52,7 +63,7 @@ rewards_all_episodes = []
 #q learnin algorithm
 for episode in range(num_episodes):
     #reset
-    road = startOver(config) 
+    road = reset() 
     state = road.ogstate()       
     print("============================================= NEW EPISODE ==================================")
     print("default state: ",state)

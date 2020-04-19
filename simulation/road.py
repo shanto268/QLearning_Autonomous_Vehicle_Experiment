@@ -218,7 +218,41 @@ class Road:
                 else: 
                     return 0 +  self.__dpushCars( amount )
 
+    def setEnvironment(self, totalCars, agentNum):
+        # self.lanes = Road.generateEmptyLanes(self.getLanesCount(), self.getLength())
+        hvNum = totalCars - agentNum
+        tot = [1 for i in range(hvNum)]
+        tot += [2 for j in range(agentNum)]
+        random.shuffle(tot)
+        while len(tot) != 0:
+            x = random.randint(0,self.getLength() -1)
+            y = random.randint(0,self.getLanesCount() -1)
+            if self.lanes[y][x] == None:
+                val = tot.pop()
+                car = Car(self, (x,y), self.speedLimits.maxSpeed, val)
+                self.lanes[car.pos[1]][car.pos[0]] = car
+                if car.vtype == 1:
+                    self.rv += 1 
+                else: 
+                    self.av += 1        
+            else:
+                x = random.randint(0,99)
+                y = random.randint(0,2)
+        print(self.lanes)
 
+    def placeObject(self, entity): 
+        if (not self.inBounds(entity.pos)
+                or self.lanes[entity.pos[1]][entity.pos[0]] != None #entity.pos[0] = 0 for cars being generated; entity.pos[1] = lane
+                or self.getSpeedLimitAt(entity.pos) == 0 ):
+            return False  #essentially empty cells return False
+        else:
+            self.lanes[entity.pos[1]][entity.pos[0]] = entity
+            if entity.vtype == 1:
+                self.rv += 1 
+            else: 
+                self.av += 1        
+            return True 
+    
     def pushCarsRandomly(self, amount): #does what the name suggests
         lanes = [x for x in range(self.getLanesCount())] 
         random.shuffle(lanes) #changes lane order
@@ -507,18 +541,7 @@ class Road:
     def placeObjects(self, entities):
         return all(self.placeObject(entity) for entity in entities)
 
-    def placeObject(self, entity): #function that takes in input of car object and returns Bolean output whether object is placed in a certain lanes[entity.pos[0]][entity.pos[1]] or not
-        if (not self.inBounds(entity.pos)
-                or self.lanes[entity.pos[1]][entity.pos[0]] != None #entity.pos[0] = 0 for cars being generated; entity.pos[1] = lane
-                or self.getSpeedLimitAt(entity.pos) == 0 ):
-            return False  #essentially empty cells return False
-        else:
-            self.lanes[entity.pos[1]][entity.pos[0]] = entity
-            if entity.vtype == 1:
-                self.rv += 1 
-            else: 
-                self.av += 1        
-            return True # condition met --> True for placing an object
+
         
     def getLength(self): #gives length of each road --> user input
       #  print("getLenght: " + str(len(self.lanes[0])))

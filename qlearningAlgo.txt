@@ -1,5 +1,10 @@
 TO DO:
-> create function in road that sets up the initial simulation
+> updates accumulate problem
+> default state returning None problem
+> not the same postion state on initilization 
+
+> print out qtables and the qstat to check
+
 > make change to car to implement better reward functions/policies
 > (rewards - simTime) needs to implemented still
 

@@ -42,6 +42,9 @@ The default parameters used for qlearning are as below:
 ```
 
 ## QState 
+Matrix composed of 300 rows and 3 columns.
+The rows correspond to the state space (300 grids in the road data structure).
+The columns correspond to the action space (change lane up, change lane down, do not change lane)
 
 ## Reward Function Logic
 

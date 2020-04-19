@@ -15,9 +15,6 @@ class SimulationManager:
         self.running = True
         self.stepsMade = 0
         self.result = [] 
-        if self.stepsMade == 0:
-            self.trafficGenerator.generate(self.road) #generates traffic
-        self.stepsMade = 1
 
     def render(self, dt):
         pass
@@ -44,7 +41,6 @@ class SimulationManager:
         if self.acc >= self.updateFrame:
             self.acc = self.acc % (self.updateFrame + 0)
             self.result = self.makeStep_constant_density(act)  #comment this for increasing density
-            print(self.result)
         self.endSimulation() #comment for increasing density
         return self.result
         
@@ -61,8 +57,8 @@ class SimulationManager:
         return results
   
     def makeStep_constant_density(self):  #for constant density
-        #   if self.stepsMade == 0:
-        #    self.trafficGenerator.generate(self.road) #generates traffic
+        if self.stepsMade == 0:
+            self.trafficGenerator.generate(self.road) #generates traffic
         if self.stepsMade > 0:
             self.road.update(); 
             self.stepsMade += 1

@@ -68,7 +68,7 @@ class Car:
             self.pos = self.pos[0], min(2,self.pos[1]+2)
         else: #no lane change and not safe to change lane
             self.pos = self.pos[0], self.pos[1]
-        print("pos: " ,self.pos)
+    #    print("pos: " ,self.pos)
         self.allocateReward() 
         return self.pos
 

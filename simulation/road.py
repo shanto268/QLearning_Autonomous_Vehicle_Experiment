@@ -138,7 +138,7 @@ class Road:
         self._updateCars(qlearn) 
         self._updateCars(speedupdate)
         reward = self.getReward()
-        print("update: " + str(self.updates))
+    #    print("update: " + str(self.updates))
         self.updates += 1   
         return state, reward, done
 
@@ -238,7 +238,7 @@ class Road:
             else:
                 x = random.randint(0,99)
                 y = random.randint(0,2)
-        print(self.lanes)
+     #   print(self.lanes)
 
     def placeObject(self, entity): 
         if (not self.inBounds(entity.pos)

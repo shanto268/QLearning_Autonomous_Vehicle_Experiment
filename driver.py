@@ -18,7 +18,7 @@ print("Initializing batch simulation....")
 print("Starting simulation...\n")
 
 #define parameters
-num_episodes = 6
+num_episodes = 20
 max_steps_per_episode = 2000 
 learning_rate = 0.1 
 discount_rate = 0.99

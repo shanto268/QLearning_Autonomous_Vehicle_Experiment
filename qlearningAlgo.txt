@@ -1,9 +1,7 @@
 TO DO:
-> learn sim program control flow
-> make changes to simManager and driver
-> make changes to road
+> create function in road that sets up the initial simulation
 > make change to car to implement better reward functions/policies
-
+> (rewards - simTime) needs to implemented still
 
 =================================================================
 #Q LEARNING ALGO:

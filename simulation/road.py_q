@@ -20,11 +20,11 @@ numHV = totCars - numAV
 
 class Road:
 
-    def __init__(self, lanesCount, length, speedLimits):
+    def __init__(self, lanesCount, length, speedLimits, trafficGenerator):
         self.lanes = Road.generateEmptyLanes(lanesCount, length)
         self.updatedLanes = Road.generateEmptyLanes(lanesCount, length) #same as above but used to update the elements of the created structure
         self.speedLimits = speedLimits if speedLimits != None else simulation.speedLimits.SpeedLimits([], 5) #refers to speedlimits.py to set speedlimits
-     #   self.trafficGenerator = trafficGenerator
+        self.trafficGenerator = trafficGenerator
         self.deadAV = 0 # cars that are gone
         self.updates = 0 #number of updates?
         self.deadCars = 0

@@ -32,7 +32,6 @@ class caEnv_v0():
             clock.tick_busy_loop(config.case.maxFps)#.tick_busy_loop = updates the clock
             dt = clock.get_time()# —	time used in the previous tick
             simulation_.update(dt) #updates logistics
-            print(road.reset())
             representation.draw(dt * simulation_.timeFactor) #updates graphics
             pygame.display.flip()
 

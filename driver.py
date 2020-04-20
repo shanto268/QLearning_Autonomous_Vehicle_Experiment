@@ -22,7 +22,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 10
+num_episodes = 5
 max_steps_per_episode = 1000 
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -65,6 +65,7 @@ state_space_size = road.stateSpaceSize
 q_table = np.zeros((state_space_size, action_space_size))
 """ include functionality ti read q_table from .txt file """
 rewards_all_episodes = []
+timesteps = []
 
 #q learnin algorithm
 
@@ -96,6 +97,7 @@ for episode in range(num_episodes):
     file1.write("\nrewards: "+str(rewards_current_episode-step))
 #    print("step : ",step)
 #    print()
+    timesteps.append(step)
     # Exploration rate decay
     exploration_rate = min_exploration_rate + (max_exploration_rate - min_exploration_rate) * np.exp(-exploration_decay_rate*episode)
     rewards_all_episodes.append(rewards_current_episode-step)
@@ -108,9 +110,14 @@ file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
 file1.close() 
 print("Simulation is over!")
 
-plt.plot(num_episodes,rewards_all_episodes) 
+plt.plot([i for i in range(num_episodes)],rewards_all_episodes) 
 plt.ylabel("Reward")
-plt.xlabel("episode #")
+plt.xlabel("Number of episode")
+plt.show()
+
+plt.plot([i for i in range(num_episodes)],timesteps) 
+plt.ylabel("Simulation Timesteps")
+plt.xlabel("Number of episode")
 plt.show()
 
 """

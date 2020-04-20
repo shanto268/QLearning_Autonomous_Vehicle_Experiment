@@ -69,6 +69,7 @@ timesteps = []
 
 #q learnin algorithm
 
+file1.write("*"*100)
 file1.write("\nNew simulation started at: " + str(start.strftime("%Y-%m-%d %H:%M:%S\n")))
 for episode in range(num_episodes):
     road = reset() 
@@ -107,6 +108,7 @@ file1.write("\n\nThe Qtable for this simulation is given below:\n")
 file1.write(str(q_table))
 end = datetime.datetime.now()
 file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
+file1.write("*"*100)
 file1.close() 
 print("Simulation is over!")
 

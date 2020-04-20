@@ -71,7 +71,6 @@ file1 =  open("outputs.txt","a")
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
 q_table = importQtable("qtable_2020-04-20_11:24:30.npy",False)
-""" include functionality ti read q_table from .txt file """
 rewards_all_episodes = []
 timesteps = []
 

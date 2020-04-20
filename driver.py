@@ -113,11 +113,13 @@ print("Simulation is over!")
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes) 
 plt.ylabel("Reward")
 plt.xlabel("Number of episode")
+plt.grid()
 plt.show()
 
 plt.plot([i for i in range(num_episodes)],timesteps) 
 plt.ylabel("Simulation Timesteps")
 plt.xlabel("Number of episode")
+plt.grid()
 plt.show()
 
 """

@@ -14,22 +14,23 @@ from simulationManager import SimulationManager
 from simulation.trafficGenerators import *
 import datetime
 import matplotlib.pyplot as plt
-
+import time
 #Initializing Training
 start = datetime.datetime.now()
+start_time = time.time()
 print("Initializing Training...")
 print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 5
-max_steps_per_episode = 1000 
+num_episodes = 3
+max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
 exploration_rate = 1 
 max_exploration_rate = 1 
 min_exploration_rate = 0.01
-exploration_decay_rate = 0.001
+exploration_decay_rate = 0.01
 
 #environment set up from Traffic Analysis Software
 config = importlib.import_module('config.case') 
@@ -108,7 +109,8 @@ file1.write("\n\nThe Qtable for this simulation is given below:\n")
 file1.write(str(q_table))
 end = datetime.datetime.now()
 file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
-file1.write("*"*100)
+file1.write("\nSimulation took "+ str((time.time() - start_time)/60.0) + " minutes\n") 
+file1.write("*"*100+str("\n"))
 file1.close() 
 print("Simulation is over!")
 

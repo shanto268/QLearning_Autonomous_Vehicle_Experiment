@@ -109,7 +109,7 @@ New version of reward function logic is as follows.
 ```
 ```python
 action is passed as input to the function guiding the agent's lane change dynamics
-    if action results in agent moving to an occupied lane->  end episode and  high penalty
+    if action results in agent moving to an occupied lane ->  end episode and  high penalty
     if action leads to empty block and safe for moving -> good reward
     if action leads to safety and better v_potential -> highest reward
 

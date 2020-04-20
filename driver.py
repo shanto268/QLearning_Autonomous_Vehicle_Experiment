@@ -13,10 +13,11 @@ from representation import Representation
 from simulationManager import SimulationManager
 from simulation.trafficGenerators import *
 import datetime
-start = datetime.datetime.now()
+import matplotlib.pyplot as plt
 
-#print to console
-print("Initializing batch simulation....")
+#Initializing Training
+start = datetime.datetime.now()
+print("Initializing Training...")
 print("Starting simulation...\n")
 
 #define parameters
@@ -100,11 +101,17 @@ for episode in range(num_episodes):
     rewards_all_episodes.append(rewards_current_episode-step)
 
 #need to save records to text files
-file1.write("\nThe Qtable for this simulation is given below:\n")
+file1.write("\n\nThe Qtable for this simulation is given below:\n")
 file1.write(str(q_table))
-file1.write("\nEnd of simulation" + str(start.strftime("%Y-%m-%d %H:%M:%S\n")))
+end = datetime.datetime.now()
+file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
 file1.close() 
 print("Simulation is over!")
+
+plt.plot(num_episodes,rewards_all_episodes) 
+plt.ylabel("Reward")
+plt.xlabel("episode #")
+plt.show()
 
 """
 # Calculate and print the average reward per thousand episodes

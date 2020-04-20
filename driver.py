@@ -60,12 +60,17 @@ def comments(new_state, reward, done, action, q_table):
 def paramWrite(name, param, fyl):
     fyl.write(name+str(": ")+str(param)+"\n")
 
-file1 =  open("outputs.txt","a") 
+def importQtable(npyfile, new):
+    if new==False:
+        return  np.zeros((state_space_size, action_space_size))
+    else:
+        return  np.load(npyfile)
 
+file1 =  open("outputs.txt","a") 
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
-q_table = np.zeros((state_space_size, action_space_size))
+q_table = importQtable("qtable_2020-04-20_11:24:30.npy",False)
 """ include functionality ti read q_table from .txt file """
 rewards_all_episodes = []
 timesteps = []

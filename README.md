@@ -38,7 +38,7 @@ The default parameters used for qlearning are as below:
   exploration_rate = 1 
   max_exploration_rate = 1 
   min_exploration_rate = 0.01
-  exploration_decay_rate = 0.001
+  exploration_decay_rate = 0.005
 ```
 
 ## QState 
@@ -102,6 +102,18 @@ The current version of the program has the reward function working as follows:
 Once, the aggregate reward is calculated using the above code block. The final reward for the episode is calculated as follows:
 ```python
 final_reward = aggregate_reward - timesteps_taken_to_complete_10_cycles
+```
+New version of reward function logic is as follows. 
+```diff
+- Note: this version is yet to be implemented
+```
+```python
+action is passed as input to the function guiding the agent's lane change dynamics
+    if action results in agent moving to an occupied lane->  end episode and  high penalty
+    if action leads to empty block and safe for moving -> good reward
+    if action leads to safety and better v_potential -> highest reward
+
+finalRewardForEpisode = aggregate_rewards - timestepsFor10cycles
 ```
 
 ## Customization

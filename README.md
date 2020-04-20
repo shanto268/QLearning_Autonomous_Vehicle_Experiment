@@ -158,6 +158,7 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] Moving average, min, max, over range stats plot for rewards update
 - [ ] Infer Probability(lane change) from training data 
 - [ ] Incorporation of visual sim in training 
+- [ ] Implement any change Dr. Li suggests
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

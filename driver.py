@@ -23,14 +23,14 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 3
+num_episodes = 2
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
 exploration_rate = 1 
 max_exploration_rate = 1 
 min_exploration_rate = 0.01
-exploration_decay_rate = 0.01
+exploration_decay_rate = 0.005
 
 #environment set up from Traffic Analysis Software
 config = importlib.import_module('config.case') 
@@ -57,8 +57,10 @@ def comments(new_state, reward, done, action, q_table):
     print("action ", action)
     print("max q: ",  np.max(q_table[new_state, :]))
 
-file1 =  open("outputs.txt","a") 
+def paramWrite(name, param, fyl):
+    fyl.write(name+str(": ")+str(param)+"\n")
 
+file1 =  open("outputs.txt","a") 
 
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
@@ -70,8 +72,16 @@ timesteps = []
 
 #q learnin algorithm
 
-file1.write("*"*100)
-file1.write("\nNew simulation started at: " + str(start.strftime("%Y-%m-%d %H:%M:%S\n")))
+file1.write("*"*50)
+file1.write("\nNew simulation started at: " + str(start.strftime("%Y-%m-%d %H:%M:%S\n"))) 
+paramWrite("number of episodes",num_episodes,file1)
+paramWrite("max steps per episodes",max_steps_per_episode,file1)
+paramWrite("learning rate" ,learning_rate,file1)
+paramWrite("discount rate" ,discount_rate,file1)
+paramWrite("exploration rate", exploration_rate,file1)
+paramWrite("max exploration rate", min_exploration_rate, file1)
+paramWrite("min exploration rate", max_exploration_rate, file1)
+paramWrite("exploration decay rate", exploration_decay_rate, file1)
 for episode in range(num_episodes):
     road = reset() 
     state = road.ogstate()       
@@ -110,7 +120,7 @@ file1.write(str(q_table))
 end = datetime.datetime.now()
 file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
 file1.write("\nSimulation took "+ str((time.time() - start_time)/60.0) + " minutes\n") 
-file1.write("*"*100+str("\n"))
+file1.write("*"*50+str("\n"))
 file1.close() 
 print("Simulation is over!")
 

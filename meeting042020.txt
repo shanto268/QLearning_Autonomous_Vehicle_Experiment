@@ -1,0 +1,32 @@
+work done:
+-> implemented qlearning into the simulation software
+-> runs in batch mode (considerably faster)
+-> trained the model a couple of times 
+
+go over:
+-> driver.py <high level explanation>
+-> current reward function
+-> small training test
+
+observations:
+-> agent doing funny stuff to maximize rewards (biased function on my end)
+-> reward maximization at same timesteps showing intelligent lane changes
+-> batch mode results used to infer P(l) using timesteps 
+
+problems:
+-> time issue 
+    > changed exp decay increased the speed
+-> quanah issue
+-> current reward function
+-> best parameters
+
+questions:
+-> should initial distribution for each episode be the same?
+-> training parameters?
+-> reward functions?
+-> how to infer P(l) from results?
+
+plans:
+-> update the reward systems
+-> run jobs on quanah
+-> understand best training parameters

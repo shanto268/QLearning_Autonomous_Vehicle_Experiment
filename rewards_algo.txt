@@ -1,0 +1,5 @@
+bare bones reward model:
+step function would take action as input
+    if action results in collision end sim -> high penalty
+    if action leads to empty block and safe -> good reward
+    if action leads to safety and better v_potential -> highest reward

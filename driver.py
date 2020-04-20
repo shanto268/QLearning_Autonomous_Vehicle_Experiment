@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 2
+num_episodes = 3
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -85,7 +85,6 @@ paramWrite("exploration decay rate", exploration_decay_rate, file1)
 for episode in range(num_episodes):
     road = reset() 
     state = road.ogstate()       
-    #print("============================================= EPISODE " +str(episode)+ " ==================================")
     #print("\ndefault state: ",state)
     print("Episode: ", episode)
     done = False
@@ -122,19 +121,17 @@ file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
 file1.write("\nSimulation took "+ str((time.time() - start_time)/60.0) + " minutes\n") 
 file1.write("*"*50+str("\n"))
 file1.close() 
+np.save('qtable_'+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
 print("Simulation is over!")
 
-plt.plot([i for i in range(num_episodes)],rewards_all_episodes) 
-plt.ylabel("Reward")
+plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
+plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps") 
+plt.ylabel("Units")
 plt.xlabel("Number of episode")
+plt.legend()
 plt.grid()
 plt.show()
 
-plt.plot([i for i in range(num_episodes)],timesteps) 
-plt.ylabel("Simulation Timesteps")
-plt.xlabel("Number of episode")
-plt.grid()
-plt.show()
 
 """
 # Calculate and print the average reward per thousand episodes

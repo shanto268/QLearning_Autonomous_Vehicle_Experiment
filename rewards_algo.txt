@@ -3,3 +3,9 @@ step function would take action as input
     if action results in collision end sim -> high penalty
     if action leads to empty block and safe -> good reward
     if action leads to safety and better v_potential -> highest reward
+    if action leads to not changing lane and lane change was not possible -> good rew    ard
+
+    for each cycle, c, record time taken, t.
+        rewards += constant * ( cycle_distance / t)
+        -> this would incentivize agent to increase its average speed more
+        -> this would also make sure that it completes more cycles

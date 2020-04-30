@@ -7,6 +7,10 @@ max_hv = int(data[5])  #SAS 2020
 max_av_av = int(data[3])  #SAS 2020
 max_av_hv = int(data[2])  #SAS 2020
 limitCycle = int(data[11])*100 #SAS 2020
+#paramaters for rewards
+HIGH_PENALTY = 1000 
+GOOD_REWARD = 500
+BEST_REWARD = 1200
 
 class Car:
     #LOOK INTO UPDATE X CODES --> UPDATE LANE --> ROAD.PY
@@ -41,6 +45,53 @@ class Car:
         self.numer = 0  #P(lanechange) = numer / denumer 2020
         self.denumer = 0 #SAS 2020
         self.reward = 0 #SAS 2020   
+    
+    def bare_bones_lane_change(self,act):
+        self.prevPos = self.pos
+        if self.vtype == 1: #vehicle is HV 
+            Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
+            self.updateLaneLogic()
+            return self.pos   
+        else:  #vehicle is agent
+            return self.agentLaneChange(act)
+    
+    def bareBonesAgentLaneChange(self,act):
+    """
+    if action results in agent moving to an occupied lane ->  end episode and  high penalty
+    if action leads to empty block and safe for moving -> good reward
+    if action leads to safety and better v_potential -> highest reward
+    constraint around boundaries
+    """
+         if act == 1:  #lane change up
+            self.pos = self.pos[0], max(0,self.pos[1]-1)  
+            #if couldn't go up no reward
+        elif act == 2:  #lane change down
+            self.pos = self.pos[0], min(2,self.pos[1]+2)
+            #if couldn't go down no reward
+        else: #no lane change and not safe to change lane
+            self.pos = self.pos[0], self.pos[1]
+            #if lane change wasn't possible and agent decided to not change lane give good reward
+            #if lane change was possible but this gives best v_gain -> highest reward
+        self.bareBonesAllocateReward(self.pos, act) 
+        return self.pos
+  
+    def bareBonesAllocateReward(self, pos, act):
+        #provision for looping 
+        #if new position leads to occupied lane
+            #high penalty
+            #end episode
+        #if new position leads to same position on the boundaries but willing to change 
+            #no reward
+        #if new position leads to empty block and safe 
+            #if not better v_gain
+                #good reward
+            #if better v_gain
+                #best reward
+        #if stay at lane and lane change not possible
+            #good reward
+        #if stay at lane and lane change possible and best v_gain at same lane
+            #highest reward
+    
 
     #pos tuple for agent to state
     def pos2state(self):
@@ -51,13 +102,13 @@ class Car:
 
     def qUpdateLane(self,act):
         self.prevPos = self.pos
-        if self.vtype == 1: 
+        if self.vtype == 1: #vehicle is HV 
             Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
             self.updateLaneLogic()
             return self.pos   
-        else:
+        else:  #vehicle is agent
             return self.agentLaneChange(act)
- 
+     
     #lane change decision to action convert
     #action to lane change decision
     #reward allocation based on lane changes

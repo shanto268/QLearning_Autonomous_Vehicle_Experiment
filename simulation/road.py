@@ -128,6 +128,15 @@ class Road:
                             self.freqAV = self.numer / self.denom
 
         self.flipLanes()            
+    
+    """
+    changes needed:
+        new termination condition
+        new function needed for reward allocation in car.py
+        new function needed for penalty allocation in car.py
+        new logic functions dor car dynamics needed in car.py
+        change state space to only neighboring agent cells
+    """
 
     def step(self, act):
         self.speedLimits.update()   
@@ -602,7 +611,9 @@ class Road:
             for entity in lane:
                 if entity != None and entity.vtype == 2:
                         return entity.terminate
-        
+    
+    #new termination function required. Need to add condition to end simulation if runs into a car
+
     def flow(self):
         self.vcount += 1 
      #   return self.vcount

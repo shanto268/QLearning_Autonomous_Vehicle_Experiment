@@ -112,8 +112,12 @@ action is passed as input to the function guiding the agent's lane change dynami
     if action results in agent moving to an occupied lane ->  end episode and  high penalty
     if action leads to empty block and safe for moving -> good reward
     if action leads to safety and better v_potential -> highest reward
+    if action leads to not changing lane and lane change was not possible -> good reward
 
-finalRewardForEpisode = aggregate_rewards - timestepsFor10cycles
+for each cycle completed, c, record time taken, t.
+        rewards += constant * ( cycle_distance / t)
+        -> this would incentivize agent to increase its average speed more
+        -> this would also make sure that it completes more cycles
 ```
 
 ## Customization

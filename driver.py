@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 3
+num_episodes = 15
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99

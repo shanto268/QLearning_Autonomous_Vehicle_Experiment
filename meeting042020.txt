@@ -30,3 +30,6 @@ plans:
 -> update the reward systems
 -> run jobs on quanah
 -> understand best training parameters
+
+Dr. Li idea:
+-> if agent is playing a game only the neighboring cells matter (smaller state space) -> paper: competition between individual and collective dynamics 

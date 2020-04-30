@@ -136,6 +136,7 @@ class Road:
         new function needed for penalty allocation in car.py
         new logic functions dor car dynamics needed in car.py
         change state space to only neighboring agent cells
+        need to send time to complete a cycle from step
     """
 
     def step(self, act):

@@ -54583,3 +54583,3402 @@ End of simulation 2020-05-01 12:44:36
 
 Simulation took 9.860952516396841 minutes
 **************************************************
+**************************************************
+New simulation started at: 2020-05-01 13:15:08
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5
+step : 0
+rewards: -1000
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 0
+rewards: -1000
+episode 10
+step : 0
+rewards: -1000
+episode 11
+step : 0
+rewards: -1000
+episode 12
+step : 0
+rewards: -1000
+episode 13
+step : 0
+rewards: -1000
+episode 14
+step : 0
+rewards: -1000
+episode 15
+step : 0
+rewards: -1000
+episode 16
+step : 0
+rewards: -1000
+episode 17
+step : 0
+rewards: -1000
+episode 18
+step : 0
+rewards: -1000
+episode 19
+step : 0
+rewards: -1000
+episode 20
+step : 0
+rewards: -1000
+episode 21
+step : 0
+rewards: -1000
+episode 22
+step : 0
+rewards: -1000
+episode 23
+step : 0
+rewards: -1000
+episode 24
+step : 0
+rewards: -1000
+episode 25
+step : 0
+rewards: -1000
+episode 26
+step : 0
+rewards: -1000
+episode 27
+step : 0
+rewards: -1000
+episode 28
+step : 0
+rewards: -1000
+episode 29
+step : 0
+rewards: -1000
+episode 30
+step : 0
+rewards: -1000
+episode 31
+step : 0
+rewards: -1000
+episode 32
+step : 0
+rewards: -1000
+episode 33
+step : 0
+rewards: -1000
+episode 34
+step : 0
+rewards: -1000
+episode 35
+step : 0
+rewards: -1000
+episode 36
+step : 0
+rewards: -1000
+episode 37
+step : 0
+rewards: -1000
+episode 38
+step : 0
+rewards: -1000
+episode 39
+step : 0
+rewards: -1000
+episode 40
+step : 0
+rewards: -1000
+episode 41
+step : 0
+rewards: -1000
+episode 42
+step : 0
+rewards: -1000
+episode 43
+step : 0
+rewards: -1000
+episode 44
+step : 0
+rewards: -1000
+episode 45
+step : 0
+rewards: -1000
+episode 46
+step : 0
+rewards: -1000
+episode 47
+step : 0
+rewards: -1000
+episode 48
+step : 0
+rewards: -1000
+episode 49
+step : 0
+rewards: -1000
+episode 50
+step : 0
+rewards: -1000
+episode 51
+step : 0
+rewards: -1000
+episode 52
+step : 0
+rewards: -1000
+episode 53
+step : 0
+rewards: -1000
+episode 54
+step : 0
+rewards: -1000
+episode 55
+step : 0
+rewards: -1000
+episode 56
+step : 0
+rewards: -1000
+episode 57
+step : 0
+rewards: -1000
+episode 58
+step : 0
+rewards: -1000
+episode 59
+step : 0
+rewards: -1000
+episode 60
+step : 0
+rewards: -1000
+episode 61
+step : 0
+rewards: -1000
+episode 62
+step : 0
+rewards: -1000
+episode 63
+step : 0
+rewards: -1000
+episode 64
+step : 0
+rewards: -1000
+episode 65
+step : 0
+rewards: -1000
+episode 66
+step : 0
+rewards: -1000
+episode 67
+step : 0
+rewards: -1000
+episode 68
+step : 0
+rewards: -1000
+episode 69
+step : 0
+rewards: -1000
+episode 70
+step : 0
+rewards: -1000
+episode 71
+step : 0
+rewards: -1000
+episode 72
+step : 0
+rewards: -1000
+episode 73
+step : 0
+rewards: -1000
+episode 74
+step : 0
+rewards: -1000
+episode 75
+step : 0
+rewards: -1000
+episode 76
+step : 0
+rewards: -1000
+episode 77
+step : 0
+rewards: -1000
+episode 78
+step : 0
+rewards: -1000
+episode 79
+step : 0
+rewards: -1000
+episode 80
+step : 0
+rewards: -1000
+episode 81
+step : 0
+rewards: -1000
+episode 82
+step : 0
+rewards: -1000
+episode 83
+step : 0
+rewards: -1000
+episode 84
+step : 0
+rewards: -1000
+episode 85
+step : 0
+rewards: -1000
+episode 86
+step : 0
+rewards: -1000
+episode 87
+step : 0
+rewards: -1000
+episode 88
+step : 0
+rewards: -1000
+episode 89
+step : 0
+rewards: -1000
+episode 90
+step : 0
+rewards: -1000
+episode 91
+step : 0
+rewards: -1000
+episode 92
+step : 0
+rewards: -1000
+episode 93
+step : 0
+rewards: -1000
+episode 94
+step : 0
+rewards: -1000
+episode 95
+step : 0
+rewards: -1000
+episode 96
+step : 0
+rewards: -1000
+episode 97
+step : 0
+rewards: -1000
+episode 98
+step : 0
+rewards: -1000
+episode 99
+step : 0
+rewards: -1000
+episode 100
+step : 0
+rewards: -1000
+episode 101
+step : 0
+rewards: -1000
+episode 102
+step : 0
+rewards: -1000
+episode 103
+step : 0
+rewards: -1000
+episode 104
+step : 0
+rewards: -1000
+episode 105
+step : 0
+rewards: -1000
+episode 106
+step : 0
+rewards: -1000
+episode 107
+step : 0
+rewards: -1000
+episode 108
+step : 0
+rewards: -1000
+episode 109
+step : 0
+rewards: -1000
+episode 110
+step : 0
+rewards: -1000
+episode 111
+step : 0
+rewards: -1000
+episode 112
+step : 0
+rewards: -1000
+episode 113
+step : 0
+rewards: -1000
+episode 114
+step : 0
+rewards: -1000
+episode 115
+step : 0
+rewards: -1000
+episode 116
+step : 0
+rewards: -1000
+episode 117
+step : 0
+rewards: -1000
+episode 118
+step : 0
+rewards: -1000
+episode 119
+step : 0
+rewards: -1000
+episode 120
+step : 0
+rewards: -1000
+episode 121
+step : 0
+rewards: -1000
+episode 122
+step : 0
+rewards: -1000
+episode 123
+step : 0
+rewards: -1000
+episode 124
+step : 0
+rewards: -1000
+episode 125
+step : 0
+rewards: -1000
+episode 126
+step : 0
+rewards: -1000
+episode 127
+step : 0
+rewards: -1000
+episode 128
+step : 0
+rewards: -1000
+episode 129
+step : 0
+rewards: -1000
+episode 130
+step : 0
+rewards: -1000
+episode 131
+step : 0
+rewards: -1000
+episode 132
+step : 0
+rewards: -1000
+episode 133
+step : 0
+rewards: -1000
+episode 134
+step : 0
+rewards: -1000
+episode 135
+step : 0
+rewards: -1000
+episode 136
+step : 0
+rewards: -1000
+episode 137
+step : 0
+rewards: -1000
+episode 138
+step : 0
+rewards: -1000
+episode 139
+step : 0
+rewards: -1000
+episode 140
+step : 0
+rewards: -1000
+episode 141
+step : 0
+rewards: -1000
+episode 142
+step : 0
+rewards: -1000
+episode 143
+step : 0
+rewards: -1000
+episode 144
+step : 0
+rewards: -1000
+episode 145
+step : 0
+rewards: -1000
+episode 146
+step : 0
+rewards: -1000
+episode 147
+step : 0
+rewards: -1000
+episode 148
+step : 0
+rewards: -1000
+episode 149
+step : 0
+rewards: -1000
+episode 150
+step : 0
+rewards: -1000
+episode 151
+step : 0
+rewards: -1000
+episode 152
+step : 0
+rewards: -1000
+episode 153
+step : 0
+rewards: -1000
+episode 154
+step : 0
+rewards: -1000
+episode 155
+step : 0
+rewards: -1000
+episode 156
+step : 0
+rewards: -1000
+episode 157
+step : 0
+rewards: -1000
+episode 158
+step : 0
+rewards: -1000
+episode 159
+step : 0
+rewards: -1000
+episode 160
+step : 0
+rewards: -1000
+episode 161
+step : 0
+rewards: -1000
+episode 162
+step : 0
+rewards: -1000
+episode 163
+step : 0
+rewards: -1000
+episode 164
+step : 0
+rewards: -1000
+episode 165
+step : 0
+rewards: -1000
+episode 166
+step : 0
+rewards: -1000
+episode 167
+step : 0
+rewards: -1000
+episode 168
+step : 0
+rewards: -1000
+episode 169
+step : 0
+rewards: -1000
+episode 170
+step : 0
+rewards: -1000
+episode 171
+step : 0
+rewards: -1000
+episode 172
+step : 0
+rewards: -1000
+episode 173
+step : 0
+rewards: -1000
+episode 174
+step : 0
+rewards: -1000
+episode 175
+step : 0
+rewards: -1000
+episode 176
+step : 0
+rewards: -1000
+episode 177
+step : 0
+rewards: -1000
+episode 178
+step : 0
+rewards: -1000
+episode 179
+step : 0
+rewards: -1000
+episode 180
+step : 0
+rewards: -1000
+episode 181
+step : 0
+rewards: -1000
+episode 182
+step : 0
+rewards: -1000
+episode 183
+step : 0
+rewards: -1000
+episode 184
+step : 0
+rewards: -1000
+episode 185
+step : 0
+rewards: -1000
+episode 186
+step : 0
+rewards: -1000
+episode 187
+step : 0
+rewards: -1000
+episode 188
+step : 0
+rewards: -1000
+episode 189
+step : 0
+rewards: -1000
+episode 190
+step : 0
+rewards: -1000
+episode 191
+step : 0
+rewards: -1000
+episode 192
+step : 0
+rewards: -1000
+episode 193
+step : 0
+rewards: -1000
+episode 194
+step : 0
+rewards: -1000
+episode 195
+step : 0
+rewards: -1000
+episode 196
+step : 0
+rewards: -1000
+episode 197
+step : 0
+rewards: -1000
+episode 198
+step : 0
+rewards: -1000
+episode 199
+step : 0
+rewards: -1000
+episode 200
+step : 0
+rewards: -1000
+episode 201
+step : 0
+rewards: -1000
+episode 202
+step : 0
+rewards: -1000
+episode 203
+step : 0
+rewards: -1000
+episode 204
+step : 0
+rewards: -1000
+episode 205
+step : 0
+rewards: -1000
+episode 206
+step : 0
+rewards: -1000
+episode 207
+step : 0
+rewards: -1000
+episode 208
+step : 0
+rewards: -1000
+episode 209
+step : 0
+rewards: -1000
+episode 210
+step : 0
+rewards: -1000
+episode 211
+step : 0
+rewards: -1000
+episode 212
+step : 0
+rewards: -1000
+episode 213
+step : 0
+rewards: -1000
+episode 214
+step : 0
+rewards: -1000
+episode 215
+step : 0
+rewards: -1000
+episode 216
+step : 0
+rewards: -1000
+episode 217
+step : 0
+rewards: -1000
+episode 218
+step : 0
+rewards: -1000
+episode 219
+step : 0
+rewards: -1000
+episode 220
+step : 0
+rewards: -1000
+episode 221
+step : 0
+rewards: -1000
+episode 222
+step : 0
+rewards: -1000
+episode 223
+step : 0
+rewards: -1000
+episode 224
+step : 0
+rewards: -1000
+episode 225
+step : 0
+rewards: -1000
+episode 226
+step : 0
+rewards: -1000
+episode 227
+step : 0
+rewards: -1000
+episode 228
+step : 0
+rewards: -1000
+episode 229
+step : 0
+rewards: -1000
+episode 230
+step : 0
+rewards: -1000
+episode 231
+step : 0
+rewards: -1000
+episode 232
+step : 0
+rewards: -1000
+episode 233
+step : 0
+rewards: -1000
+episode 234
+step : 0
+rewards: -1000
+episode 235
+step : 0
+rewards: -1000
+episode 236
+step : 0
+rewards: -1000
+episode 237
+step : 0
+rewards: -1000
+episode 238
+step : 0
+rewards: -1000
+episode 239
+step : 0
+rewards: -1000
+episode 240
+step : 0
+rewards: -1000
+episode 241
+step : 0
+rewards: -1000
+episode 242
+step : 0
+rewards: -1000
+episode 243
+step : 0
+rewards: -1000
+episode 244
+step : 0
+rewards: -1000
+episode 245
+step : 0
+rewards: -1000
+episode 246
+step : 0
+rewards: -1000
+episode 247
+step : 0
+rewards: -1000
+episode 248
+step : 0
+rewards: -1000
+episode 249
+step : 0
+rewards: -1000
+episode 250
+step : 0
+rewards: -1000
+episode 251
+step : 0
+rewards: -1000
+episode 252
+step : 0
+rewards: -1000
+episode 253
+step : 0
+rewards: -1000
+episode 254
+step : 0
+rewards: -1000
+episode 255
+step : 0
+rewards: -1000
+episode 256
+step : 0
+rewards: -1000
+episode 257
+step : 0
+rewards: -1000
+episode 258
+step : 0
+rewards: -1000
+episode 259
+step : 8
+rewards: 4392
+episode 260
+step : 8
+rewards: 4392
+episode 261
+step : 8
+rewards: 4392
+episode 262
+step : 8
+rewards: 4392
+episode 263
+step : 8
+rewards: 4392
+episode 264
+step : 8
+rewards: 4392
+episode 265
+step : 8
+rewards: 4392
+episode 266
+step : 8
+rewards: 4392
+episode 267
+step : 8
+rewards: 4392
+episode 268
+step : 8
+rewards: 4392
+episode 269
+step : 8
+rewards: 4392
+episode 270
+step : 8
+rewards: 4392
+episode 271
+step : 8
+rewards: 4392
+episode 272
+step : 8
+rewards: 4392
+episode 273
+step : 8
+rewards: 4392
+episode 274
+step : 8
+rewards: 4392
+episode 275
+step : 8
+rewards: 4392
+episode 276
+step : 8
+rewards: 4392
+episode 277
+step : 8
+rewards: 4392
+episode 278
+step : 8
+rewards: 4392
+episode 279
+step : 8
+rewards: 4392
+episode 280
+step : 8
+rewards: 4392
+episode 281
+step : 8
+rewards: 4392
+episode 282
+step : 8
+rewards: 4392
+episode 283
+step : 8
+rewards: 4392
+episode 284
+step : 8
+rewards: 4392
+episode 285
+step : 8
+rewards: 4392
+episode 286
+step : 8
+rewards: 4392
+episode 287
+step : 8
+rewards: 4392
+episode 288
+step : 8
+rewards: 4392
+episode 289
+step : 8
+rewards: 4392
+episode 290
+step : 8
+rewards: 4392
+episode 291
+step : 8
+rewards: 4392
+episode 292
+step : 8
+rewards: 4392
+episode 293
+step : 8
+rewards: 4392
+episode 294
+step : 8
+rewards: 4392
+episode 295
+step : 8
+rewards: 4392
+episode 296
+step : 8
+rewards: 4392
+episode 297
+step : 8
+rewards: 4392
+episode 298
+step : 8
+rewards: 4392
+episode 299
+step : 8
+rewards: 4392
+
+The Qtable for this simulation is given below:
+[[    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [ 4628.67304071     0.         -1000.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [ 1642.45396114     0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [  493.34860268     0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.          -986.69720535     0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]]
+
+End of simulation 2020-05-01 13:15:15
+
+Simulation took 0.11122488180796306 minutes
+**************************************************
+**************************************************
+New simulation started at: 2020-05-01 13:17:05
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5
+step : 0
+rewards: -1000
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 0
+rewards: -1000
+episode 10
+step : 0
+rewards: -1000
+episode 11
+step : 0
+rewards: -1000
+episode 12
+step : 0
+rewards: -1000
+episode 13
+step : 0
+rewards: -1000
+episode 14
+step : 0
+rewards: -1000
+episode 15
+step : 0
+rewards: -1000
+episode 16
+step : 0
+rewards: -1000
+episode 17
+step : 0
+rewards: -1000
+episode 18
+step : 0
+rewards: -1000
+episode 19
+step : 0
+rewards: -1000
+episode 20
+step : 0
+rewards: -1000
+episode 21
+step : 0
+rewards: -1000
+episode 22
+step : 0
+rewards: -1000
+episode 23
+step : 0
+rewards: -1000
+episode 24
+step : 0
+rewards: -1000
+episode 25
+step : 0
+rewards: -1000
+episode 26
+step : 0
+rewards: -1000
+episode 27
+step : 0
+rewards: -1000
+episode 28
+step : 0
+rewards: -1000
+episode 29
+step : 0
+rewards: -1000
+episode 30
+step : 0
+rewards: -1000
+episode 31
+step : 0
+rewards: -1000
+episode 32
+step : 0
+rewards: -1000
+episode 33
+step : 0
+rewards: -1000
+episode 34
+step : 0
+rewards: -1000
+episode 35
+step : 0
+rewards: -1000
+episode 36
+step : 0
+rewards: -1000
+episode 37
+step : 0
+rewards: -1000
+episode 38
+step : 0
+rewards: -1000
+episode 39
+step : 0
+rewards: -1000
+episode 40
+step : 0
+rewards: -1000
+episode 41
+step : 0
+rewards: -1000
+episode 42
+step : 0
+rewards: -1000
+episode 43
+step : 0
+rewards: -1000
+episode 44
+step : 0
+rewards: -1000
+episode 45
+step : 0
+rewards: -1000
+episode 46
+step : 0
+rewards: -1000
+episode 47
+step : 0
+rewards: -1000
+episode 48
+step : 0
+rewards: -1000
+episode 49
+step : 0
+rewards: -1000
+episode 50
+step : 0
+rewards: -1000
+episode 51
+step : 0
+rewards: -1000
+episode 52
+step : 0
+rewards: -1000
+episode 53
+step : 0
+rewards: -1000
+episode 54
+step : 0
+rewards: -1000
+episode 55
+step : 0
+rewards: -1000
+episode 56
+step : 0
+rewards: -1000
+episode 57
+step : 0
+rewards: -1000
+episode 58
+step : 0
+rewards: -1000
+episode 59
+step : 0
+rewards: -1000
+episode 60
+step : 0
+rewards: -1000
+episode 61
+step : 0
+rewards: -1000
+episode 62
+step : 0
+rewards: -1000
+episode 63
+step : 0
+rewards: -1000
+episode 64
+step : 0
+rewards: -1000
+episode 65
+step : 0
+rewards: -1000
+episode 66
+step : 0
+rewards: -1000
+episode 67
+step : 0
+rewards: -1000
+episode 68
+step : 0
+rewards: -1000
+episode 69
+step : 0
+rewards: -1000
+episode 70
+step : 0
+rewards: -1000
+episode 71
+step : 0
+rewards: -1000
+episode 72
+step : 0
+rewards: -1000
+episode 73
+step : 0
+rewards: -1000
+episode 74
+step : 0
+rewards: -1000
+episode 75
+step : 0
+rewards: -1000
+episode 76
+step : 0
+rewards: -1000
+episode 77
+step : 0
+rewards: -1000
+episode 78
+step : 0
+rewards: -1000
+episode 79
+step : 0
+rewards: -1000
+episode 80
+step : 0
+rewards: -1000
+episode 81
+step : 0
+rewards: -1000
+episode 82
+step : 0
+rewards: -1000
+episode 83
+step : 0
+rewards: -1000
+episode 84
+step : 0
+rewards: -1000
+episode 85
+step : 0
+rewards: -1000
+episode 86
+step : 0
+rewards: -1000
+episode 87
+step : 0
+rewards: -1000
+episode 88
+step : 0
+rewards: -1000
+episode 89
+step : 0
+rewards: -1000
+episode 90
+step : 0
+rewards: -1000
+episode 91
+step : 0
+rewards: -1000
+episode 92
+step : 0
+rewards: -1000
+episode 93
+step : 0
+rewards: -1000
+episode 94
+step : 0
+rewards: -1000
+episode 95
+step : 0
+rewards: -1000
+episode 96
+step : 0
+rewards: -1000
+episode 97
+step : 0
+rewards: -1000
+episode 98
+step : 0
+rewards: -1000
+episode 99
+step : 0
+rewards: -1000
+episode 100
+step : 0
+rewards: -1000
+episode 101
+step : 0
+rewards: -1000
+episode 102
+step : 0
+rewards: -1000
+episode 103
+step : 0
+rewards: -1000
+episode 104
+step : 0
+rewards: -1000
+episode 105
+step : 0
+rewards: -1000
+episode 106
+step : 0
+rewards: -1000
+episode 107
+step : 0
+rewards: -1000
+episode 108
+step : 0
+rewards: -1000
+episode 109
+step : 0
+rewards: -1000
+episode 110
+step : 0
+rewards: -1000
+episode 111
+step : 0
+rewards: -1000
+episode 112
+step : 0
+rewards: -1000
+episode 113
+step : 0
+rewards: -1000
+episode 114
+step : 0
+rewards: -1000
+episode 115
+step : 0
+rewards: -1000
+episode 116
+step : 0
+rewards: -1000
+episode 117
+step : 0
+rewards: -1000
+episode 118
+step : 0
+rewards: -1000
+episode 119
+step : 0
+rewards: -1000
+episode 120
+step : 0
+rewards: -1000
+episode 121
+step : 0
+rewards: -1000
+episode 122
+step : 0
+rewards: -1000
+episode 123
+step : 0
+rewards: -1000
+episode 124
+step : 0
+rewards: -1000
+episode 125
+step : 0
+rewards: -1000
+episode 126
+step : 0
+rewards: -1000
+episode 127
+step : 0
+rewards: -1000
+episode 128
+step : 0
+rewards: -1000
+episode 129
+step : 0
+rewards: -1000
+episode 130
+step : 0
+rewards: -1000
+episode 131
+step : 0
+rewards: -1000
+episode 132
+step : 0
+rewards: -1000
+episode 133
+step : 0
+rewards: -1000
+episode 134
+step : 0
+rewards: -1000
+episode 135
+step : 0
+rewards: -1000
+episode 136
+step : 0
+rewards: -1000
+episode 137
+step : 0
+rewards: -1000
+episode 138
+step : 0
+rewards: -1000
+episode 139
+step : 0
+rewards: -1000
+episode 140
+step : 0
+rewards: -1000
+episode 141
+step : 0
+rewards: -1000
+episode 142
+step : 0
+rewards: -1000
+episode 143
+step : 0
+rewards: -1000
+episode 144
+step : 0
+rewards: -1000
+episode 145
+step : 0
+rewards: -1000
+episode 146
+step : 0
+rewards: -1000
+episode 147
+step : 0
+rewards: -1000
+episode 148
+step : 0
+rewards: -1000
+episode 149
+step : 0
+rewards: -1000
+episode 150
+step : 0
+rewards: -1000
+episode 151
+step : 0
+rewards: -1000
+episode 152
+step : 0
+rewards: -1000
+episode 153
+step : 0
+rewards: -1000
+episode 154
+step : 0
+rewards: -1000
+episode 155
+step : 0
+rewards: -1000
+episode 156
+step : 0
+rewards: -1000
+episode 157
+step : 0
+rewards: -1000
+episode 158
+step : 0
+rewards: -1000
+episode 159
+step : 0
+rewards: -1000
+episode 160
+step : 0
+rewards: -1000
+episode 161
+step : 0
+rewards: -1000
+episode 162
+step : 0
+rewards: -1000
+episode 163
+step : 0
+rewards: -1000
+episode 164
+step : 0
+rewards: -1000
+episode 165
+step : 0
+rewards: -1000
+episode 166
+step : 0
+rewards: -1000
+episode 167
+step : 0
+rewards: -1000
+episode 168
+step : 0
+rewards: -1000
+episode 169
+step : 0
+rewards: -1000
+episode 170
+step : 0
+rewards: -1000
+episode 171
+step : 0
+rewards: -1000
+episode 172
+step : 0
+rewards: -1000
+episode 173
+step : 0
+rewards: -1000
+episode 174
+step : 0
+rewards: -1000
+episode 175
+step : 0
+rewards: -1000
+episode 176
+step : 0
+rewards: -1000
+episode 177
+step : 0
+rewards: -1000
+episode 178
+step : 0
+rewards: -1000
+episode 179
+step : 0
+rewards: -1000
+episode 180
+step : 0
+rewards: -1000
+episode 181
+step : 0
+rewards: -1000
+episode 182
+step : 0
+rewards: -1000
+episode 183
+step : 0
+rewards: -1000
+episode 184
+step : 0
+rewards: -1000
+episode 185
+step : 0
+rewards: -1000
+episode 186
+step : 0
+rewards: -1000
+episode 187
+step : 0
+rewards: -1000
+episode 188
+step : 0
+rewards: -1000
+episode 189
+step : 0
+rewards: -1000
+episode 190
+step : 0
+rewards: -1000
+episode 191
+step : 0
+rewards: -1000
+episode 192
+step : 0
+rewards: -1000
+episode 193
+step : 0
+rewards: -1000
+episode 194
+step : 0
+rewards: -1000
+episode 195
+step : 0
+rewards: -1000
+episode 196
+step : 0
+rewards: -1000
+episode 197
+step : 0
+rewards: -1000
+episode 198
+step : 0
+rewards: -1000
+episode 199
+step : 0
+rewards: -1000
+episode 200
+step : 0
+rewards: -1000
+episode 201
+step : 0
+rewards: -1000
+episode 202
+step : 0
+rewards: -1000
+episode 203
+step : 0
+rewards: -1000
+episode 204
+step : 0
+rewards: -1000
+episode 205
+step : 0
+rewards: -1000
+episode 206
+step : 0
+rewards: -1000
+episode 207
+step : 0
+rewards: -1000
+episode 208
+step : 0
+rewards: -1000
+episode 209
+step : 0
+rewards: -1000
+episode 210
+step : 0
+rewards: -1000
+episode 211
+step : 0
+rewards: -1000
+episode 212
+step : 0
+rewards: -1000
+episode 213
+step : 0
+rewards: -1000
+episode 214
+step : 0
+rewards: -1000
+episode 215
+step : 0
+rewards: -1000
+episode 216
+step : 0
+rewards: -1000
+episode 217
+step : 0
+rewards: -1000
+episode 218
+step : 0
+rewards: -1000
+episode 219
+step : 0
+rewards: -1000
+episode 220
+step : 0
+rewards: -1000
+episode 221
+step : 0
+rewards: -1000
+episode 222
+step : 0
+rewards: -1000
+episode 223
+step : 0
+rewards: -1000
+episode 224
+step : 0
+rewards: -1000
+episode 225
+step : 0
+rewards: -1000
+episode 226
+step : 0
+rewards: -1000
+episode 227
+step : 0
+rewards: -1000
+episode 228
+step : 0
+rewards: -1000
+episode 229
+step : 0
+rewards: -1000
+episode 230
+step : 0
+rewards: -1000
+episode 231
+step : 0
+rewards: -1000
+episode 232
+step : 0
+rewards: -1000
+episode 233
+step : 0
+rewards: -1000
+episode 234
+step : 0
+rewards: -1000
+episode 235
+step : 0
+rewards: -1000
+episode 236
+step : 0
+rewards: -1000
+episode 237
+step : 0
+rewards: -1000
+episode 238
+step : 0
+rewards: -1000
+episode 239
+step : 0
+rewards: -1000
+episode 240
+step : 0
+rewards: -1000
+episode 241
+step : 0
+rewards: -1000
+episode 242
+step : 0
+rewards: -1000
+episode 243
+step : 0
+rewards: -1000
+episode 244
+step : 0
+rewards: -1000
+episode 245
+step : 0
+rewards: -1000
+episode 246
+step : 0
+rewards: -1000
+episode 247
+step : 0
+rewards: -1000
+episode 248
+step : 0
+rewards: -1000
+episode 249
+step : 0
+rewards: -1000
+episode 250
+step : 0
+rewards: -1000
+episode 251
+step : 0
+rewards: -1000
+episode 252
+step : 0
+rewards: -1000
+episode 253
+step : 0
+rewards: -1000
+episode 254
+step : 0
+rewards: -1000
+episode 255
+step : 0
+rewards: -1000
+episode 256
+step : 0
+rewards: -1000
+episode 257
+step : 0
+rewards: -1000
+episode 258
+step : 0
+rewards: -1000
+episode 259
+step : 8
+rewards: 4392
+episode 260
+step : 8
+rewards: 4392
+episode 261
+step : 8
+rewards: 4392
+episode 262
+step : 8
+rewards: 4392
+episode 263
+step : 8
+rewards: 4392
+episode 264
+step : 8
+rewards: 4392
+episode 265
+step : 8
+rewards: 4392
+episode 266
+step : 8
+rewards: 4392
+episode 267
+step : 8
+rewards: 4392
+episode 268
+step : 8
+rewards: 4392
+episode 269
+step : 8
+rewards: 4392
+episode 270
+step : 8
+rewards: 4392
+episode 271
+step : 8
+rewards: 4392
+episode 272
+step : 8
+rewards: 4392
+episode 273
+step : 8
+rewards: 4392
+episode 274
+step : 8
+rewards: 4392
+episode 275
+step : 8
+rewards: 4392
+episode 276
+step : 8
+rewards: 4392
+episode 277
+step : 8
+rewards: 4392
+episode 278
+step : 8
+rewards: 4392
+episode 279
+step : 8
+rewards: 4392
+episode 280
+step : 8
+rewards: 4392
+episode 281
+step : 8
+rewards: 4392
+episode 282
+step : 8
+rewards: 4392
+episode 283
+step : 8
+rewards: 4392
+episode 284
+step : 8
+rewards: 4392
+episode 285
+step : 8
+rewards: 4392
+episode 286
+step : 8
+rewards: 4392
+episode 287
+step : 8
+rewards: 4392
+episode 288
+step : 8
+rewards: 4392
+episode 289
+step : 8
+rewards: 4392
+episode 290
+step : 8
+rewards: 4392
+episode 291
+step : 8
+rewards: 4392
+episode 292
+step : 8
+rewards: 4392
+episode 293
+step : 8
+rewards: 4392
+episode 294
+step : 8
+rewards: 4392
+episode 295
+step : 8
+rewards: 4392
+episode 296
+step : 8
+rewards: 4392
+episode 297
+step : 8
+rewards: 4392
+episode 298
+step : 8
+rewards: 4392
+episode 299
+step : 8
+rewards: 4392
+
+The Qtable for this simulation is given below:
+[[    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [ 4628.67304071     0.         -1000.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [ 1642.45396114     0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [  493.34860268     0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.          -986.69720535     0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]
+ [    0.             0.             0.        ]]
+
+End of simulation 2020-05-01 13:17:14
+
+Simulation took 0.15002819697062175 minutes
+**************************************************
+**************************************************
+New simulation started at: 2020-05-01 13:24:13
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5
+step : 0
+rewards: -1000
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 0
+rewards: -1000
+episode 10
+step : 0
+rewards: -1000
+episode 11
+step : 0
+rewards: -1000
+episode 12
+step : 0
+rewards: -1000
+episode 13
+step : 0
+rewards: -1000
+episode 14
+step : 0
+rewards: -1000
+episode 15
+step : 0
+rewards: -1000
+episode 16
+step : 0
+rewards: -1000
+episode 17
+step : 0
+rewards: -1000
+episode 18
+step : 0
+rewards: -1000
+episode 19
+step : 0
+rewards: -1000
+episode 20
+step : 0
+rewards: -1000
+episode 21
+step : 0
+rewards: -1000
+episode 22
+step : 0
+rewards: -1000
+episode 23
+step : 0
+rewards: -1000
+episode 24
+step : 0
+rewards: -1000
+episode 25
+step : 0
+rewards: -1000
+episode 26
+step : 0
+rewards: -1000
+episode 27
+step : 0
+rewards: -1000
+episode 28
+step : 0
+rewards: -1000
+episode 29
+step : 0
+rewards: -1000
+episode 30
+step : 0
+rewards: -1000
+episode 31
+step : 0
+rewards: -1000
+episode 32
+step : 0
+rewards: -1000
+episode 33
+step : 0
+rewards: -1000
+episode 34
+step : 0
+rewards: -1000
+episode 35
+step : 0
+rewards: -1000
+episode 36
+step : 0
+rewards: -1000
+episode 37
+step : 0
+rewards: -1000
+episode 38
+step : 0
+rewards: -1000
+episode 39
+step : 0
+rewards: -1000
+episode 40
+step : 0
+rewards: -1000
+episode 41
+step : 0
+rewards: -1000
+episode 42
+step : 0
+rewards: -1000
+episode 43
+step : 0
+rewards: -1000
+episode 44
+step : 0
+rewards: -1000
+episode 45
+step : 0
+rewards: -1000
+episode 46
+step : 0
+rewards: -1000
+episode 47
+step : 0
+rewards: -1000
+episode 48
+step : 0
+rewards: -1000
+episode 49
+step : 0
+rewards: -1000
+episode 50
+step : 0
+rewards: -1000
+episode 51
+step : 0
+rewards: -1000
+episode 52
+step : 0
+rewards: -1000
+episode 53
+step : 0
+rewards: -1000
+episode 54
+step : 0
+rewards: -1000
+episode 55
+step : 0
+rewards: -1000
+episode 56
+step : 0
+rewards: -1000
+episode 57
+step : 0
+rewards: -1000
+episode 58
+step : 0
+rewards: -1000
+episode 59
+step : 0
+rewards: -1000
+episode 60
+step : 0
+rewards: -1000
+episode 61
+step : 0
+rewards: -1000
+episode 62
+step : 0
+rewards: -1000
+episode 63
+step : 0
+rewards: -1000
+episode 64
+step : 0
+rewards: -1000
+episode 65
+step : 0
+rewards: -1000
+episode 66
+step : 0
+rewards: -1000
+episode 67
+step : 0
+rewards: -1000
+episode 68
+step : 0
+rewards: -1000
+episode 69
+step : 0
+rewards: -1000
+episode 70
+step : 0
+rewards: -1000
+episode 71
+step : 0
+rewards: -1000
+episode 72
+step : 0
+rewards: -1000
+episode 73
+step : 0
+rewards: -1000
+episode 74
+step : 0
+rewards: -1000
+episode 75
+step : 0
+rewards: -1000
+episode 76
+step : 0
+rewards: -1000
+episode 77
+step : 0
+rewards: -1000
+episode 78
+step : 0
+rewards: -1000
+episode 79
+step : 0
+rewards: -1000
+episode 80
+step : 0
+rewards: -1000
+episode 81
+step : 0
+rewards: -1000
+episode 82
+step : 0
+rewards: -1000
+episode 83
+step : 0
+rewards: -1000
+episode 84
+step : 0
+rewards: -1000
+episode 85
+step : 0
+rewards: -1000
+episode 86
+step : 0
+rewards: -1000
+episode 87
+step : 0
+rewards: -1000
+episode 88
+step : 0
+rewards: -1000
+episode 89
+step : 0
+rewards: -1000
+episode 90
+step : 0
+rewards: -1000
+episode 91
+step : 0
+rewards: -1000
+episode 92
+step : 0
+rewards: -1000
+episode 93
+step : 0
+rewards: -1000
+episode 94
+step : 0
+rewards: -1000
+episode 95
+step : 0
+rewards: -1000
+episode 96
+step : 0
+rewards: -1000
+episode 97
+step : 0
+rewards: -1000
+episode 98
+step : 0
+rewards: -1000
+episode 99
+step : 0
+rewards: -1000
+episode 100
+step : 0
+rewards: -1000
+episode 101
+step : 0
+rewards: -1000
+episode 102
+step : 0
+rewards: -1000
+episode 103
+step : 0
+rewards: -1000
+episode 104
+step : 0
+rewards: -1000
+episode 105
+step : 0
+rewards: -1000
+episode 106
+step : 0
+rewards: -1000
+episode 107
+step : 0
+rewards: -1000
+episode 108
+step : 0
+rewards: -1000
+episode 109
+step : 0
+rewards: -1000
+episode 110
+step : 0
+rewards: -1000
+episode 111
+step : 0
+rewards: -1000
+episode 112
+step : 0
+rewards: -1000
+episode 113
+step : 0
+rewards: -1000
+episode 114
+step : 0
+rewards: -1000
+episode 115
+step : 0
+rewards: -1000
+episode 116
+step : 0
+rewards: -1000
+episode 117
+step : 0
+rewards: -1000
+episode 118
+step : 0
+rewards: -1000
+episode 119
+step : 0
+rewards: -1000
+episode 120
+step : 0
+rewards: -1000
+episode 121
+step : 0
+rewards: -1000
+episode 122
+step : 0
+rewards: -1000
+episode 123
+step : 0
+rewards: -1000
+episode 124
+step : 0
+rewards: -1000
+episode 125
+step : 0
+rewards: -1000
+episode 126
+step : 0
+rewards: -1000
+episode 127
+step : 0
+rewards: -1000
+episode 128
+step : 0
+rewards: -1000
+episode 129
+step : 0
+rewards: -1000
+episode 130
+step : 0
+rewards: -1000
+episode 131
+step : 0
+rewards: -1000
+episode 132
+step : 0
+rewards: -1000
+episode 133
+step : 0
+rewards: -1000
+episode 134
+step : 0
+rewards: -1000
+episode 135
+step : 0
+rewards: -1000
+episode 136
+step : 0
+rewards: -1000
+episode 137
+step : 0
+rewards: -1000
+episode 138
+step : 0
+rewards: -1000
+episode 139
+step : 0
+rewards: -1000
+episode 140
+step : 0
+rewards: -1000
+episode 141
+step : 0
+rewards: -1000
+episode 142
+step : 0
+rewards: -1000
+episode 143
+step : 0
+rewards: -1000
+episode 144
+step : 0
+rewards: -1000
+episode 145
+step : 0
+rewards: -1000
+episode 146
+step : 0
+rewards: -1000
+episode 147
+step : 0
+rewards: -1000
+episode 148
+step : 0
+rewards: -1000
+episode 149
+step : 0
+rewards: -1000
+episode 150
+step : 0
+rewards: -1000
+episode 151
+step : 0
+rewards: -1000
+episode 152
+step : 0
+rewards: -1000
+episode 153
+step : 0
+rewards: -1000
+episode 154
+step : 0
+rewards: -1000
+episode 155
+step : 0
+rewards: -1000
+episode 156
+step : 0
+rewards: -1000
+episode 157
+step : 0
+rewards: -1000
+episode 158
+step : 0
+rewards: -1000
+episode 159
+step : 0
+rewards: -1000
+episode 160
+step : 0
+rewards: -1000
+episode 161
+step : 0
+rewards: -1000
+episode 162
+step : 0
+rewards: -1000
+episode 163
+step : 0
+rewards: -1000
+episode 164
+step : 0
+rewards: -1000
+episode 165
+step : 0
+rewards: -1000
+episode 166
+step : 0
+rewards: -1000
+episode 167
+step : 0
+rewards: -1000
+episode 168
+step : 0
+rewards: -1000
+episode 169
+step : 0
+rewards: -1000
+episode 170
+step : 0
+rewards: -1000
+episode 171
+step : 0
+rewards: -1000
+episode 172
+step : 0
+rewards: -1000
+episode 173
+step : 0
+rewards: -1000
+episode 174
+step : 0
+rewards: -1000
+episode 175
+step : 0
+rewards: -1000
+episode 176
+step : 0
+rewards: -1000
+episode 177
+step : 0
+rewards: -1000
+episode 178
+step : 0
+rewards: -1000
+episode 179
+step : 0
+rewards: -1000
+episode 180
+step : 0
+rewards: -1000
+episode 181
+step : 0
+rewards: -1000
+episode 182
+step : 0
+rewards: -1000
+episode 183
+step : 0
+rewards: -1000
+episode 184
+step : 0
+rewards: -1000
+episode 185
+step : 0
+rewards: -1000
+episode 186
+step : 0
+rewards: -1000
+episode 187
+step : 0
+rewards: -1000
+episode 188
+step : 0
+rewards: -1000
+episode 189
+step : 0
+rewards: -1000
+episode 190
+step : 0
+rewards: -1000
+episode 191
+step : 0
+rewards: -1000
+episode 192
+step : 0
+rewards: -1000
+episode 193
+step : 0
+rewards: -1000
+episode 194
+step : 0
+rewards: -1000
+episode 195
+step : 0
+rewards: -1000
+episode 196
+step : 0
+rewards: -1000
+episode 197
+step : 0
+rewards: -1000
+episode 198
+step : 0
+rewards: -1000
+episode 199
+step : 0
+rewards: -1000
+episode 200
+step : 0
+rewards: -1000
+episode 201
+step : 0
+rewards: -1000
+episode 202
+step : 0
+rewards: -1000
+episode 203
+step : 0
+rewards: -1000
+episode 204
+step : 0
+rewards: -1000
+episode 205
+step : 0
+rewards: -1000
+episode 206
+step : 0
+rewards: -1000
+episode 207
+step : 0
+rewards: -1000
+episode 208
+step : 0
+rewards: -1000
+episode 209
+step : 0
+rewards: -1000
+episode 210
+step : 0
+rewards: -1000
+episode 211
+step : 0
+rewards: -1000
+episode 212
+step : 0
+rewards: -1000
+episode 213
+step : 0
+rewards: -1000
+episode 214
+step : 0
+rewards: -1000
+episode 215
+step : 0
+rewards: -1000
+episode 216
+step : 0
+rewards: -1000
+episode 217
+step : 0
+rewards: -1000
+episode 218
+step : 0
+rewards: -1000
+episode 219
+step : 0
+rewards: -1000
+episode 220
+step : 0
+rewards: -1000
+episode 221
+step : 0
+rewards: -1000
+episode 222
+step : 0**************************************************
+New simulation started at: 2020-05-01 13:24:42
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 1
+rewards: -1001
+episode 2
+step : 1
+rewards: 199
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 1
+rewards: 199
+episode 5
+step : 2
+rewards: 698
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 1
+rewards: 199
+episode 10
+step : 1
+rewards: -1001
+episode 11
+step : 0
+rewards: -1000
+episode 12
+step : 0
+rewards: -1000
+episode 13
+step : 1
+rewards: -501
+episode 14
+step : 0
+rewards: -1000
+episode 15
+step : 0
+rewards: -1000
+episode 16
+step : 0
+rewards: -1000
+episode 17
+step : 0
+rewards: -1000
+episode 18
+step : 0
+rewards: -1000
+episode 19
+step : 0
+rewards: -1000
+episode 20
+step : 1
+rewards: -501
+episode 21
+step : 1
+rewards: 199
+episode 22
+step : 1
+rewards: -1001
+episode 23
+step : 0
+rewards: -1000
+episode 24
+step : 0
+rewards: -1000
+episode 25
+step : 0
+rewards: -1000
+episode 26
+step : 0
+rewards: -1000
+episode 27
+step : 6
+rewards: 2694
+episode 28
+step : 0
+rewards: -1000
+episode 29**************************************************
+New simulation started at: 2020-05-01 13:27:37
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 4
+rewards: 1196
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 1
+rewards: -1001
+episode 3
+step : 1
+rewards: -501
+episode 4
+step : 1
+rewards: 199
+episode 5
+step : 2
+rewards: 1398
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 2
+rewards: 698
+episode 8
+step : 0
+rewards: -1000
+episode 9**************************************************
+New simulation started at: 2020-05-01 13:27:46
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 1
+rewards: 199
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5**************************************************
+New simulation started at: 2020-05-01 13:27:48
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 2
+rewards: -2
+episode 1
+step : 1
+rewards: 199
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 1
+rewards: -1001
+episode 4
+step : 1
+rewards: -1001
+episode 5
+step : 1
+rewards: -1001
+episode 6**************************************************
+New simulation started at: 2020-05-01 13:27:49
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2**************************************************
+New simulation started at: 2020-05-01 13:27:51
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 2
+rewards: 698
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 2
+rewards: -1002
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 1
+rewards: -1001
+episode 5
+step : 3
+rewards: -1003
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 0
+rewards: -1000
+episode 10
+step : 2
+rewards: 1398
+episode 11
+step : 2
+rewards: -502
+episode 12**************************************************
+New simulation started at: 2020-05-01 13:28:57
+number of episodes: 300
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 1
+rewards: 199
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5
+step : 0
+rewards: -1000
+episode 6

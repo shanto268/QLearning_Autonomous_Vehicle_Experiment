@@ -91,7 +91,7 @@ class Car:
 
     def bareBonesAllocateReward(self, posn, act):
         self.reward = self.bbReward(posn, act) 
-       # print("self reward car ", self.reward)
+        print("self reward car ", self.reward)
         
     def SpeedGain(self, sourceLane, destLane):                           
         if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
@@ -106,7 +106,7 @@ class Car:
             return True 
    
     def bbReward(self, posn, act):
-       if (act==0):
+       if (act==0): #agent will stay in the given lane
         #   print("in 0")
            if (not self.road.possibleLaneChangeUp(posn) and not self.road.possibleLaneChangeDown(posn) ):
          #      print("no lane change possible")

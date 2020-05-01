@@ -14,6 +14,7 @@ maxFps= 2000 #default = 40 , fast = 10, nice = 500
 size = width, heigth = 1250, 500
 updateFrame = 2000 #default = 500, fast = 10 , nice 500
 seed = 50
+#seed = None
 lanes = 3
 length = 100
 

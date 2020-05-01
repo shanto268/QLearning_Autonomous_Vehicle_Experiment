@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 1000
+num_episodes = 5000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -92,7 +92,7 @@ for episode in range(num_episodes):
     road = reset() 
     state = road.ogstate()       
     #print("\ndefault state: ",state)
-    print("Episode: " +str(episode))
+    print("\nEpisode: " +str(episode))
     done = False
     file1.write("\nepisode " + str(episode))
     rewards_current_episode = 0
@@ -105,11 +105,12 @@ for episode in range(num_episodes):
         #new_state, reward, done = road.step(action)
         new_state, reward, done = road.stepBB(action)
         #comments(new_state, reward, done, action, q_table)
-        #print("step: ",step)
+        print("step: ",step)
+        print("action: ", action)
         #print("")
      #   rwds = processInfo(info)
         # Update Q-table for Q(s,a)
-      #  print("reward ", reward)
+        print("reward ", reward)
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state
         rewards_current_episode += reward
@@ -142,13 +143,14 @@ plt.ylabel("Units")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
-plt.show()
+#plt.show()
 
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
 plt.ylabel("Rewards(Units)")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
+plt.savefig("rewards.jpeg")
 plt.show()
 
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps")
@@ -156,6 +158,7 @@ plt.ylabel("Timesteps (Units)")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
+plt.savefig("timeSurvived.jpeg")
 plt.show()
 
 """

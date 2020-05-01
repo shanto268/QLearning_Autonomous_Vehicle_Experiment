@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 800
+num_episodes = 1000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -72,7 +72,7 @@ file1 =  open("outputs.txt","a")
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
-q_table = importQtable("qtable_2020-04-20_11:24:30.npy",False)
+q_table = importQtable("qtable_2020-05-01_12:31:20.npy",True)
 rewards_all_episodes = []
 timesteps = []
 lapTimes = []

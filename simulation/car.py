@@ -56,20 +56,19 @@ class Car:
             return self.bareBonesAgentLaneChange(act)
     
     def bareBonesAgentLaneChange(self,act):
-    """
-    if action results in agent moving to an occupied lane ->  end episode and  high penalty
-    if action leads to empty block and safe for moving -> good reward
-    if action leads to safety and better v_potential -> highest reward
-    constraint around boundaries
-    if terminate = true, may not need to return self.pos
-    """
-         if act == 1:  #lane change up
+    #if action results in agent moving to an occupied lane ->  end episode and  high penalty
+    #if action leads to empty block and safe for moving -> good reward
+    #if action leads to safety and better v_potential -> highest reward
+    #constraint around boundaries
+    #if terminate = true, may not need to return self.pos
+        if act == 1:  #lane change up
             self.pos = self.pos[0], max(0,self.pos[1]-1)  
         elif act == 2:  #lane change down
             self.pos = self.pos[0], min(2,self.pos[1]+2)
         else: #no lane change and not safe to change lane
             self.pos = self.pos[0], self.pos[1]
-        self.bareBonesAllocateReward(self.pos, act) 
+        self.bareBonesAllocateReward(self.pos, act)
+      #  print("terminate from car ", self.terminate) 
         return self.pos
     
     #may need to get rid of looping conditions
@@ -108,63 +107,63 @@ class Car:
             #highest reward
         if (isInMid):
             if (act==0):
-                if ( !self.road.possibleLaneChangeUp(posn) and !self.road.possibleLaneChangeDown(posn) ):
+                if ( not self.road.possibleLaneChangeUp(posn) and not self.road.possibleLaneChangeDown(posn) ):
                     return GOOD_REWARD
                 elif ( self.road.possibleLaneChangeUp(posn) ):
-                    if (!SpeedGain( posn[1], posn[1] - 1 )):
-                        return reward = BEST_REWARD 
+                    if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+                        return BEST_REWARD 
                 elif ( self.road.possibleLaneChangeDown(posn) ):
-                    if (!SpeedGain( posn[1], posn[1] + 1 )):
-                        return reward = BEST_REWARD 
+                    if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+                        return BEST_REWARD 
             elif (act==1):
-                if (!self.road.possibleLaneChangeUp(posn)): #not possible to change lane up
+                if (not self.road.possibleLaneChangeUp(posn)): #not possible to change lane up
                     self.terminate = True 
-                    return reward = HIGH_PENALTY 
+                    return HIGH_PENALTY 
                 elif ( self.road.possibleLaneChangeUp(posn) and self.safeToChangeLane(posn[1], posn[1] - 1) ):
-                    if (!SpeedGain( posn[1], posn[1] - 1 )):
-                        return reward = GOOD_REWARD
-                    elif ( SpeedGain( posn[1], posn[1] - 1 ) ):
-                        return reward = BEST_REWARD
+                    if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+                        return GOOD_REWARD
+                    elif ( self.SpeedGain( posn[1], posn[1] - 1 ) ):
+                        return BEST_REWARD
             elif (act==2):
-                 if (!self.road.possibleLaneChangeDown(posn)): #not possible to change lane up
+                 if (not self.road.possibleLaneChangeDown(posn)): #not possible to change lane up
                     self.terminate = True 
-                    return reward = HIGH_PENALTY 
-                elif ( self.road.possibleLaneChangeDown(posn) and self.safeToChangeLane(posn[1], posn[1] + 1) ):
-                    if (!SpeedGain( posn[1], posn[1] + 1 )):
-                        return reward = GOOD_REWARD
-                    elif ( SpeedGain( posn[1], posn[1] + 1 ) ):
-                        return reward = BEST_REWARD           
+                    return HIGH_PENALTY 
+                 elif ( self.road.possibleLaneChangeDown(posn) and self.safeToChangeLane(posn[1], posn[1] + 1) ):
+                    if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+                        return GOOD_REWARD
+                    elif ( self.SpeedGain( posn[1], posn[1] + 1 ) ):
+                        return BEST_REWARD           
             #min(max_hv,self.road.distanceToNextThing(posn)) #mid
         else:
             # min(max_hv, self.road.d2n(posn)) #loop
              if (act==0):
-                if ( !self.road.possibleLaneChangeUp(posn) and !self.road.possibleLaneChangeDown(posn) ):
+                if ( not self.road.possibleLaneChangeUp(posn) and not self.road.possibleLaneChangeDown(posn) ):
                     return GOOD_REWARD
                 elif ( self.road.possibleLaneChangeUp(posn) ):
-                    if (!SpeedGain( posn[1], posn[1] - 1 )):
-                        return reward = BEST_REWARD 
+                    if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+                        return  BEST_REWARD 
                 elif ( self.road.possibleLaneChangeDown(posn) ):
-                    if (!SpeedGain( posn[1], posn[1] + 1 )):
-                        return reward = BEST_REWARD 
-            elif (act==1):
-                if (!self.road.possibleLaneChangeUp(posn)): #not possible to change lane up
+                    if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+                        return  BEST_REWARD 
+             elif (act==1):
+                if (not self.road.possibleLaneChangeUp(posn)): #not possible to change lane up
                     self.terminate = True 
-                    return reward = HIGH_PENALTY 
+                    return  HIGH_PENALTY 
                 elif ( self.road.possibleLaneChangeUp(posn) and self.safeToChangeLane(posn[1], posn[1] - 1) ):
-                    if (!SpeedGain( posn[1], posn[1] - 1 )):
-                        return reward = GOOD_REWARD
-                    elif ( SpeedGain( posn[1], posn[1] - 1 ) ):
-                        return reward = BEST_REWARD
-            elif (act==2):
-                 if (!self.road.possibleLaneChangeDown(posn)): #not possible to change lane up
+                    if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+                        return  GOOD_REWARD
+                    elif ( self.SpeedGain( posn[1], posn[1] - 1 ) ):
+                        return  BEST_REWARD
+             elif (act==2):
+                 if (not self.road.possibleLaneChangeDown(posn)): #not possible to change lane up
                     self.terminate = True 
-                    return reward = HIGH_PENALTY 
-                elif ( self.road.possibleLaneChangeDown(posn) and self.safeToChangeLane(posn[1], posn[1] + 1) ):
-                    if (!SpeedGain( posn[1], posn[1] + 1 )):
-                        return reward = GOOD_REWARD
-                    elif ( SpeedGain( posn[1], posn[1] + 1 ) ):
-                        return reward = BEST_REWARD             
-        return reward
+                    return  HIGH_PENALTY 
+                 elif ( self.road.possibleLaneChangeDown(posn) and self.safeToChangeLane(posn[1], posn[1] + 1) ):
+                    if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+                        return  GOOD_REWARD
+                    elif ( self.SpeedGain( posn[1], posn[1] + 1 ) ):
+                        return  BEST_REWARD             
+        return 0
 
     #pos tuple for agent to state
     def pos2state(self):
@@ -310,12 +309,13 @@ class Car:
         if (self.pos[0] + self.velocity) >= self.road.getLength():
                 self.pos = (self.pos[0] + self.velocity) % self.road.getLength(), self.pos[1]
         return self.pos
-           
+          
+    def AVdistance(self):
+        return self.CAVdist
+
     def didAVfinish(self,moved):    
         self.CAVdist += moved
-        if (self.CAVdist < limitCycle):
-                self.terminate = False
-        else:
+        if (self.CAVdist >= limitCycle):
                 self.terminate = True
 
     def updateX(self): #stochastic slowing down

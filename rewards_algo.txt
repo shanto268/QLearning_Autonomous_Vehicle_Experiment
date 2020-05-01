@@ -5,6 +5,7 @@ step function would take action as input
     if action leads to safety and better v_potential -> highest reward
     if action leads to not changing lane and lane change was not possible -> good rew    ard
 
+need to do!
     for each cycle, c, record time taken, t.
         rewards += constant * ( cycle_distance / t)
         -> this would incentivize agent to increase its average speed more

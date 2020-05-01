@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 15
+num_episodes = 500
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -50,6 +50,8 @@ def reset():
     road.setEnvironment(totalCars,numAgent)
     return road
 
+def processInfo(info):
+    pass
 def comments(new_state, reward, done, action, q_table):
     print("new state ", new_state)
     print("reward ", reward)
@@ -73,7 +75,7 @@ state_space_size = road.stateSpaceSize
 q_table = importQtable("qtable_2020-04-20_11:24:30.npy",False)
 rewards_all_episodes = []
 timesteps = []
-
+lapTimes = []
 #q learnin algorithm
 
 file1.write("*"*50)
@@ -90,7 +92,7 @@ for episode in range(num_episodes):
     road = reset() 
     state = road.ogstate()       
     #print("\ndefault state: ",state)
-    print("Episode: ", episode)
+    print("Episode: " +str(episode))
     done = False
     file1.write("\nepisode " + str(episode))
     rewards_current_episode = 0
@@ -100,8 +102,12 @@ for episode in range(num_episodes):
             action = np.argmax(q_table[state,:])
         else:
             action = road.sampleAction()
-        new_state, reward, done = road.step(action)
-        #comments(new_state, reward, done, action, q_table) 
+        #new_state, reward, done = road.step(action)
+        new_state, reward, done = road.stepBB(action)
+        #comments(new_state, reward, done, action, q_table)
+        #print("step: ",step)
+        #print("")
+     #   rwds = processInfo(info)
         # Update Q-table for Q(s,a)
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state
@@ -128,6 +134,8 @@ file1.close()
 np.save('qtable_'+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
 print("Simulation is over!")
 
+print(timesteps)
+
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps") 
 plt.ylabel("Units")
@@ -136,6 +144,19 @@ plt.legend()
 plt.grid()
 plt.show()
 
+plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
+plt.ylabel("Rewards(Units)")
+plt.xlabel("Number of episode")
+plt.legend()
+plt.grid()
+plt.show()
+
+plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps")
+plt.ylabel("Timesteps (Units)")
+plt.xlabel("Number of episode")
+plt.legend()
+plt.grid()
+plt.show()
 
 """
 # Calculate and print the average reward per thousand episodes

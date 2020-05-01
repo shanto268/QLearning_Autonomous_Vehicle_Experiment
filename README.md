@@ -155,7 +155,7 @@ python3 driver.py
 ## Learning Statistics
 The program records the rewards, qvalues, and timesteps associated with each episode and upon termination creates a text file with these key statistics and generates two plots - rewards vs episodes, and timesteps vs episodes
 ## TO DO LIST:
-- [ ] Update Reward Function
+- [x] Update Reward Function
 - [ ] Identify Best Learning Parameters with respect to simulation time 
 - [ ] Identify Best Learning Parameters with respect to rewards
 - [ ] Train Model on HPCC Network
@@ -163,6 +163,10 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] Infer Probability(lane change) from training data 
 - [ ] Incorporation of visual sim in training 
 - [ ] Implement any change Dr. Li suggests
+
+## ISSUES:
+- [ ] None type return of reward
+- [ ] Factoring in time of lap into rewards
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

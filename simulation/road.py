@@ -17,6 +17,7 @@ time_period = 100
 numAV = int(data[10]) 
 totCars = int(data[1])
 numHV = totCars - numAV
+lapDist = [i*100 for i in range(int(data[11]))]
 
 class Road:
 
@@ -81,6 +82,7 @@ class Road:
         self.stateSpaceSize = self.lanesCount * self.length #2020 SAS
         self.actions = [0,1,2] #2020 SAS #0 same lane, 1 up lane, 2 bottom lane
         self.actionSpaceSize = len(self.actions) #2020 SAS
+        self.indexTemp = 0
 
     def sampleAction(self):
         return self.actions[random.randint(0,2)]
@@ -138,7 +140,34 @@ class Road:
         change state space to only neighboring agent cells
         need to send time to complete a cycle from step
     """
-
+    def stepBB(self, act):
+        self.speedLimits.update()   
+        state = self.getState()
+      #  qlearn = lambda x: x.qUpdateLane(act)
+        bareBones = lambda x: x.bare_bones_lane_change(act)
+        speedupdate = lambda x: x.updateX()
+        self._updateCars(bareBones) 
+        self._updateCars(speedupdate)
+        reward = self.getReward()
+        done = self.TerminateSimulation()
+     #   dist = self.getAVdistance()
+     #   lapTime = 
+    #    print("update: " + str(self.updates))
+        self.updates += 1   
+        return state, reward, done
+    """
+    def getLapTime(self, dist):
+        index = mp.floor(dist/100)
+        if index = self.indexTemp
+            return self.updates
+        self.indexTemp = index
+    """
+    def getAVdistance(self):
+        for lane in self.lanes:
+            for entity in lane:
+                if entity != None and entity.vtype == 2:
+                    return entity.CAVdist     
+    
     def step(self, act):
         self.speedLimits.update()   
         done = self.TerminateSimulation()

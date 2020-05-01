@@ -163,6 +163,7 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] Infer Probability(lane change) from training data 
 - [ ] Incorporation of visual sim in training 
 - [ ] Implement any change Dr. Li suggests
+- [x] Incorporation of random seed
 
 ## ISSUES:
 - [ ] None type return of reward

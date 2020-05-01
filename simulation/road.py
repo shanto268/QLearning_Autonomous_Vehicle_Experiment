@@ -131,6 +131,8 @@ class Road:
 
         self.flipLanes()            
     
+
+
     """
     changes needed:
         new termination condition
@@ -143,12 +145,11 @@ class Road:
     def stepBB(self, act):
         self.speedLimits.update()   
         state = self.getState()
-      #  qlearn = lambda x: x.qUpdateLane(act)
         bareBones = lambda x: x.bare_bones_lane_change(act)
         speedupdate = lambda x: x.updateX()
         self._updateCars(bareBones) 
-        self._updateCars(speedupdate)
         reward = self.getReward()
+        self._updateCars(speedupdate)
         done = self.TerminateSimulation()
      #   dist = self.getAVdistance()
      #   lapTime = 
@@ -184,9 +185,10 @@ class Road:
     def getReward(self):
         for lane in self.lanes:
             for entity in lane:
-                if entity != None and entity.vtype == 2:
-                    return entity.reward      
-
+                if entity != None and entity.vtype==2:
+                 #   print("reward road.py ", entity.reward)
+                    return entity.reward
+                    
     def getState(self):
         for lane in self.lanes:
             for entity in lane:

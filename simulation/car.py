@@ -45,16 +45,20 @@ class Car:
         self.numer = 0  #P(lanechange) = numer / denumer 2020
         self.denumer = 0 #SAS 2020
         self.reward = 0 #SAS 2020   
-    
+   
+    def getRewardAgent(self):
+        if self.vtype == 2:
+            return self.reward
+
     def bare_bones_lane_change(self,act):
         self.prevPos = self.pos
         if self.vtype == 1: #vehicle is HV 
             Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
             self.updateLaneLogic()
-            return self.pos   
+            return self.pos  
         else:  #vehicle is agent
             return self.bareBonesAgentLaneChange(act)
-    
+
     def bareBonesAgentLaneChange(self,act):
     #if action results in agent moving to an occupied lane ->  end episode and  high penalty
     #if action leads to empty block and safe for moving -> good reward
@@ -62,23 +66,33 @@ class Car:
     #constraint around boundaries
     #if terminate = true, may not need to return self.pos
         if act == 1:  #lane change up
-            self.pos = self.pos[0], max(0,self.pos[1]-1)  
+            self.pos = self.pos[0], max(0,self.pos[1]-1) 
+      #      print("act 1")
         elif act == 2:  #lane change down
             self.pos = self.pos[0], min(2,self.pos[1]+2)
+       #     print("act 2")
         else: #no lane change and not safe to change lane
             self.pos = self.pos[0], self.pos[1]
+        #    print("act 0")
         self.bareBonesAllocateReward(self.pos, act)
+     #   print("position ", self.pos)
       #  print("terminate from car ", self.terminate) 
         return self.pos
-    
+    """    
     #may need to get rid of looping conditions
     def bareBonesAllocateReward(self, posn, act):
         #provision for looping
         if posn[0] < (self.road.getLength() - 5) and posn[0] >= 0:
             self.reward = self.bbReward(posn, act, True) 
         elif posn[0] < self.road.getLength() and posn[0] >= (self.road.getLength() - 5):
-            self.reward = self.bbReward(posn, act, False) 
+            self.reward = self.bbReward(posn, act, False)  
+    #    print("reward: ", self.reward)
+    """
 
+    def bareBonesAllocateReward(self, posn, act):
+        self.reward = self.bbReward(posn, act) 
+       # print("self reward car ", self.reward)
+        
     def SpeedGain(self, sourceLane, destLane):                           
         if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
             srcLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], sourceLane) )  #gets max speed at sourcelane
@@ -90,9 +104,73 @@ class Car:
             return False 
         else:
             return True 
-    
+   
+    def bbReward(self, posn, act):
+       if (act==0):
+        #   print("in 0")
+           if (not self.road.possibleLaneChangeUp(posn) and not self.road.possibleLaneChangeDown(posn) ):
+         #      print("no lane change possible")
+               return GOOD_REWARD
+           elif ( self.road.possibleLaneChangeUp(posn) ):
+          #     print("lane change up possible")
+               if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+           #        print("no speed gain in lane change up")
+                   return BEST_REWARD
+               else:
+                   return 0
+           elif ( self.road.possibleLaneChangeDown(posn) ):
+            #   print("lane change down possible")
+               if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+             #      print("no speed gain in lane change up")
+                   return BEST_REWARD
+               else:
+                   return 0
+           else:
+          #     print("somehow")
+               return 0
+       elif (act==1):
+           if (not self.road.possibleLaneChangeUp(posn)): #not possible to change lane up
+               self.terminate = True 
+               return HIGH_PENALTY 
+           elif ( self.road.possibleLaneChangeUp(posn) and self.safeToChangeLane(posn[1], posn[1] - 1) ): #possible to change lane and safe
+               if (not self.SpeedGain( posn[1], posn[1] - 1 )):
+                   return GOOD_REWARD
+               elif ( self.SpeedGain( posn[1], posn[1] - 1 ) ) :  #possible to change lane and safe and speed gain
+                   return BEST_REWARD
+               else:
+                   return 0
+           else:
+               return 0
+       elif (act==2):
+           # print("inside action 2")
+            if (not self.road.possibleLaneChangeDown(posn)): #not possible to change lane down
+               self.terminate = True
+           #    print("lane ", self.pos[1]) 
+           #    print("not possible to move down")
+               return HIGH_PENALTY 
+            elif ( self.road.possibleLaneChangeDown(posn) and self.safeToChangeLane(posn[1], posn[1] + 1) ): #possible to change lane and safe
+            #   print("possible to move down and safe")
+               if (not self.SpeedGain( posn[1], posn[1] + 1 )):
+             #      print("possible to move down, safe but no speed gain")
+                   return GOOD_REWARD
+               elif ( self.SpeedGain( posn[1], posn[1] + 1 ) ): #possible to change lane and safe and speed gain
+              #     print("possible to move down, safe and speed gain")
+                   return BEST_REWARD     
+               else:
+               #    print("somehow1")
+                   return 0
+            else:
+             #  print("somehow2")
+               return 0
+       else:
+            return 0
+       #min(max_hv,self.road.distanceToNextThing(posn)) #mid
+
+
+    """
     def bbReward(self, posn, act, isInMid):
         reward = 0
+  #      print("action ", act)
         #if new position leads to occupied lane
             #high penalty
             #end episode
@@ -164,6 +242,7 @@ class Car:
                     elif ( self.SpeedGain( posn[1], posn[1] + 1 ) ):
                         return  BEST_REWARD             
         return 0
+        """
 
     #pos tuple for agent to state
     def pos2state(self):

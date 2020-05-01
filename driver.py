@@ -23,7 +23,7 @@ print("Starting simulation...\n")
 
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 500
+num_episodes = 800
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -109,6 +109,7 @@ for episode in range(num_episodes):
         #print("")
      #   rwds = processInfo(info)
         # Update Q-table for Q(s,a)
+      #  print("reward ", reward)
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state
         rewards_current_episode += reward
@@ -134,7 +135,6 @@ file1.close()
 np.save('qtable_'+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
 print("Simulation is over!")
 
-print(timesteps)
 
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps") 

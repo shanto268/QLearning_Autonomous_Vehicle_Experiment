@@ -24,14 +24,14 @@ print("Starting simulation...\n")
 PENALTY = -1000
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 1000
+num_episodes = 5000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
 exploration_rate = 1 
 max_exploration_rate = 1 
 min_exploration_rate = 0.01
-exploration_decay_rate = 0.001
+exploration_decay_rate = 0.005
 
 #environment set up from Traffic Analysis Software
 config = importlib.import_module('config.case') 
@@ -73,7 +73,7 @@ file1 =  open("outputs.txt","a")
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
-q_table = importQtable("qtable_2020-05-01_12:31:20.npy",False)
+q_table = importQtable("qtable_2020-05-01_12:31:20.npy",True)
 rewards_all_episodes = []
 timesteps = []
 lapTimes = []

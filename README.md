@@ -168,6 +168,7 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] Infer Probability(lane change) from training data 
 - [ ] Incorporation of visual sim in training 
 - [ ] Implement any change Dr. Li suggests
+- [ ] Reducing the state space to only that of the neighboring cells of the agent
 - [ ] Incorporation of random seed
 
 ## ISSUES:

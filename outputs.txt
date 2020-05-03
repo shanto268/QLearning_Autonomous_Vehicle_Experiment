@@ -66080,3 +66080,690 @@ rewards: 4392
 episode 455
 step : 8
 rewards: 4392
+episode 456
+step : 8
+rewards: 4392
+episode 457
+step : 8
+rewards: 4392
+episode 458
+step : 8
+rewards: 4392
+episode 459
+step : 8
+rewards: 4392
+episode 460
+step : 8
+rewards: 4392
+episode 461
+step : 8
+rewards: 4392
+episode 462
+step : 8
+rewards: 4392
+episode 463
+step : 8
+rewards: 4392
+episode 464
+step : 8
+rewards: 4392
+episode 465
+step : 8
+rewards: 4392
+episode 466
+step : 8
+rewards: 4392
+episode 467
+step : 8
+rewards: 4392
+episode 468
+step : 8
+rewards: 4392
+episode 469
+step : 8
+rewards: 4392
+episode 470
+step : 8
+rewards: 4392
+episode 471
+step : 8
+rewards: 4392
+episode 472
+step : 8
+rewards: 4392
+episode 473
+step : 8
+rewards: 4392
+episode 474
+step : 8
+rewards: 4392
+episode 475
+step : 8
+rewards: 4392
+episode 476
+step : 8
+rewards: 4392
+episode 477
+step : 8
+rewards: 4392
+episode 478
+step : 8
+rewards: 4392
+episode 479
+step : 8
+rewards: 4392
+episode 480
+step : 8
+rewards: 4392
+episode 481
+step : 8
+rewards: 4392
+episode 482
+step : 8
+rewards: 4392
+episode 483
+step : 8
+rewards: 4392
+episode 484
+step : 8
+rewards: 4392
+episode 485
+step : 8
+rewards: 4392
+episode 486
+step : 8
+rewards: 4392
+episode 487
+step : 8
+rewards: 4392
+episode 488
+step : 8
+rewards: 4392
+episode 489
+step : 8
+rewards: 4392
+episode 490
+step : 8
+rewards: 4392
+episode 491
+step : 8
+rewards: 4392
+episode 492
+step : 8
+rewards: 4392
+episode 493
+step : 8
+rewards: 4392
+episode 494
+step : 8
+rewards: 4392
+episode 495
+step : 8
+rewards: 4392
+episode 496
+step : 8
+rewards: 4392
+episode 497
+step : 8
+rewards: 4392
+episode 498
+step : 17
+rewards: 8983
+episode 499
+step : 17
+rewards: 8983
+episode 500
+step : 17
+rewards: 8983
+episode 501
+step : 17
+rewards: 8983
+episode 502
+step : 17
+rewards: 8983
+episode 503
+step : 17
+rewards: 8983
+episode 504
+step : 17
+rewards: 8983
+episode 505
+step : 17
+rewards: 8983
+episode 506
+step : 17
+rewards: 8983
+episode 507
+step : 17
+rewards: 8983
+episode 508
+step : 17
+rewards: 8983
+episode 509
+step : 17
+rewards: 8983
+episode 510
+step : 17
+rewards: 8983
+episode 511
+step : 17
+rewards: 8983
+episode 512
+step : 17
+rewards: 8983
+episode 513
+step : 17
+rewards: 8983
+episode 514
+step : 17
+rewards: 8983
+episode 515
+step : 17
+rewards: 8983
+episode 516
+step : 17
+rewards: 8983
+episode 517
+step : 17
+rewards: 8983
+episode 518
+step : 17
+rewards: 8983
+episode 519
+step : 17
+rewards: 8983
+episode 520
+step : 17
+rewards: 8983
+episode 521
+step : 17
+rewards: 8983
+episode 522
+step : 17
+rewards: 8983
+episode 523
+step : 17
+rewards: 8983
+episode 524
+step : 17
+rewards: 8983
+episode 525
+step : 17
+rewards: 8983
+episode 526
+step : 17
+rewards: 8983
+episode 527
+step : 17
+rewards: 8983
+episode 528
+step : 17
+rewards: 8983
+episode 529
+step : 17
+rewards: 8983
+episode 530
+step : 17
+rewards: 8983
+episode 531
+step : 17
+rewards: 8983
+episode 532
+step : 17
+rewards: 8983
+episode 533
+step : 17
+rewards: 8983
+episode 534
+step : 17
+rewards: 8983
+episode 535
+step : 17
+rewards: 8983
+episode 536
+step : 17
+rewards: 8983
+episode 537
+step : 17
+rewards: 8983
+episode 538
+step : 17
+rewards: 8983
+episode 539
+step : 17
+rewards: 8983
+episode 540
+step : 17
+rewards: 8983
+episode 541
+step : 17
+rewards: 8983
+episode 542
+step : 17
+rewards: 8983
+episode 543
+step : 17
+rewards: 8983
+episode 544
+step : 17
+rewards: 8983
+episode 545
+step : 17
+rewards: 8983
+episode 546
+step : 17
+rewards: 8983
+episode 547
+step : 17
+rewards: 8983
+episode 548
+step : 17
+rewards: 8983
+episode 549
+step : 17
+rewards: 8983
+episode 550
+step : 17
+rewards: 8983
+episode 551
+step : 17
+rewards: 8983
+episode 552
+step : 17
+rewards: 8983
+episode 553
+step : 17
+rewards: 8983
+episode 554
+step : 17
+rewards: 8983
+episode 555
+step : 17
+rewards: 8983
+episode 556
+step : 17
+rewards: 8983
+episode 557
+step : 17
+rewards: 8983
+episode 558
+step : 17
+rewards: 8983
+episode 559
+step : 17
+rewards: 8983
+episode 560
+step : 17
+rewards: 8983
+episode 561
+step : 17
+rewards: 8983
+episode 562
+step : 17
+rewards: 8983
+episode 563
+step : 17
+rewards: 8983
+episode 564
+step : 17
+rewards: 8983
+episode 565
+step : 17
+rewards: 8983
+episode 566
+step : 17
+rewards: 8983
+episode 567
+step : 17
+rewards: 8983
+episode 568
+step : 17
+rewards: 8983
+episode 569
+step : 17
+rewards: 8983
+episode 570
+step : 17
+rewards: 8983
+episode 571
+step : 17
+rewards: 8983
+episode 572
+step : 17
+rewards: 8983
+episode 573
+step : 17
+rewards: 8983
+episode 574
+step : 17
+rewards: 8983
+episode 575
+step : 17
+rewards: 8983
+episode 576
+step : 17
+rewards: 8983
+episode 577
+step : 17
+rewards: 8983
+episode 578
+step : 17
+rewards: 8983
+episode 579
+step : 17
+rewards: 8983
+episode 580
+step : 17
+rewards: 8983
+episode 581
+step : 17
+rewards: 8983
+episode 582
+step : 17
+rewards: 8983
+episode 583
+step : 17
+rewards: 8983
+episode 584
+step : 17
+rewards: 8983
+episode 585
+step : 17
+rewards: 8983
+episode 586
+step : 17
+rewards: 8983
+episode 587
+step : 17
+rewards: 8983
+episode 588
+step : 17
+rewards: 8983
+episode 589
+step : 17
+rewards: 8983
+episode 590
+step : 17
+rewards: 8983
+episode 591
+step : 17
+rewards: 8983
+episode 592
+step : 17
+rewards: 8983
+episode 593
+step : 17
+rewards: 8983
+episode 594
+step : 17
+rewards: 8983
+episode 595
+step : 17
+rewards: 8983
+episode 596
+step : 17
+rewards: 8983
+episode 597
+step : 17
+rewards: 8983
+episode 598
+step : 17
+rewards: 8983
+episode 599
+step : 17
+rewards: 8983
+episode 600
+step : 17
+rewards: 8983
+episode 601
+step : 17
+rewards: 8983
+episode 602
+step : 17
+rewards: 8983
+episode 603
+step : 17
+rewards: 8983
+episode 604
+step : 17
+rewards: 8983
+episode 605
+step : 17
+rewards: 8983
+episode 606
+step : 17
+rewards: 8983
+episode 607
+step : 17
+rewards: 8983
+episode 608
+step : 17
+rewards: 8983
+episode 609
+step : 17
+rewards: 8983
+episode 610
+step : 17
+rewards: 8983
+episode 611
+step : 17
+rewards: 8983
+episode 612
+step : 17
+rewards: 8983
+episode 613
+step : 17
+rewards: 8983
+episode 614
+step : 17
+rewards: 8983
+episode 615
+step : 17
+rewards: 8983
+episode 616
+step : 17
+rewards: 8983
+episode 617
+step : 17
+rewards: 8983
+episode 618
+step : 17
+rewards: 8983
+episode 619
+step : 17
+rewards: 8983
+episode 620
+step : 17
+rewards: 8983
+episode 621
+step : 17
+rewards: 8983
+episode 622
+step : 17
+rewards: 8983
+episode 623
+step : 17
+rewards: 8983
+episode 624
+step : 17
+rewards: 8983
+episode 625
+step : 17
+rewards: 8983
+episode 626
+step : 17
+rewards: 8983
+episode 627
+step : 17
+rewards: 8983
+episode 628
+step : 17
+rewards: 8983
+episode 629
+step : 17
+rewards: 8983
+episode 630
+step : 17
+rewards: 8983
+episode 631
+step : 17
+rewards: 8983
+episode 632
+step : 17
+rewards: 8983
+episode 633
+step : 17
+rewards: 8983
+episode 634
+step : 17
+rewards: 8983
+episode 635
+step : 17
+rewards: 8983
+episode 636
+step : 17
+rewards: 8983
+episode 637
+step : 17
+rewards: 8983
+episode 638
+step : 17
+rewards: 8983
+episode 639
+step : 17
+rewards: 8983
+episode 640
+step : 17
+rewards: 8983
+episode 641
+step : 17
+rewards: 8983
+episode 642
+step : 17
+rewards: 8983
+episode 643
+step : 17
+rewards: 8983
+episode 644
+step : 17
+rewards: 8983
+episode 645
+step : 17
+rewards: 8983
+episode 646
+step : 17
+rewards: 8983
+episode 647
+step : 17
+rewards: 8983
+episode 648
+step : 17
+rewards: 8983
+episode 649
+step : 17
+rewards: 8983
+episode 650
+step : 17
+rewards: 8983
+episode 651
+step : 17
+rewards: 8983
+episode 652
+step : 17
+rewards: 8983
+episode 653
+step : 17
+rewards: 8983
+episode 654
+step : 17
+rewards: 8983
+episode 655
+step : 17
+rewards: 8983
+episode 656
+step : 17
+rewards: 8983
+episode 657
+step : 17
+rewards: 8983
+episode 658
+step : 17
+rewards: 8983
+episode 659
+step : 17
+rewards: 8983
+episode 660
+step : 17
+rewards: 8983
+episode 661
+step : 17
+rewards: 8983
+episode 662
+step : 17
+rewards: 8983
+episode 663
+step : 17
+rewards: 8983
+episode 664
+step : 17
+rewards: 8983
+episode 665
+step : 17
+rewards: 8983
+episode 666
+step : 17
+rewards: 8983
+episode 667
+step : 17
+rewards: 8983
+episode 668
+step : 17
+rewards: 8983
+episode 669
+step : 17
+rewards: 8983
+episode 670
+step : 17
+rewards: 8983
+episode 671
+step : 17
+rewards: 8983
+episode 672
+step : 17
+rewards: 8983
+episode 673
+step : 17
+rewards: 8983
+episode 674
+step : 17
+rewards: 8983
+episode 675
+step : 17
+rewards: 8983
+episode 676
+step : 17
+rewards: 8983
+episode 677
+step : 17
+rewards: 8983
+episode 678
+step : 17
+rewards: 8983
+episode 679
+step : 17
+rewards: 8983
+episode 680
+step : 17
+rewards: 8983
+episode 681
+step : 17
+rewards: 8983
+episode 682
+step : 17
+rewards: 8983
+episode 683
+step : 17
+rewards: 8983
+episode 684
+step : 17
+rewards: 8983

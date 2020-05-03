@@ -57981,4 +57981,3405 @@ rewards: -1000
 episode 5
 step : 0
 rewards: -1000
+episode 6**************************************************
+New simulation started at: 2020-05-02 22:37:18
+number of episodes: 1000
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 1
+rewards: -1001
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 3
+rewards: 497
+episode 5
+step : 1
+rewards: -1001
 episode 6
+step : 1
+rewards: -501
+episode 7**************************************************
+New simulation started at: 2020-05-02 22:38:36
+number of episodes: 1000
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 1
+rewards: 199
+episode 1
+step : 0
+rewards: -1000
+episode 2**************************************************
+New simulation started at: 2020-05-02 22:39:28
+number of episodes: 1000
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.005
+
+episode 0
+step : 1499
+rewards: -1496799
+episode 1
+step : 1499
+rewards: -1501499
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 1
+rewards: 199
+episode 5
+step : 0
+rewards: -1000
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 1
+rewards: 199
+episode 8**************************************************
+New simulation started at: 2020-05-02 22:41:23
+number of episodes: 1000
+max steps per episodes: 1500
+learning rate: 0.1
+discount rate: 0.99
+exploration rate: 1
+max exploration rate: 0.01
+min exploration rate: 1
+exploration decay rate: 0.001
+
+episode 0
+step : 0
+rewards: -1000
+episode 1
+step : 0
+rewards: -1000
+episode 2
+step : 0
+rewards: -1000
+episode 3
+step : 0
+rewards: -1000
+episode 4
+step : 0
+rewards: -1000
+episode 5
+step : 0
+rewards: -1000
+episode 6
+step : 0
+rewards: -1000
+episode 7
+step : 0
+rewards: -1000
+episode 8
+step : 0
+rewards: -1000
+episode 9
+step : 0
+rewards: -1000
+episode 10
+step : 0
+rewards: -1000
+episode 11
+step : 0
+rewards: -1000
+episode 12
+step : 0
+rewards: -1000
+episode 13
+step : 0
+rewards: -1000
+episode 14
+step : 0
+rewards: -1000
+episode 15
+step : 0
+rewards: -1000
+episode 16
+step : 0
+rewards: -1000
+episode 17
+step : 0
+rewards: -1000
+episode 18
+step : 0
+rewards: -1000
+episode 19
+step : 0
+rewards: -1000
+episode 20
+step : 0
+rewards: -1000
+episode 21
+step : 0
+rewards: -1000
+episode 22
+step : 0
+rewards: -1000
+episode 23
+step : 0
+rewards: -1000
+episode 24
+step : 0
+rewards: -1000
+episode 25
+step : 0
+rewards: -1000
+episode 26
+step : 0
+rewards: -1000
+episode 27
+step : 0
+rewards: -1000
+episode 28
+step : 0
+rewards: -1000
+episode 29
+step : 0
+rewards: -1000
+episode 30
+step : 0
+rewards: -1000
+episode 31
+step : 0
+rewards: -1000
+episode 32
+step : 0
+rewards: -1000
+episode 33
+step : 0
+rewards: -1000
+episode 34
+step : 0
+rewards: -1000
+episode 35
+step : 0
+rewards: -1000
+episode 36
+step : 0
+rewards: -1000
+episode 37
+step : 0
+rewards: -1000
+episode 38
+step : 0
+rewards: -1000
+episode 39
+step : 0
+rewards: -1000
+episode 40
+step : 0
+rewards: -1000
+episode 41
+step : 0
+rewards: -1000
+episode 42
+step : 0
+rewards: -1000
+episode 43
+step : 0
+rewards: -1000
+episode 44
+step : 0
+rewards: -1000
+episode 45
+step : 0
+rewards: -1000
+episode 46
+step : 0
+rewards: -1000
+episode 47
+step : 0
+rewards: -1000
+episode 48
+step : 0
+rewards: -1000
+episode 49
+step : 0
+rewards: -1000
+episode 50
+step : 0
+rewards: -1000
+episode 51
+step : 0
+rewards: -1000
+episode 52
+step : 0
+rewards: -1000
+episode 53
+step : 0
+rewards: -1000
+episode 54
+step : 0
+rewards: -1000
+episode 55
+step : 0
+rewards: -1000
+episode 56
+step : 0
+rewards: -1000
+episode 57
+step : 0
+rewards: -1000
+episode 58
+step : 0
+rewards: -1000
+episode 59
+step : 0
+rewards: -1000
+episode 60
+step : 0
+rewards: -1000
+episode 61
+step : 0
+rewards: -1000
+episode 62
+step : 0
+rewards: -1000
+episode 63
+step : 0
+rewards: -1000
+episode 64
+step : 0
+rewards: -1000
+episode 65
+step : 0
+rewards: -1000
+episode 66
+step : 0
+rewards: -1000
+episode 67
+step : 0
+rewards: -1000
+episode 68
+step : 0
+rewards: -1000
+episode 69
+step : 0
+rewards: -1000
+episode 70
+step : 0
+rewards: -1000
+episode 71
+step : 0
+rewards: -1000
+episode 72
+step : 0
+rewards: -1000
+episode 73
+step : 0
+rewards: -1000
+episode 74
+step : 0
+rewards: -1000
+episode 75
+step : 0
+rewards: -1000
+episode 76
+step : 0
+rewards: -1000
+episode 77
+step : 0
+rewards: -1000
+episode 78
+step : 0
+rewards: -1000
+episode 79
+step : 0
+rewards: -1000
+episode 80
+step : 0
+rewards: -1000
+episode 81
+step : 0
+rewards: -1000
+episode 82
+step : 0
+rewards: -1000
+episode 83
+step : 0
+rewards: -1000
+episode 84
+step : 0
+rewards: -1000
+episode 85
+step : 0
+rewards: -1000
+episode 86
+step : 0
+rewards: -1000
+episode 87
+step : 0
+rewards: -1000
+episode 88
+step : 0
+rewards: -1000
+episode 89
+step : 0
+rewards: -1000
+episode 90
+step : 0
+rewards: -1000
+episode 91
+step : 0
+rewards: -1000
+episode 92
+step : 0
+rewards: -1000
+episode 93
+step : 0
+rewards: -1000
+episode 94
+step : 0
+rewards: -1000
+episode 95
+step : 0
+rewards: -1000
+episode 96
+step : 0
+rewards: -1000
+episode 97
+step : 0
+rewards: -1000
+episode 98
+step : 0
+rewards: -1000
+episode 99
+step : 0
+rewards: -1000
+episode 100
+step : 0
+rewards: -1000
+episode 101
+step : 0
+rewards: -1000
+episode 102
+step : 0
+rewards: -1000
+episode 103
+step : 0
+rewards: -1000
+episode 104
+step : 0
+rewards: -1000
+episode 105
+step : 0
+rewards: -1000
+episode 106
+step : 0
+rewards: -1000
+episode 107
+step : 0
+rewards: -1000
+episode 108
+step : 0
+rewards: -1000
+episode 109
+step : 0
+rewards: -1000
+episode 110
+step : 0
+rewards: -1000
+episode 111
+step : 0
+rewards: -1000
+episode 112
+step : 0
+rewards: -1000
+episode 113
+step : 0
+rewards: -1000
+episode 114
+step : 0
+rewards: -1000
+episode 115
+step : 0
+rewards: -1000
+episode 116
+step : 0
+rewards: -1000
+episode 117
+step : 0
+rewards: -1000
+episode 118
+step : 0
+rewards: -1000
+episode 119
+step : 0
+rewards: -1000
+episode 120
+step : 0
+rewards: -1000
+episode 121
+step : 0
+rewards: -1000
+episode 122
+step : 0
+rewards: -1000
+episode 123
+step : 0
+rewards: -1000
+episode 124
+step : 0
+rewards: -1000
+episode 125
+step : 0
+rewards: -1000
+episode 126
+step : 0
+rewards: -1000
+episode 127
+step : 0
+rewards: -1000
+episode 128
+step : 0
+rewards: -1000
+episode 129
+step : 0
+rewards: -1000
+episode 130
+step : 0
+rewards: -1000
+episode 131
+step : 0
+rewards: -1000
+episode 132
+step : 0
+rewards: -1000
+episode 133
+step : 0
+rewards: -1000
+episode 134
+step : 0
+rewards: -1000
+episode 135
+step : 0
+rewards: -1000
+episode 136
+step : 0
+rewards: -1000
+episode 137
+step : 0
+rewards: -1000
+episode 138
+step : 0
+rewards: -1000
+episode 139
+step : 0
+rewards: -1000
+episode 140
+step : 0
+rewards: -1000
+episode 141
+step : 0
+rewards: -1000
+episode 142
+step : 0
+rewards: -1000
+episode 143
+step : 0
+rewards: -1000
+episode 144
+step : 0
+rewards: -1000
+episode 145
+step : 0
+rewards: -1000
+episode 146
+step : 0
+rewards: -1000
+episode 147
+step : 0
+rewards: -1000
+episode 148
+step : 0
+rewards: -1000
+episode 149
+step : 0
+rewards: -1000
+episode 150
+step : 0
+rewards: -1000
+episode 151
+step : 0
+rewards: -1000
+episode 152
+step : 0
+rewards: -1000
+episode 153
+step : 0
+rewards: -1000
+episode 154
+step : 0
+rewards: -1000
+episode 155
+step : 0
+rewards: -1000
+episode 156
+step : 0
+rewards: -1000
+episode 157
+step : 0
+rewards: -1000
+episode 158
+step : 0
+rewards: -1000
+episode 159
+step : 0
+rewards: -1000
+episode 160
+step : 0
+rewards: -1000
+episode 161
+step : 0
+rewards: -1000
+episode 162
+step : 0
+rewards: -1000
+episode 163
+step : 0
+rewards: -1000
+episode 164
+step : 0
+rewards: -1000
+episode 165
+step : 0
+rewards: -1000
+episode 166
+step : 0
+rewards: -1000
+episode 167
+step : 0
+rewards: -1000
+episode 168
+step : 0
+rewards: -1000
+episode 169
+step : 0
+rewards: -1000
+episode 170
+step : 0
+rewards: -1000
+episode 171
+step : 0
+rewards: -1000
+episode 172
+step : 0
+rewards: -1000
+episode 173
+step : 0
+rewards: -1000
+episode 174
+step : 0
+rewards: -1000
+episode 175
+step : 0
+rewards: -1000
+episode 176
+step : 0
+rewards: -1000
+episode 177
+step : 0
+rewards: -1000
+episode 178
+step : 0
+rewards: -1000
+episode 179
+step : 0
+rewards: -1000
+episode 180
+step : 0
+rewards: -1000
+episode 181
+step : 0
+rewards: -1000
+episode 182
+step : 0
+rewards: -1000
+episode 183
+step : 0
+rewards: -1000
+episode 184
+step : 0
+rewards: -1000
+episode 185
+step : 0
+rewards: -1000
+episode 186
+step : 0
+rewards: -1000
+episode 187
+step : 0
+rewards: -1000
+episode 188
+step : 0
+rewards: -1000
+episode 189
+step : 0
+rewards: -1000
+episode 190
+step : 0
+rewards: -1000
+episode 191
+step : 0
+rewards: -1000
+episode 192
+step : 0
+rewards: -1000
+episode 193
+step : 0
+rewards: -1000
+episode 194
+step : 0
+rewards: -1000
+episode 195
+step : 0
+rewards: -1000
+episode 196
+step : 0
+rewards: -1000
+episode 197
+step : 0
+rewards: -1000
+episode 198
+step : 0
+rewards: -1000
+episode 199
+step : 0
+rewards: -1000
+episode 200
+step : 0
+rewards: -1000
+episode 201
+step : 0
+rewards: -1000
+episode 202
+step : 0
+rewards: -1000
+episode 203
+step : 0
+rewards: -1000
+episode 204
+step : 0
+rewards: -1000
+episode 205
+step : 0
+rewards: -1000
+episode 206
+step : 0
+rewards: -1000
+episode 207
+step : 0
+rewards: -1000
+episode 208
+step : 0
+rewards: -1000
+episode 209
+step : 0
+rewards: -1000
+episode 210
+step : 0
+rewards: -1000
+episode 211
+step : 0
+rewards: -1000
+episode 212
+step : 0
+rewards: -1000
+episode 213
+step : 0
+rewards: -1000
+episode 214
+step : 0
+rewards: -1000
+episode 215
+step : 0
+rewards: -1000
+episode 216
+step : 0
+rewards: -1000
+episode 217
+step : 0
+rewards: -1000
+episode 218
+step : 0
+rewards: -1000
+episode 219
+step : 0
+rewards: -1000
+episode 220
+step : 0
+rewards: -1000
+episode 221
+step : 0
+rewards: -1000
+episode 222
+step : 0
+rewards: -1000
+episode 223
+step : 0
+rewards: -1000
+episode 224
+step : 0
+rewards: -1000
+episode 225
+step : 0
+rewards: -1000
+episode 226
+step : 0
+rewards: -1000
+episode 227
+step : 0
+rewards: -1000
+episode 228
+step : 0
+rewards: -1000
+episode 229
+step : 0
+rewards: -1000
+episode 230
+step : 0
+rewards: -1000
+episode 231
+step : 0
+rewards: -1000
+episode 232
+step : 0
+rewards: -1000
+episode 233
+step : 0
+rewards: -1000
+episode 234
+step : 0
+rewards: -1000
+episode 235
+step : 0
+rewards: -1000
+episode 236
+step : 0
+rewards: -1000
+episode 237
+step : 0
+rewards: -1000
+episode 238
+step : 0
+rewards: -1000
+episode 239
+step : 0
+rewards: -1000
+episode 240
+step : 0
+rewards: -1000
+episode 241
+step : 0
+rewards: -1000
+episode 242
+step : 0
+rewards: -1000
+episode 243
+step : 0
+rewards: -1000
+episode 244
+step : 0
+rewards: -1000
+episode 245
+step : 0
+rewards: -1000
+episode 246
+step : 0
+rewards: -1000
+episode 247
+step : 0
+rewards: -1000
+episode 248
+step : 0
+rewards: -1000
+episode 249
+step : 0
+rewards: -1000
+episode 250
+step : 0
+rewards: -1000
+episode 251
+step : 0
+rewards: -1000
+episode 252
+step : 0
+rewards: -1000
+episode 253
+step : 0
+rewards: -1000
+episode 254
+step : 0
+rewards: -1000
+episode 255
+step : 0
+rewards: -1000
+episode 256
+step : 0
+rewards: -1000
+episode 257
+step : 0
+rewards: -1000
+episode 258
+step : 0
+rewards: -1000
+episode 259
+step : 0
+rewards: -1000
+episode 260
+step : 0
+rewards: -1000
+episode 261
+step : 0
+rewards: -1000
+episode 262
+step : 0
+rewards: -1000
+episode 263
+step : 0
+rewards: -1000
+episode 264
+step : 0
+rewards: -1000
+episode 265
+step : 0
+rewards: -1000
+episode 266
+step : 0
+rewards: -1000
+episode 267
+step : 0
+rewards: -1000
+episode 268
+step : 0
+rewards: -1000
+episode 269
+step : 0
+rewards: -1000
+episode 270
+step : 0
+rewards: -1000
+episode 271
+step : 0
+rewards: -1000
+episode 272
+step : 0
+rewards: -1000
+episode 273
+step : 0
+rewards: -1000
+episode 274
+step : 0
+rewards: -1000
+episode 275
+step : 0
+rewards: -1000
+episode 276
+step : 0
+rewards: -1000
+episode 277
+step : 0
+rewards: -1000
+episode 278
+step : 0
+rewards: -1000
+episode 279
+step : 0
+rewards: -1000
+episode 280
+step : 0
+rewards: -1000
+episode 281
+step : 0
+rewards: -1000
+episode 282
+step : 0
+rewards: -1000
+episode 283
+step : 0
+rewards: -1000
+episode 284
+step : 0
+rewards: -1000
+episode 285
+step : 0
+rewards: -1000
+episode 286
+step : 0
+rewards: -1000
+episode 287
+step : 0
+rewards: -1000
+episode 288
+step : 0
+rewards: -1000
+episode 289
+step : 0
+rewards: -1000
+episode 290
+step : 0
+rewards: -1000
+episode 291
+step : 0
+rewards: -1000
+episode 292
+step : 0
+rewards: -1000
+episode 293
+step : 0
+rewards: -1000
+episode 294
+step : 0
+rewards: -1000
+episode 295
+step : 0
+rewards: -1000
+episode 296
+step : 0
+rewards: -1000
+episode 297
+step : 0
+rewards: -1000
+episode 298
+step : 0
+rewards: -1000
+episode 299
+step : 0
+rewards: -1000
+episode 300
+step : 0
+rewards: -1000
+episode 301
+step : 0
+rewards: -1000
+episode 302
+step : 0
+rewards: -1000
+episode 303
+step : 0
+rewards: -1000
+episode 304
+step : 0
+rewards: -1000
+episode 305
+step : 0
+rewards: -1000
+episode 306
+step : 0
+rewards: -1000
+episode 307
+step : 0
+rewards: -1000
+episode 308
+step : 0
+rewards: -1000
+episode 309
+step : 0
+rewards: -1000
+episode 310
+step : 0
+rewards: -1000
+episode 311
+step : 0
+rewards: -1000
+episode 312
+step : 0
+rewards: -1000
+episode 313
+step : 0
+rewards: -1000
+episode 314
+step : 0
+rewards: -1000
+episode 315
+step : 0
+rewards: -1000
+episode 316
+step : 0
+rewards: -1000
+episode 317
+step : 0
+rewards: -1000
+episode 318
+step : 0
+rewards: -1000
+episode 319
+step : 0
+rewards: -1000
+episode 320
+step : 0
+rewards: -1000
+episode 321
+step : 0
+rewards: -1000
+episode 322
+step : 0
+rewards: -1000
+episode 323
+step : 0
+rewards: -1000
+episode 324
+step : 0
+rewards: -1000
+episode 325
+step : 0
+rewards: -1000
+episode 326
+step : 0
+rewards: -1000
+episode 327
+step : 0
+rewards: -1000
+episode 328
+step : 0
+rewards: -1000
+episode 329
+step : 0
+rewards: -1000
+episode 330
+step : 0
+rewards: -1000
+episode 331
+step : 0
+rewards: -1000
+episode 332
+step : 0
+rewards: -1000
+episode 333
+step : 0
+rewards: -1000
+episode 334
+step : 0
+rewards: -1000
+episode 335
+step : 0
+rewards: -1000
+episode 336
+step : 0
+rewards: -1000
+episode 337
+step : 0
+rewards: -1000
+episode 338
+step : 0
+rewards: -1000
+episode 339
+step : 0
+rewards: -1000
+episode 340
+step : 0
+rewards: -1000
+episode 341
+step : 0
+rewards: -1000
+episode 342
+step : 0
+rewards: -1000
+episode 343
+step : 0
+rewards: -1000
+episode 344
+step : 0
+rewards: -1000
+episode 345
+step : 0
+rewards: -1000
+episode 346
+step : 0
+rewards: -1000
+episode 347
+step : 0
+rewards: -1000
+episode 348
+step : 0
+rewards: -1000
+episode 349
+step : 0
+rewards: -1000
+episode 350
+step : 0
+rewards: -1000
+episode 351
+step : 0
+rewards: -1000
+episode 352
+step : 0
+rewards: -1000
+episode 353
+step : 0
+rewards: -1000
+episode 354
+step : 0
+rewards: -1000
+episode 355
+step : 0
+rewards: -1000
+episode 356
+step : 0
+rewards: -1000
+episode 357
+step : 0
+rewards: -1000
+episode 358
+step : 0
+rewards: -1000
+episode 359
+step : 0
+rewards: -1000
+episode 360
+step : 0
+rewards: -1000
+episode 361
+step : 0
+rewards: -1000
+episode 362
+step : 0
+rewards: -1000
+episode 363
+step : 0
+rewards: -1000
+episode 364
+step : 0
+rewards: -1000
+episode 365
+step : 0
+rewards: -1000
+episode 366
+step : 0
+rewards: -1000
+episode 367
+step : 0
+rewards: -1000
+episode 368
+step : 0
+rewards: -1000
+episode 369
+step : 0
+rewards: -1000
+episode 370
+step : 0
+rewards: -1000
+episode 371
+step : 0
+rewards: -1000
+episode 372
+step : 0
+rewards: -1000
+episode 373
+step : 0
+rewards: -1000
+episode 374
+step : 0
+rewards: -1000
+episode 375
+step : 0
+rewards: -1000
+episode 376
+step : 0
+rewards: -1000
+episode 377
+step : 0
+rewards: -1000
+episode 378
+step : 0
+rewards: -1000
+episode 379
+step : 0
+rewards: -1000
+episode 380
+step : 0
+rewards: -1000
+episode 381
+step : 0
+rewards: -1000
+episode 382
+step : 0
+rewards: -1000
+episode 383
+step : 0
+rewards: -1000
+episode 384
+step : 0
+rewards: -1000
+episode 385
+step : 0
+rewards: -1000
+episode 386
+step : 0
+rewards: -1000
+episode 387
+step : 0
+rewards: -1000
+episode 388
+step : 0
+rewards: -1000
+episode 389
+step : 0
+rewards: -1000
+episode 390
+step : 0
+rewards: -1000
+episode 391
+step : 0
+rewards: -1000
+episode 392
+step : 0
+rewards: -1000
+episode 393
+step : 0
+rewards: -1000
+episode 394
+step : 0
+rewards: -1000
+episode 395
+step : 0
+rewards: -1000
+episode 396
+step : 0
+rewards: -1000
+episode 397
+step : 0
+rewards: -1000
+episode 398
+step : 0
+rewards: -1000
+episode 399
+step : 0
+rewards: -1000
+episode 400
+step : 0
+rewards: -1000
+episode 401
+step : 0
+rewards: -1000
+episode 402
+step : 0
+rewards: -1000
+episode 403
+step : 0
+rewards: -1000
+episode 404
+step : 0
+rewards: -1000
+episode 405
+step : 0
+rewards: -1000
+episode 406
+step : 0
+rewards: -1000
+episode 407
+step : 0
+rewards: -1000
+episode 408
+step : 0
+rewards: -1000
+episode 409
+step : 0
+rewards: -1000
+episode 410
+step : 0
+rewards: -1000
+episode 411
+step : 0
+rewards: -1000
+episode 412
+step : 0
+rewards: -1000
+episode 413
+step : 0
+rewards: -1000
+episode 414
+step : 0
+rewards: -1000
+episode 415
+step : 0
+rewards: -1000
+episode 416
+step : 0
+rewards: -1000
+episode 417
+step : 0
+rewards: -1000
+episode 418
+step : 0
+rewards: -1000
+episode 419
+step : 0
+rewards: -1000
+episode 420
+step : 0
+rewards: -1000
+episode 421
+step : 0
+rewards: -1000
+episode 422
+step : 0
+rewards: -1000
+episode 423
+step : 0
+rewards: -1000
+episode 424
+step : 0
+rewards: -1000
+episode 425
+step : 0
+rewards: -1000
+episode 426
+step : 0
+rewards: -1000
+episode 427
+step : 0
+rewards: -1000
+episode 428
+step : 0
+rewards: -1000
+episode 429
+step : 0
+rewards: -1000
+episode 430
+step : 0
+rewards: -1000
+episode 431
+step : 0
+rewards: -1000
+episode 432
+step : 0
+rewards: -1000
+episode 433
+step : 0
+rewards: -1000
+episode 434
+step : 0
+rewards: -1000
+episode 435
+step : 0
+rewards: -1000
+episode 436
+step : 0
+rewards: -1000
+episode 437
+step : 0
+rewards: -1000
+episode 438
+step : 0
+rewards: -1000
+episode 439
+step : 0
+rewards: -1000
+episode 440
+step : 0
+rewards: -1000
+episode 441
+step : 0
+rewards: -1000
+episode 442
+step : 0
+rewards: -1000
+episode 443
+step : 0
+rewards: -1000
+episode 444
+step : 0
+rewards: -1000
+episode 445
+step : 0
+rewards: -1000
+episode 446
+step : 0
+rewards: -1000
+episode 447
+step : 0
+rewards: -1000
+episode 448
+step : 0
+rewards: -1000
+episode 449
+step : 0
+rewards: -1000
+episode 450
+step : 0
+rewards: -1000
+episode 451
+step : 0
+rewards: -1000
+episode 452
+step : 0
+rewards: -1000
+episode 453
+step : 0
+rewards: -1000
+episode 454
+step : 0
+rewards: -1000
+episode 455
+step : 0
+rewards: -1000
+episode 456
+step : 0
+rewards: -1000
+episode 457
+step : 0
+rewards: -1000
+episode 458
+step : 0
+rewards: -1000
+episode 459
+step : 0
+rewards: -1000
+episode 460
+step : 0
+rewards: -1000
+episode 461
+step : 0
+rewards: -1000
+episode 462
+step : 0
+rewards: -1000
+episode 463
+step : 0
+rewards: -1000
+episode 464
+step : 0
+rewards: -1000
+episode 465
+step : 0
+rewards: -1000
+episode 466
+step : 0
+rewards: -1000
+episode 467
+step : 0
+rewards: -1000
+episode 468
+step : 0
+rewards: -1000
+episode 469
+step : 0
+rewards: -1000
+episode 470
+step : 0
+rewards: -1000
+episode 471
+step : 0
+rewards: -1000
+episode 472
+step : 0
+rewards: -1000
+episode 473
+step : 0
+rewards: -1000
+episode 474
+step : 0
+rewards: -1000
+episode 475
+step : 0
+rewards: -1000
+episode 476
+step : 0
+rewards: -1000
+episode 477
+step : 0
+rewards: -1000
+episode 478
+step : 0
+rewards: -1000
+episode 479
+step : 0
+rewards: -1000
+episode 480
+step : 0
+rewards: -1000
+episode 481
+step : 0
+rewards: -1000
+episode 482
+step : 0
+rewards: -1000
+episode 483
+step : 0
+rewards: -1000
+episode 484
+step : 0
+rewards: -1000
+episode 485
+step : 0
+rewards: -1000
+episode 486
+step : 0
+rewards: -1000
+episode 487
+step : 0
+rewards: -1000
+episode 488
+step : 0
+rewards: -1000
+episode 489
+step : 0
+rewards: -1000
+episode 490
+step : 0
+rewards: -1000
+episode 491
+step : 0
+rewards: -1000
+episode 492
+step : 0
+rewards: -1000
+episode 493
+step : 0
+rewards: -1000
+episode 494
+step : 0
+rewards: -1000
+episode 495
+step : 0
+rewards: -1000
+episode 496
+step : 0
+rewards: -1000
+episode 497
+step : 0
+rewards: -1000
+episode 498
+step : 0
+rewards: -1000
+episode 499
+step : 0
+rewards: -1000
+episode 500
+step : 0
+rewards: -1000
+episode 501
+step : 0
+rewards: -1000
+episode 502
+step : 0
+rewards: -1000
+episode 503
+step : 0
+rewards: -1000
+episode 504
+step : 0
+rewards: -1000
+episode 505
+step : 0
+rewards: -1000
+episode 506
+step : 0
+rewards: -1000
+episode 507
+step : 0
+rewards: -1000
+episode 508
+step : 0
+rewards: -1000
+episode 509
+step : 0
+rewards: -1000
+episode 510
+step : 0
+rewards: -1000
+episode 511
+step : 0
+rewards: -1000
+episode 512
+step : 0
+rewards: -1000
+episode 513
+step : 0
+rewards: -1000
+episode 514
+step : 0
+rewards: -1000
+episode 515
+step : 0
+rewards: -1000
+episode 516
+step : 0
+rewards: -1000
+episode 517
+step : 0
+rewards: -1000
+episode 518
+step : 0
+rewards: -1000
+episode 519
+step : 0
+rewards: -1000
+episode 520
+step : 0
+rewards: -1000
+episode 521
+step : 0
+rewards: -1000
+episode 522
+step : 0
+rewards: -1000
+episode 523
+step : 0
+rewards: -1000
+episode 524
+step : 0
+rewards: -1000
+episode 525
+step : 0
+rewards: -1000
+episode 526
+step : 0
+rewards: -1000
+episode 527
+step : 0
+rewards: -1000
+episode 528
+step : 0
+rewards: -1000
+episode 529
+step : 0
+rewards: -1000
+episode 530
+step : 0
+rewards: -1000
+episode 531
+step : 0
+rewards: -1000
+episode 532
+step : 0
+rewards: -1000
+episode 533
+step : 0
+rewards: -1000
+episode 534
+step : 0
+rewards: -1000
+episode 535
+step : 0
+rewards: -1000
+episode 536
+step : 0
+rewards: -1000
+episode 537
+step : 0
+rewards: -1000
+episode 538
+step : 0
+rewards: -1000
+episode 539
+step : 0
+rewards: -1000
+episode 540
+step : 0
+rewards: -1000
+episode 541
+step : 0
+rewards: -1000
+episode 542
+step : 0
+rewards: -1000
+episode 543
+step : 0
+rewards: -1000
+episode 544
+step : 0
+rewards: -1000
+episode 545
+step : 0
+rewards: -1000
+episode 546
+step : 0
+rewards: -1000
+episode 547
+step : 0
+rewards: -1000
+episode 548
+step : 0
+rewards: -1000
+episode 549
+step : 0
+rewards: -1000
+episode 550
+step : 0
+rewards: -1000
+episode 551
+step : 0
+rewards: -1000
+episode 552
+step : 0
+rewards: -1000
+episode 553
+step : 0
+rewards: -1000
+episode 554
+step : 0
+rewards: -1000
+episode 555
+step : 0
+rewards: -1000
+episode 556
+step : 0
+rewards: -1000
+episode 557
+step : 0
+rewards: -1000
+episode 558
+step : 0
+rewards: -1000
+episode 559
+step : 0
+rewards: -1000
+episode 560
+step : 0
+rewards: -1000
+episode 561
+step : 0
+rewards: -1000
+episode 562
+step : 0
+rewards: -1000
+episode 563
+step : 0
+rewards: -1000
+episode 564
+step : 0
+rewards: -1000
+episode 565
+step : 0
+rewards: -1000
+episode 566
+step : 0
+rewards: -1000
+episode 567
+step : 0
+rewards: -1000
+episode 568
+step : 0
+rewards: -1000
+episode 569
+step : 0
+rewards: -1000
+episode 570
+step : 0
+rewards: -1000
+episode 571
+step : 0
+rewards: -1000
+episode 572
+step : 0
+rewards: -1000
+episode 573
+step : 0
+rewards: -1000
+episode 574
+step : 0
+rewards: -1000
+episode 575
+step : 0
+rewards: -1000
+episode 576
+step : 0
+rewards: -1000
+episode 577
+step : 0
+rewards: -1000
+episode 578
+step : 0
+rewards: -1000
+episode 579
+step : 0
+rewards: -1000
+episode 580
+step : 0
+rewards: -1000
+episode 581
+step : 0
+rewards: -1000
+episode 582
+step : 0
+rewards: -1000
+episode 583
+step : 0
+rewards: -1000
+episode 584
+step : 0
+rewards: -1000
+episode 585
+step : 0
+rewards: -1000
+episode 586
+step : 0
+rewards: -1000
+episode 587
+step : 0
+rewards: -1000
+episode 588
+step : 0
+rewards: -1000
+episode 589
+step : 0
+rewards: -1000
+episode 590
+step : 0
+rewards: -1000
+episode 591
+step : 0
+rewards: -1000
+episode 592
+step : 0
+rewards: -1000
+episode 593
+step : 0
+rewards: -1000
+episode 594
+step : 0
+rewards: -1000
+episode 595
+step : 0
+rewards: -1000
+episode 596
+step : 0
+rewards: -1000
+episode 597
+step : 0
+rewards: -1000
+episode 598
+step : 0
+rewards: -1000
+episode 599
+step : 0
+rewards: -1000
+episode 600
+step : 0
+rewards: -1000
+episode 601
+step : 0
+rewards: -1000
+episode 602
+step : 0
+rewards: -1000
+episode 603
+step : 0
+rewards: -1000
+episode 604
+step : 0
+rewards: -1000
+episode 605
+step : 0
+rewards: -1000
+episode 606
+step : 0
+rewards: -1000
+episode 607
+step : 0
+rewards: -1000
+episode 608
+step : 0
+rewards: -1000
+episode 609
+step : 0
+rewards: -1000
+episode 610
+step : 0
+rewards: -1000
+episode 611
+step : 0
+rewards: -1000
+episode 612
+step : 0
+rewards: -1000
+episode 613
+step : 0
+rewards: -1000
+episode 614
+step : 0
+rewards: -1000
+episode 615
+step : 0
+rewards: -1000
+episode 616
+step : 0
+rewards: -1000
+episode 617
+step : 0
+rewards: -1000
+episode 618
+step : 0
+rewards: -1000
+episode 619
+step : 0
+rewards: -1000
+episode 620
+step : 0
+rewards: -1000
+episode 621
+step : 0
+rewards: -1000
+episode 622
+step : 0
+rewards: -1000
+episode 623
+step : 0
+rewards: -1000
+episode 624
+step : 0
+rewards: -1000
+episode 625
+step : 0
+rewards: -1000
+episode 626
+step : 0
+rewards: -1000
+episode 627
+step : 0
+rewards: -1000
+episode 628
+step : 0
+rewards: -1000
+episode 629
+step : 0
+rewards: -1000
+episode 630
+step : 0
+rewards: -1000
+episode 631
+step : 0
+rewards: -1000
+episode 632
+step : 0
+rewards: -1000
+episode 633
+step : 0
+rewards: -1000
+episode 634
+step : 0
+rewards: -1000
+episode 635
+step : 0
+rewards: -1000
+episode 636
+step : 0
+rewards: -1000
+episode 637
+step : 0
+rewards: -1000
+episode 638
+step : 0
+rewards: -1000
+episode 639
+step : 0
+rewards: -1000
+episode 640
+step : 0
+rewards: -1000
+episode 641
+step : 0
+rewards: -1000
+episode 642
+step : 0
+rewards: -1000
+episode 643
+step : 0
+rewards: -1000
+episode 644
+step : 0
+rewards: -1000
+episode 645
+step : 0
+rewards: -1000
+episode 646
+step : 0
+rewards: -1000
+episode 647
+step : 0
+rewards: -1000
+episode 648
+step : 0
+rewards: -1000
+episode 649
+step : 0
+rewards: -1000
+episode 650
+step : 0
+rewards: -1000
+episode 651
+step : 0
+rewards: -1000
+episode 652
+step : 0
+rewards: -1000
+episode 653
+step : 0
+rewards: -1000
+episode 654
+step : 0
+rewards: -1000
+episode 655
+step : 0
+rewards: -1000
+episode 656
+step : 0
+rewards: -1000
+episode 657
+step : 0
+rewards: -1000
+episode 658
+step : 0
+rewards: -1000
+episode 659
+step : 0
+rewards: -1000
+episode 660
+step : 0
+rewards: -1000
+episode 661
+step : 0
+rewards: -1000
+episode 662
+step : 0
+rewards: -1000
+episode 663
+step : 0
+rewards: -1000
+episode 664
+step : 0
+rewards: -1000
+episode 665
+step : 0
+rewards: -1000
+episode 666
+step : 0
+rewards: -1000
+episode 667
+step : 0
+rewards: -1000
+episode 668
+step : 0
+rewards: -1000
+episode 669
+step : 0
+rewards: -1000
+episode 670
+step : 0
+rewards: -1000
+episode 671
+step : 0
+rewards: -1000
+episode 672
+step : 0
+rewards: -1000
+episode 673
+step : 0
+rewards: -1000
+episode 674
+step : 0
+rewards: -1000
+episode 675
+step : 0
+rewards: -1000
+episode 676
+step : 0
+rewards: -1000
+episode 677
+step : 0
+rewards: -1000
+episode 678
+step : 0
+rewards: -1000
+episode 679
+step : 0
+rewards: -1000
+episode 680
+step : 0
+rewards: -1000
+episode 681
+step : 0
+rewards: -1000
+episode 682
+step : 0
+rewards: -1000
+episode 683
+step : 0
+rewards: -1000
+episode 684
+step : 0
+rewards: -1000
+episode 685
+step : 0
+rewards: -1000
+episode 686
+step : 0
+rewards: -1000
+episode 687
+step : 0
+rewards: -1000
+episode 688
+step : 0
+rewards: -1000
+episode 689
+step : 0
+rewards: -1000
+episode 690
+step : 0
+rewards: -1000
+episode 691
+step : 0
+rewards: -1000
+episode 692
+step : 0
+rewards: -1000
+episode 693
+step : 0
+rewards: -1000
+episode 694
+step : 0
+rewards: -1000
+episode 695
+step : 0
+rewards: -1000
+episode 696
+step : 0
+rewards: -1000
+episode 697
+step : 0
+rewards: -1000
+episode 698
+step : 0
+rewards: -1000
+episode 699
+step : 0
+rewards: -1000
+episode 700
+step : 0
+rewards: -1000
+episode 701
+step : 0
+rewards: -1000
+episode 702
+step : 0
+rewards: -1000
+episode 703
+step : 0
+rewards: -1000
+episode 704
+step : 0
+rewards: -1000
+episode 705
+step : 0
+rewards: -1000
+episode 706
+step : 0
+rewards: -1000
+episode 707
+step : 0
+rewards: -1000
+episode 708
+step : 0
+rewards: -1000
+episode 709
+step : 0
+rewards: -1000
+episode 710
+step : 0
+rewards: -1000
+episode 711
+step : 0
+rewards: -1000
+episode 712
+step : 0
+rewards: -1000
+episode 713
+step : 0
+rewards: -1000
+episode 714
+step : 0
+rewards: -1000
+episode 715
+step : 0
+rewards: -1000
+episode 716
+step : 0
+rewards: -1000
+episode 717
+step : 0
+rewards: -1000
+episode 718
+step : 0
+rewards: -1000
+episode 719
+step : 0
+rewards: -1000
+episode 720
+step : 0
+rewards: -1000
+episode 721
+step : 0
+rewards: -1000
+episode 722
+step : 0
+rewards: -1000
+episode 723
+step : 0
+rewards: -1000
+episode 724
+step : 0
+rewards: -1000
+episode 725
+step : 0
+rewards: -1000
+episode 726
+step : 0
+rewards: -1000
+episode 727
+step : 0
+rewards: -1000
+episode 728
+step : 0
+rewards: -1000
+episode 729
+step : 0
+rewards: -1000
+episode 730
+step : 0
+rewards: -1000
+episode 731
+step : 0
+rewards: -1000
+episode 732
+step : 0
+rewards: -1000
+episode 733
+step : 0
+rewards: -1000
+episode 734
+step : 0
+rewards: -1000
+episode 735
+step : 0
+rewards: -1000
+episode 736
+step : 0
+rewards: -1000
+episode 737
+step : 0
+rewards: -1000
+episode 738
+step : 0
+rewards: -1000
+episode 739
+step : 0
+rewards: -1000
+episode 740
+step : 0
+rewards: -1000
+episode 741
+step : 0
+rewards: -1000
+episode 742
+step : 0
+rewards: -1000
+episode 743
+step : 0
+rewards: -1000
+episode 744
+step : 0
+rewards: -1000
+episode 745
+step : 0
+rewards: -1000
+episode 746
+step : 0
+rewards: -1000
+episode 747
+step : 0
+rewards: -1000
+episode 748
+step : 0
+rewards: -1000
+episode 749
+step : 0
+rewards: -1000
+episode 750
+step : 0
+rewards: -1000
+episode 751
+step : 0
+rewards: -1000
+episode 752
+step : 0
+rewards: -1000
+episode 753
+step : 0
+rewards: -1000
+episode 754
+step : 0
+rewards: -1000
+episode 755
+step : 0
+rewards: -1000
+episode 756
+step : 0
+rewards: -1000
+episode 757
+step : 0
+rewards: -1000
+episode 758
+step : 0
+rewards: -1000
+episode 759
+step : 0
+rewards: -1000
+episode 760
+step : 0
+rewards: -1000
+episode 761
+step : 0
+rewards: -1000
+episode 762
+step : 0
+rewards: -1000
+episode 763
+step : 0
+rewards: -1000
+episode 764
+step : 0
+rewards: -1000
+episode 765
+step : 0
+rewards: -1000
+episode 766
+step : 0
+rewards: -1000
+episode 767
+step : 0
+rewards: -1000
+episode 768
+step : 0
+rewards: -1000
+episode 769
+step : 0
+rewards: -1000
+episode 770
+step : 0
+rewards: -1000
+episode 771
+step : 0
+rewards: -1000
+episode 772
+step : 0
+rewards: -1000
+episode 773
+step : 0
+rewards: -1000
+episode 774
+step : 0
+rewards: -1000
+episode 775
+step : 0
+rewards: -1000
+episode 776
+step : 0
+rewards: -1000
+episode 777
+step : 0
+rewards: -1000
+episode 778
+step : 0
+rewards: -1000
+episode 779
+step : 0
+rewards: -1000
+episode 780
+step : 0
+rewards: -1000
+episode 781
+step : 0
+rewards: -1000
+episode 782
+step : 0
+rewards: -1000
+episode 783
+step : 0
+rewards: -1000
+episode 784
+step : 0
+rewards: -1000
+episode 785
+step : 0
+rewards: -1000
+episode 786
+step : 0
+rewards: -1000
+episode 787
+step : 0
+rewards: -1000
+episode 788
+step : 0
+rewards: -1000
+episode 789
+step : 0
+rewards: -1000
+episode 790
+step : 0
+rewards: -1000
+episode 791
+step : 0
+rewards: -1000
+episode 792
+step : 0
+rewards: -1000
+episode 793
+step : 0
+rewards: -1000
+episode 794
+step : 0
+rewards: -1000
+episode 795
+step : 0
+rewards: -1000
+episode 796
+step : 0
+rewards: -1000
+episode 797
+step : 0
+rewards: -1000
+episode 798
+step : 0
+rewards: -1000
+episode 799
+step : 0
+rewards: -1000
+episode 800
+step : 0
+rewards: -1000
+episode 801
+step : 0
+rewards: -1000
+episode 802
+step : 0
+rewards: -1000
+episode 803
+step : 0
+rewards: -1000
+episode 804
+step : 0
+rewards: -1000
+episode 805
+step : 0
+rewards: -1000
+episode 806
+step : 0
+rewards: -1000
+episode 807
+step : 0
+rewards: -1000
+episode 808
+step : 0
+rewards: -1000
+episode 809
+step : 0
+rewards: -1000
+episode 810
+step : 0
+rewards: -1000
+episode 811
+step : 0
+rewards: -1000
+episode 812
+step : 0
+rewards: -1000
+episode 813
+step : 0
+rewards: -1000
+episode 814
+step : 0
+rewards: -1000
+episode 815
+step : 0
+rewards: -1000
+episode 816
+step : 0
+rewards: -1000
+episode 817
+step : 0
+rewards: -1000
+episode 818
+step : 0
+rewards: -1000
+episode 819
+step : 0
+rewards: -1000
+episode 820
+step : 0
+rewards: -1000
+episode 821
+step : 0
+rewards: -1000
+episode 822
+step : 0
+rewards: -1000
+episode 823
+step : 0
+rewards: -1000
+episode 824
+step : 0
+rewards: -1000
+episode 825
+step : 0
+rewards: -1000
+episode 826
+step : 0
+rewards: -1000
+episode 827
+step : 0
+rewards: -1000
+episode 828
+step : 0
+rewards: -1000
+episode 829
+step : 0
+rewards: -1000
+episode 830
+step : 0
+rewards: -1000
+episode 831
+step : 0
+rewards: -1000
+episode 832
+step : 0
+rewards: -1000
+episode 833
+step : 0
+rewards: -1000
+episode 834
+step : 0
+rewards: -1000
+episode 835
+step : 0
+rewards: -1000
+episode 836
+step : 0
+rewards: -1000
+episode 837
+step : 0
+rewards: -1000
+episode 838
+step : 0
+rewards: -1000
+episode 839
+step : 0
+rewards: -1000
+episode 840
+step : 0
+rewards: -1000
+episode 841
+step : 0
+rewards: -1000
+episode 842
+step : 0
+rewards: -1000
+episode 843
+step : 0
+rewards: -1000
+episode 844
+step : 0
+rewards: -1000
+episode 845
+step : 0
+rewards: -1000
+episode 846
+step : 0
+rewards: -1000
+episode 847
+step : 0
+rewards: -1000
+episode 848
+step : 0
+rewards: -1000
+episode 849
+step : 0
+rewards: -1000
+episode 850
+step : 0
+rewards: -1000
+episode 851
+step : 0
+rewards: -1000
+episode 852
+step : 0
+rewards: -1000
+episode 853
+step : 0
+rewards: -1000
+episode 854
+step : 0
+rewards: -1000
+episode 855
+step : 0
+rewards: -1000
+episode 856
+step : 0
+rewards: -1000
+episode 857
+step : 0
+rewards: -1000
+episode 858
+step : 0
+rewards: -1000
+episode 859
+step : 0
+rewards: -1000
+episode 860
+step : 0
+rewards: -1000
+episode 861
+step : 0
+rewards: -1000
+episode 862
+step : 0
+rewards: -1000
+episode 863
+step : 0
+rewards: -1000
+episode 864
+step : 0
+rewards: -1000
+episode 865
+step : 0
+rewards: -1000
+episode 866
+step : 0
+rewards: -1000
+episode 867
+step : 0
+rewards: -1000
+episode 868
+step : 0
+rewards: -1000
+episode 869
+step : 0
+rewards: -1000
+episode 870
+step : 0
+rewards: -1000
+episode 871
+step : 0
+rewards: -1000
+episode 872
+step : 0
+rewards: -1000
+episode 873
+step : 0
+rewards: -1000
+episode 874
+step : 0
+rewards: -1000
+episode 875
+step : 0
+rewards: -1000
+episode 876
+step : 0
+rewards: -1000
+episode 877
+step : 0
+rewards: -1000
+episode 878
+step : 0
+rewards: -1000
+episode 879
+step : 0
+rewards: -1000
+episode 880
+step : 0
+rewards: -1000
+episode 881
+step : 0
+rewards: -1000
+episode 882
+step : 0
+rewards: -1000
+episode 883
+step : 0
+rewards: -1000
+episode 884
+step : 0
+rewards: -1000
+episode 885
+step : 0
+rewards: -1000
+episode 886
+step : 0
+rewards: -1000
+episode 887
+step : 0
+rewards: -1000
+episode 888
+step : 0
+rewards: -1000
+episode 889
+step : 0
+rewards: -1000
+episode 890
+step : 0
+rewards: -1000
+episode 891
+step : 0
+rewards: -1000
+episode 892
+step : 0
+rewards: -1000
+episode 893
+step : 0
+rewards: -1000
+episode 894
+step : 0
+rewards: -1000
+episode 895
+step : 0
+rewards: -1000
+episode 896
+step : 0
+rewards: -1000
+episode 897
+step : 0
+rewards: -1000
+episode 898
+step : 0
+rewards: -1000
+episode 899
+step : 0
+rewards: -1000
+episode 900
+step : 0
+rewards: -1000
+episode 901
+step : 0
+rewards: -1000
+episode 902
+step : 0
+rewards: -1000
+episode 903
+step : 0
+rewards: -1000
+episode 904
+step : 0
+rewards: -1000
+episode 905
+step : 0
+rewards: -1000
+episode 906
+step : 0
+rewards: -1000
+episode 907
+step : 0
+rewards: -1000
+episode 908
+step : 0
+rewards: -1000
+episode 909
+step : 0
+rewards: -1000
+episode 910
+step : 0
+rewards: -1000
+episode 911
+step : 0
+rewards: -1000
+episode 912
+step : 0
+rewards: -1000
+episode 913
+step : 0
+rewards: -1000
+episode 914
+step : 0
+rewards: -1000
+episode 915
+step : 0
+rewards: -1000
+episode 916
+step : 0
+rewards: -1000
+episode 917
+step : 0
+rewards: -1000
+episode 918
+step : 0
+rewards: -1000
+episode 919
+step : 0
+rewards: -1000
+episode 920
+step : 0
+rewards: -1000
+episode 921
+step : 0
+rewards: -1000
+episode 922
+step : 0
+rewards: -1000
+episode 923
+step : 0
+rewards: -1000
+episode 924
+step : 0
+rewards: -1000
+episode 925
+step : 0
+rewards: -1000
+episode 926
+step : 0
+rewards: -1000
+episode 927
+step : 0
+rewards: -1000
+episode 928
+step : 0
+rewards: -1000
+episode 929
+step : 0
+rewards: -1000
+episode 930
+step : 0
+rewards: -1000
+episode 931
+step : 0
+rewards: -1000
+episode 932
+step : 0
+rewards: -1000
+episode 933
+step : 0
+rewards: -1000
+episode 934
+step : 0
+rewards: -1000
+episode 935
+step : 0
+rewards: -1000
+episode 936
+step : 0
+rewards: -1000
+episode 937
+step : 0
+rewards: -1000
+episode 938
+step : 0
+rewards: -1000
+episode 939
+step : 0
+rewards: -1000
+episode 940
+step : 0
+rewards: -1000
+episode 941
+step : 0
+rewards: -1000
+episode 942
+step : 0
+rewards: -1000
+episode 943
+step : 0
+rewards: -1000
+episode 944
+step : 0
+rewards: -1000
+episode 945
+step : 0
+rewards: -1000
+episode 946
+step : 0
+rewards: -1000
+episode 947
+step : 0
+rewards: -1000
+episode 948
+step : 0
+rewards: -1000
+episode 949
+step : 0
+rewards: -1000
+episode 950
+step : 0
+rewards: -1000
+episode 951
+step : 0
+rewards: -1000
+episode 952
+step : 0
+rewards: -1000
+episode 953
+step : 0
+rewards: -1000
+episode 954
+step : 0
+rewards: -1000
+episode 955
+step : 0
+rewards: -1000
+episode 956
+step : 0
+rewards: -1000
+episode 957
+step : 0
+rewards: -1000
+episode 958
+step : 0
+rewards: -1000
+episode 959
+step : 0
+rewards: -1000
+episode 960
+step : 0
+rewards: -1000
+episode 961
+step : 0
+rewards: -1000
+episode 962
+step : 0
+rewards: -1000
+episode 963
+step : 0
+rewards: -1000
+episode 964
+step : 0
+rewards: -1000
+episode 965
+step : 0
+rewards: -1000
+episode 966
+step : 0
+rewards: -1000
+episode 967
+step : 0
+rewards: -1000
+episode 968
+step : 0
+rewards: -1000
+episode 969
+step : 0
+rewards: -1000
+episode 970
+step : 0
+rewards: -1000
+episode 971
+step : 0
+rewards: -1000
+episode 972
+step : 0
+rewards: -1000
+episode 973
+step : 0
+rewards: -1000
+episode 974
+step : 0
+rewards: -1000
+episode 975
+step : 0
+rewards: -1000
+episode 976
+step : 0
+rewards: -1000
+episode 977
+step : 0
+rewards: -1000
+episode 978
+step : 0
+rewards: -1000
+episode 979
+step : 0
+rewards: -1000
+episode 980
+step : 0
+rewards: -1000
+episode 981
+step : 0
+rewards: -1000
+episode 982
+step : 0
+rewards: -1000
+episode 983
+step : 0
+rewards: -1000
+episode 984
+step : 0
+rewards: -1000
+episode 985
+step : 0
+rewards: -1000
+episode 986
+step : 0
+rewards: -1000
+episode 987
+step : 0
+rewards: -1000
+episode 988
+step : 0
+rewards: -1000
+episode 989
+step : 0
+rewards: -1000
+episode 990
+step : 0
+rewards: -1000
+episode 991
+step : 0
+rewards: -1000
+episode 992
+step : 0
+rewards: -1000
+episode 993
+step : 0
+rewards: -1000
+episode 994
+step : 0
+rewards: -1000
+episode 995
+step : 0
+rewards: -1000
+episode 996
+step : 0
+rewards: -1000
+episode 997
+step : 0
+rewards: -1000
+episode 998
+step : 0
+rewards: -1000
+episode 999
+step : 0
+rewards: -1000
+
+The Qtable for this simulation is given below:
+[[    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0. -1000.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]
+ [    0.     0.     0.]]
+
+End of simulation 2020-05-02 22:41:34
+
+Simulation took 0.181214706103007 minutes
+**************************************************

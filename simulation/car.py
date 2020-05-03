@@ -91,7 +91,7 @@ class Car:
 
     def bareBonesAllocateReward(self, posn, act):
         self.reward = self.bbReward(posn, act) 
-        print("self reward car ", self.reward)
+    #    print("self reward car ", self.reward)
         
     def SpeedGain(self, sourceLane, destLane):                           
         if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:

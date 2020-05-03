@@ -21,16 +21,17 @@ start_time = time.time()
 print("Initializing Training...")
 print("Starting simulation...\n")
 
+PENALTY = -1000
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 5000
+num_episodes = 1000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
 exploration_rate = 1 
 max_exploration_rate = 1 
 min_exploration_rate = 0.01
-exploration_decay_rate = 0.005
+exploration_decay_rate = 0.001
 
 #environment set up from Traffic Analysis Software
 config = importlib.import_module('config.case') 
@@ -72,7 +73,7 @@ file1 =  open("outputs.txt","a")
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
-q_table = importQtable("qtable_2020-05-01_12:31:20.npy",True)
+q_table = importQtable("qtable_2020-05-01_12:31:20.npy",False)
 rewards_all_episodes = []
 timesteps = []
 lapTimes = []
@@ -104,13 +105,15 @@ for episode in range(num_episodes):
             action = road.sampleAction()
         #new_state, reward, done = road.step(action)
         new_state, reward, done = road.stepBB(action)
+        #if reward == None:
+        #    reward = PENALTY
         #comments(new_state, reward, done, action, q_table)
-        print("step: ",step)
-        print("action: ", action)
+   #     print("step: ",step)
+   #     print("action: ", action)
         #print("")
      #   rwds = processInfo(info)
         # Update Q-table for Q(s,a)
-        print("reward ", reward)
+    #    print("reward ", reward)
         q_table[state, action] = q_table[state, action] * (1 - learning_rate) +  learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         state = new_state
         rewards_current_episode += reward
@@ -150,7 +153,7 @@ plt.ylabel("Rewards(Units)")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
-plt.savefig("rewards.jpeg")
+plt.savefig("rewards.png")
 plt.show()
 
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps")
@@ -158,7 +161,7 @@ plt.ylabel("Timesteps (Units)")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
-plt.savefig("timeSurvived.jpeg")
+plt.savefig("timeSurvived.png")
 plt.show()
 
 """

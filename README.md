@@ -161,6 +161,7 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 
 ## TO DO LIST:
 - [x] Update Reward Function
+- [ ] Include a parameter to adjust the cooperation vs aggressive nature of the agent
 - [ ] Identify Best Learning Parameters with respect to simulation time 
 - [ ] Identify Best Learning Parameters with respect to rewards
 - [ ] Train Model on HPCC Network

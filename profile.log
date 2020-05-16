@@ -1,0 +1,633 @@
+FUNCTION  <SNR>57_selected_region()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:295
+Called 5 times
+Total time:   0.000870
+ Self time:   0.000190
+
+count  total (s)   self (s)
+    5              0.000041   if mode() ==# 'n' || mode() ==# 'i'
+    5              0.000015     if a:type == 'c'
+    5   0.000750   0.000070       let offset = kite#utils#character_offset()
+                                else
+                                  let offset = kite#utils#byte_offset_start()
+    5              0.000007     endif
+    5              0.000014     return [offset, offset]
+                              endif
+                            
+                              if mode() ==? 'v'
+                                let pos_start = getpos('v')
+                                let pos_end   = getpos('.')
+                            
+                                if (pos_start[1] > pos_end[1]) || (pos_start[1] == pos_end[1] && pos_start[2] > pos_end[2])
+                                  let [pos_start, pos_end] = [pos_end, pos_start]
+                                endif
+                            
+                                " switch to normal mode
+                                execute "normal! \<Esc>"
+                            
+                                call setpos('.', pos_start)
+                                if a:type == 'c'
+                                  let offset1 = kite#utils#character_offset()
+                                else
+                                  let offset1 = kite#utils#byte_offset_start()
+                                endif
+                            
+                                call setpos('.', pos_end)
+                                " end position is exclusive
+                                if a:type == 'c'
+                                  let offset2 = kite#utils#character_offset() + 1
+                                else
+                                  let offset2 = kite#utils#byte_offset_end() + 1
+                                endif
+                            
+                                " restore visual selection
+                                normal! gv
+                            
+                                return [offset1, offset2]
+                              endif
+                            
+                              return [-1, -1]
+
+FUNCTION  kite#utils#filepath()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:241
+Called 5 times
+Total time:   0.001356
+ Self time:   0.001356
+
+count  total (s)   self (s)
+    5              0.001180   let path = resolve(expand('%:p'))
+                            
+    5              0.000025   if a:url_format
+                                let path = substitute(path, '[\/]', ':', 'g')
+                                if kite#utils#windows()
+                                  let path = substitute(path, '^\(\a\)::', '\1:', '')
+                                  let path = ':windows:'.path
+                                endif
+                                let path = kite#utils#url_encode(path)
+    5              0.000005   endif
+                            
+    5              0.000017   return path
+
+FUNCTION  kite#utils#buffer_contents()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:409
+Called 5 times
+Total time:   0.000970
+ Self time:   0.000970
+
+count  total (s)   self (s)
+    5              0.000070   let line_ending = {"unix": "\n", "dos": "\r\n", "mac": "\r"}[&fileformat]
+    5              0.000892   return join(getline(1, '$'), line_ending).(&eol ? line_ending : '')
+
+FUNCTION  <SNR>60_on_std_out()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:151
+Called 5 times
+Total time:   0.000117
+ Self time:   0.000117
+
+count  total (s)   self (s)
+    5              0.000100   let self.stdoutbuffer .= a:message
+
+FUNCTION  kite#utils#plugin_version()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:51
+Called 5 times
+Total time:   0.000038
+ Self time:   0.000038
+
+count  total (s)   self (s)
+    5              0.000024   if !empty(s:plugin_version)
+    5              0.000012     return s:plugin_version
+                              endif
+                            
+                              let s:plugin_version = readfile(s:plugin_dir.s:separator.'VERSION')[0]
+                            
+                              return s:plugin_version
+
+FUNCTION  kite#utils#log()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:211
+Called 20 times
+Total time:   0.000437
+ Self time:   0.000437
+
+count  total (s)   self (s)
+   20              0.000063   if g:kite_log
+                                if type(a:msg) == v:t_string
+                                  let msg = [a:msg]
+                                else
+                                  let msg = a:msg
+                                endif
+                                call writefile(msg, 'kite-vim.log', 'a')
+   20              0.000024   endif
+
+FUNCTION  kite#utils#character_offset()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:365
+Called 5 times
+Total time:   0.000680
+ Self time:   0.000680
+
+count  total (s)   self (s)
+                              " wordcount().cursor_chars is 1-based so we need to subtract 1.
+    5              0.000565   let offset = wordcount().cursor_chars - 1
+                            
+                              " In insert mode the cursor isn't really between two characters;
+                              " it is actually on the second character, but that's what we want
+                              " anyway.
+                            
+                              " If the cursor is just before (i.e. on) the end of the line, and
+                              " the file has dos line endings, wordcount().cursor_chars will
+                              " regard the cursor as on the second character of the \r\n.  In this
+                              " case we want the offset of the first, i.e. the \r.
+                            
+    5              0.000036   if col('.') == col('$') && &ff ==# 'dos'
+                                let offset -= 1
+    5              0.000007   endif
+                            
+    5              0.000011   return offset
+
+FUNCTION  <SNR>60_async()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:146
+Called 5 times
+Total time:   0.000034
+ Self time:   0.000034
+
+count  total (s)   self (s)
+    5              0.000031   call timer_start(0, a:callback)
+
+FUNCTION  kite#status#status()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/status.vim:4
+Called 11 times
+Total time:   0.001054
+ Self time:   0.000613
+
+count  total (s)   self (s)
+   11   0.001004   0.000563   if !s:status_in_status_line() | return | endif
+                            
+                              let buf = bufnr('')
+                              let msg = 'NOT SET'
+                            
+                              " Check kited status (logged-in / installed / running) every 10 file status checks.
+                              let counter = getbufvar(buf, 'kite_status_counter', 0)
+                              if counter == 0
+                                if !kite#utils#logged_in()
+                                  let msg = 'Kite: not logged in'
+                                  if !kite#utils#kite_installed()
+                                    let msg = 'Kite: not installed'
+                                  elseif !kite#utils#kite_running()
+                                    let msg = 'Kite: not running'
+                                  endif
+                                endif
+                              endif
+                              call setbufvar(buf, 'kite_status_counter', (counter + 1) % 10)
+                            
+                              if wordcount().bytes > kite#max_file_size()
+                                let msg = 'Kite: file too large'
+                              endif
+                            
+                              if msg !=# 'NOT SET'
+                                if msg !=# getbufvar(buf, 'kite_status')
+                                  call setbufvar(buf, 'kite_status', msg)
+                                  redrawstatus
+                                endif
+                                return
+                              endif
+                            
+                              let filename = kite#utils#filepath(0)
+                              call kite#client#status(filename, function('kite#status#handler', [buf]))
+
+FUNCTION  lightline#link()
+    Defined: ~/.vim/plugged/lightline.vim/autoload/lightline.vim:217
+Called 72 times
+Total time:   0.001488
+ Self time:   0.001488
+
+count  total (s)   self (s)
+   72              0.000982   let mode = get(s:lightline._mode_, a:0 ? a:1 : mode(), 'normal')
+   72              0.000230   if s:mode ==# mode
+   72              0.000125     return ''
+                              endif
+                              let s:mode = mode
+                              if !has_key(s:highlight, mode)
+                                call lightline#highlight(mode)
+                              endif
+                              let types = map(s:uniq(sort(filter(values(s:lightline.component_type), 'v:val !=# "raw"'))), '[v:val, 1]')
+                              for [p, l] in [['Left', len(s:lightline.active.left)], ['Right', len(s:lightline.active.right)]]
+                                for [i, t] in map(range(0, l), '[v:val, 0]') + types
+                                  if i != l
+                                    exec printf('hi link Lightline%s_active_%s Lightline%s_%s_%s', p, i, p, mode, i)
+                                  endif
+                                  for [j, s] in map(range(0, l), '[v:val, 0]') + types
+                                    if i + 1 == j || t || s && i != l
+                                      exec printf('hi link Lightline%s_active_%s_%s Lightline%s_%s_%s_%s', p, i, j, p, mode, i, j)
+                                    endif
+                                  endfor
+                                endfor
+                              endfor
+                              exec printf('hi link LightlineMiddle_active LightlineMiddle_%s', mode)
+                              return ''
+
+FUNCTION  <SNR>60_parse_response()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:241
+Called 5 times
+Total time:   0.001523
+ Self time:   0.001414
+
+count  total (s)   self (s)
+    5              0.000032   if empty(a:lines)
+                                return {'status': 0, 'body': ''}
+    5              0.000008   endif
+                            
+    5              0.000033   if type(a:lines) == v:t_string
+    5              0.000206     let lines = split(a:lines, '\r\?\n', 1)
+                              else
+                                let lines = a:lines
+    5              0.000007   endif
+    5   0.000332   0.000223   call kite#utils#log(map(copy(lines), '"< ".v:val'))
+                            
+    5              0.000033   if type(a:lines) == v:t_string
+    5              0.000215     let lines = split(a:lines, '\r\?\n')
+                              else
+                                let lines = a:lines
+    5              0.000008   endif
+                            
+                              " Ignore occasional 100 Continue.
+    5              0.000113   let i = match(lines, '^HTTP/1.[01] [2345]\d\d ')
+    5              0.000015   if i == -1
+                                return {'status': 0, 'body': ''}
+    5              0.000007   endif
+    5              0.000183   let status = split(lines[i], ' ')[1]
+                            
+    5              0.000083   let sep = match(lines, '^$', i)
+    5              0.000053   let body = join(lines[sep+1:], "\n")
+                            
+    5              0.000036   return {'status': status, 'body': body}
+
+FUNCTION  kite#events#handler()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/events.vim:41
+Called 5 times
+Total time:   0.000101
+ Self time:   0.000101
+
+count  total (s)   self (s)
+    5              0.000024   let s:events_pending -= 1
+                            
+    5              0.000067   call setbufvar(a:bufnr, 'kite_skip', (a:response.status == 0 || a:response.status == 403))
+
+FUNCTION  <SNR>62_status_in_status_line()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/status.vim:70
+Called 11 times
+Total time:   0.000441
+ Self time:   0.000441
+
+count  total (s)   self (s)
+   11              0.000387   return stridx(&statusline, 'kite#statusline()') != -1
+
+FUNCTION  kite#client#post_event()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:127
+Called 5 times
+Total time:   0.000302
+ Self time:   0.000268
+
+count  total (s)   self (s)
+    5              0.000026   let path = s:editor_path.'/event'
+    5              0.000026   if has('channel')
+    5   0.000173   0.000139     call s:async(function('s:timer_post', [path, g:kite_short_timeout, a:json, a:handler]))
+                              else
+                                call kite#async#execute(s:external_http_cmd(s:base_url.path, g:kite_short_timeout, 1), function('s:parse_and_handle', [a:handler]), a:json)
+    5              0.000005   endif
+
+FUNCTION  <SNR>60_internal_http()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:157
+Called 5 times
+Total time:   0.069413
+ Self time:   0.068968
+
+count  total (s)   self (s)
+                              " Use HTTP 1.0 (not 1.1) to avoid having to parse chunked responses.
+    5              0.000010   if a:0
+    5              0.000099     let str = 'POST '.a:path." HTTP/1.0\nHost: localhost\nContent-Type: application/x-www-form-urlencoded\nContent-Length: ".len(a:1)."\n\n".a:1
+                              else
+                                let str = 'GET '.a:path." HTTP/1.0\nHost: localhost\n\n"
+    5              0.000005   endif
+    5   0.000160   0.000058   call kite#utils#log('')
+    5   0.000631   0.000542   call kite#utils#log(map(split(str, '\n', 1), '"> ".v:val'))
+                            
+    5              0.000027   let options = {'stdoutbuffer': ''}
+    5              0.000009   try
+    5              0.009126     let channel = ch_open(s:channel_base, {   'mode':     'raw',   'callback': function('s:on_std_out', options) })
+                              catch /E898\|E901\|E902/
+                                call kite#utils#log('| Cannot open channel: '.str)
+                                return ''
+    5              0.000012   endtry
+                            
+    5              0.000008   try
+    5              0.000244     call ch_sendraw(channel, str)
+                              catch /E630\|E631\|E906/
+                                call kite#utils#log('| Cannot send over channel: '.str)
+                                return ''
+    5              0.000040   endtry
+                            
+    5              0.000096   let start = reltime()
+                            
+   14              0.000186   while ch_status(channel) !=# 'closed'
+    9              0.000106     if reltimefloat(reltime(start))*1000 > a:timeout
+                                  call kite#utils#log('| Timed out waiting for response (timeout: '.a:timeout.'ms)')
+                                  try
+                                    call ch_close(channel)
+                                  catch /E906/
+                                    " noop
+                                  endtry
+                                  return ''
+    9              0.000012     endif
+                            
+    9   0.057454   0.057337     sleep 5m
+   14              0.000085   endwhile
+                            
+    5   0.000377   0.000240   call kite#utils#log('| Received complete response: '.string(reltimefloat(reltime(start))*1000).'ms')
+                            
+    5              0.000025   return options.stdoutbuffer
+
+FUNCTION  lightline#mode()
+    Defined: ~/.vim/plugged/lightline.vim/autoload/lightline.vim:212
+Called 72 times
+Total time:   0.000448
+ Self time:   0.000448
+
+count  total (s)   self (s)
+   72              0.000408   return get(s:lightline.mode_map, mode(), '')
+
+FUNCTION  <SNR>40_Highlight_Matching_Pair()
+    Defined: /usr/local/Cellar/macvim/8.2-163/MacVim.app/Contents/Resources/vim/runtime/plugin/matchparen.vim:39
+Called 3 times
+Total time:   0.000557
+ Self time:   0.000557
+
+count  total (s)   self (s)
+                              " Remove any previous match.
+    3              0.000045   if exists('w:paren_hl_on') && w:paren_hl_on
+                                silent! call matchdelete(3)
+                                let w:paren_hl_on = 0
+    3              0.000007   endif
+                            
+                              " Avoid that we remove the popup menu.
+                              " Return when there are no colors (looks like the cursor jumps).
+    3              0.000043   if pumvisible() || (&t_Co < 8 && !has("gui_running"))
+                                return
+    3              0.000003   endif
+                            
+                              " Get the character under the cursor and check if it's in 'matchpairs'.
+    3              0.000025   let c_lnum = line('.')
+    3              0.000016   let c_col = col('.')
+    3              0.000006   let before = 0
+                            
+    3              0.000020   let text = getline(c_lnum)
+    3              0.000105   let matches = matchlist(text, '\(.\)\=\%'.c_col.'c\(.\=\)')
+    3              0.000012   if empty(matches)
+                                let [c_before, c] = ['', '']
+    3              0.000004   else
+    3              0.000024     let [c_before, c] = matches[1:2]
+    3              0.000002   endif
+    3              0.000066   let plist = split(&matchpairs, '.\zs[:,]')
+    3              0.000017   let i = index(plist, c)
+    3              0.000006   if i < 0
+                                " not found, in Insert mode try character before the cursor
+    3              0.000014     if c_col > 1 && (mode() == 'i' || mode() == 'R')
+                                  let before = strlen(c_before)
+                                  let c = c_before
+                                  let i = index(plist, c)
+    3              0.000002     endif
+    3              0.000003     if i < 0
+                                  " not found, nothing to do
+    3              0.000007       return
+                                endif
+                              endif
+                            
+                              " Figure out the arguments for searchpairpos().
+                              if i % 2 == 0
+                                let s_flags = 'nW'
+                                let c2 = plist[i + 1]
+                              else
+                                let s_flags = 'nbW'
+                                let c2 = c
+                                let c = plist[i - 1]
+                              endif
+                              if c == '['
+                                let c = '\['
+                                let c2 = '\]'
+                              endif
+                            
+                              " Find the match.  When it was just before the cursor move it there for a
+                              " moment.
+                              if before > 0
+                                let has_getcurpos = exists("*getcurpos")
+                                if has_getcurpos
+                                  " getcurpos() is more efficient but doesn't exist before 7.4.313.
+                                  let save_cursor = getcurpos()
+                                else
+                                  let save_cursor = winsaveview()
+                                endif
+                                call cursor(c_lnum, c_col - before)
+                              endif
+                            
+                              if !has("syntax") || !exists("g:syntax_on")
+                                let s_skip = "0"
+                              else
+                                " Build an expression that detects whether the current cursor position is
+                                " in certain syntax types (string, comment, etc.), for use as
+                                " searchpairpos()'s skip argument.
+                                " We match "escape" for special items, such as lispEscapeSpecial.
+                                let s_skip = '!empty(filter(map(synstack(line("."), col(".")), ''synIDattr(v:val, "name")''), ' . '''v:val =~? "string\\|character\\|singlequote\\|escape\\|comment"''))'
+                                " If executing the expression determines that the cursor is currently in
+                                " one of the syntax types, then we want searchpairpos() to find the pair
+                                " within those syntax types (i.e., not skip).  Otherwise, the cursor is
+                                " outside of the syntax types and s_skip should keep its value so we skip
+                                " any matching pair inside the syntax types.
+                                " Catch if this throws E363: pattern uses more memory than 'maxmempattern'.
+                                try
+                                  execute 'if ' . s_skip . ' | let s_skip = "0" | endif'
+                                catch /^Vim\%((\a\+)\)\=:E363/
+                                  " We won't find anything, so skip searching, should keep Vim responsive.
+                                  return
+                                endtry
+                              endif
+                            
+                              " Limit the search to lines visible in the window.
+                              let stoplinebottom = line('w$')
+                              let stoplinetop = line('w0')
+                              if i % 2 == 0
+                                let stopline = stoplinebottom
+                              else
+                                let stopline = stoplinetop
+                              endif
+                            
+                              " Limit the search time to 300 msec to avoid a hang on very long lines.
+                              " This fails when a timeout is not supported.
+                              if mode() == 'i' || mode() == 'R'
+                                let timeout = exists("b:matchparen_insert_timeout") ? b:matchparen_insert_timeout : g:matchparen_insert_timeout
+                              else
+                                let timeout = exists("b:matchparen_timeout") ? b:matchparen_timeout : g:matchparen_timeout
+                              endif
+                              try
+                                let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline, timeout)
+                              catch /E118/
+                                " Can't use the timeout, restrict the stopline a bit more to avoid taking
+                                " a long time on closed folds and long lines.
+                                " The "viewable" variables give a range in which we can scroll while
+                                " keeping the cursor at the same position.
+                                " adjustedScrolloff accounts for very large numbers of scrolloff.
+                                let adjustedScrolloff = min([&scrolloff, (line('w$') - line('w0')) / 2])
+                                let bottom_viewable = min([line('$'), c_lnum + &lines - adjustedScrolloff - 2])
+                                let top_viewable = max([1, c_lnum-&lines+adjustedScrolloff + 2])
+                                " one of these stoplines will be adjusted below, but the current values are
+                                " minimal boundaries within the current window
+                                if i % 2 == 0
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = min([line2byte("$"), line2byte(".") + col(".") + &smc * 2])
+                            	let stopline = min([bottom_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = min([bottom_viewable, c_lnum + 100])
+                                  endif
+                                  let stoplinebottom = stopline
+                                else
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = max([1, line2byte(".") + col(".") - &smc * 2])
+                            	let stopline = max([top_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = max([top_viewable, c_lnum - 100])
+                                  endif
+                                  let stoplinetop = stopline
+                                endif
+                                let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline)
+                              endtry
+                            
+                              if before > 0
+                                if has_getcurpos
+                                  call setpos('.', save_cursor)
+                                else
+                                  call winrestview(save_cursor)
+                                endif
+                              endif
+                            
+                              " If a match is found setup match highlighting.
+                              if m_lnum > 0 && m_lnum >= stoplinetop && m_lnum <= stoplinebottom 
+                                if exists('*matchaddpos')
+                                  call matchaddpos('MatchParen', [[c_lnum, c_col - before], [m_lnum, m_col]], 10, 3)
+                                else
+                                  exe '3match MatchParen /\(\%' . c_lnum . 'l\%' . (c_col - before) . 'c\)\|\(\%' . m_lnum . 'l\%' . m_col . 'c\)/'
+                                endif
+                                let w:paren_hl_on = 1
+                              endif
+
+FUNCTION  kite#max_file_size()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite.vim:39
+Called 5 times
+Total time:   0.000020
+ Self time:   0.000020
+
+count  total (s)   self (s)
+    5              0.000015   return 76800  " 75KB
+
+FUNCTION  kite#utils#selected_region_characters()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:265
+Called 5 times
+Total time:   0.000972
+ Self time:   0.000102
+
+count  total (s)   self (s)
+    5   0.000966   0.000096   return s:selected_region('c')
+
+FUNCTION  <SNR>60_timer_post()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/client.vim:142
+Called 5 times
+Total time:   0.071374
+ Self time:   0.000337
+
+count  total (s)   self (s)
+    5   0.071368   0.000331   call a:handler(s:parse_response(s:internal_http(a:path, a:timeout, a:json)))
+
+FUNCTION  kite#events#event()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/events.vim:8
+Called 5 times
+Total time:   0.006673
+ Self time:   0.002976
+
+count  total (s)   self (s)
+    5   0.001472   0.000116   let filename = kite#utils#filepath(0)
+                            
+    5   0.000707   0.000687   if wordcount().bytes < kite#max_file_size()
+    5              0.000022     let action = a:action
+    5   0.001054   0.000084     let text = kite#utils#buffer_contents()
+                              else
+                                let action = 'skip'
+                                let text = ''
+    5              0.000009   endif
+                            
+    5   0.001089   0.000117   let [sel_start, sel_end] = kite#utils#selected_region_characters()
+    5              0.000029   if [sel_start, sel_end] == [-1, -1]
+                                return
+    5              0.000006   endif
+    5              0.000035   let selections = [{ 'start': sel_start, 'end': sel_end }]
+                            
+    5   0.001696   0.001619   let json = json_encode({ 'source':     'vim', 'filename':   filename, 'text':       text, 'action':     action, 'selections': selections, 'editor_version': kite#utils#vim_version(), 'plugin_version': kite#utils#plugin_version() })
+                            
+    5              0.000023   let s:events_pending += 1
+                            
+    5   0.000436   0.000134   call kite#client#post_event(json, function('kite#events#handler', [bufnr('')]))
+
+FUNCTION  kite#utils#vim_version()
+    Defined: ~/.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim:26
+Called 5 times
+Total time:   0.000039
+ Self time:   0.000039
+
+count  total (s)   self (s)
+    5              0.000024   if !empty(s:vim_version)
+    5              0.000011     return s:vim_version
+                              endif
+                              let s:vim_version = kite#utils#normalise_version(execute('version'))
+                              return s:vim_version
+
+FUNCTIONS SORTED ON TOTAL TIME
+count  total (s)   self (s)  function
+    5   0.071374   0.000337  <SNR>60_timer_post()
+    5   0.069413   0.068968  <SNR>60_internal_http()
+    5   0.006673   0.002976  kite#events#event()
+    5   0.001523   0.001414  <SNR>60_parse_response()
+   72   0.001488             lightline#link()
+    5   0.001356             kite#utils#filepath()
+   11   0.001054   0.000613  kite#status#status()
+    5   0.000972   0.000102  kite#utils#selected_region_characters()
+    5   0.000970             kite#utils#buffer_contents()
+    5   0.000870   0.000190  <SNR>57_selected_region()
+    5   0.000680             kite#utils#character_offset()
+    3   0.000557             <SNR>40_Highlight_Matching_Pair()
+   72   0.000448             lightline#mode()
+   11   0.000441             <SNR>62_status_in_status_line()
+   20   0.000437             kite#utils#log()
+    5   0.000302   0.000268  kite#client#post_event()
+    5   0.000117             <SNR>60_on_std_out()
+    5   0.000101             kite#events#handler()
+    5   0.000039             kite#utils#vim_version()
+    5   0.000038             kite#utils#plugin_version()
+
+FUNCTIONS SORTED ON SELF TIME
+count  total (s)   self (s)  function
+    5   0.069413   0.068968  <SNR>60_internal_http()
+    5   0.006673   0.002976  kite#events#event()
+   72              0.001488  lightline#link()
+    5   0.001523   0.001414  <SNR>60_parse_response()
+    5              0.001356  kite#utils#filepath()
+    5              0.000970  kite#utils#buffer_contents()
+    5              0.000680  kite#utils#character_offset()
+   11   0.001054   0.000613  kite#status#status()
+    3              0.000557  <SNR>40_Highlight_Matching_Pair()
+   72              0.000448  lightline#mode()
+   11              0.000441  <SNR>62_status_in_status_line()
+   20              0.000437  kite#utils#log()
+    5   0.071374   0.000337  <SNR>60_timer_post()
+    5   0.000302   0.000268  kite#client#post_event()
+    5   0.000870   0.000190  <SNR>57_selected_region()
+    5              0.000117  <SNR>60_on_std_out()
+    5   0.000972   0.000102  kite#utils#selected_region_characters()
+    5              0.000101  kite#events#handler()
+    5              0.000039  kite#utils#vim_version()
+    5              0.000038  kite#utils#plugin_version()
+

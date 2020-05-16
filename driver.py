@@ -24,14 +24,14 @@ print("Starting simulation...\n")
 PENALTY = -1000
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 5000
+num_episodes = 2000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
 exploration_rate = 1 
 max_exploration_rate = 1 
 min_exploration_rate = 0.01
-exploration_decay_rate = 0.005
+exploration_decay_rate = 0.001
 
 #environment set up from Traffic Analysis Software
 config = importlib.import_module('config.case') 
@@ -139,7 +139,7 @@ file1.close()
 np.save('qtable_'+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
 print("Simulation is over!")
 
-
+"""
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps") 
 plt.ylabel("Units")
@@ -147,13 +147,15 @@ plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
 #plt.show()
+"""
 
 plt.plot([i for i in range(num_episodes)],rewards_all_episodes, label="rewards")
-plt.ylabel("Rewards(Units)")
+plt.ylabel("Rewards (Units)")
 plt.xlabel("Number of episode")
+plt.title("[lr: {}, dr: {}, er: {:.3f}, dr: {} ]".format(learning_rate,discount_rate,exploration_rate,exploration_decay_rate))
 plt.legend()
 plt.grid()
-plt.savefig("rewards.png")
+plt.savefig("rewards"+str(end.strftime("%Y-%m-%d_%H:%M:%S"))+".png")
 plt.show()
 
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps")

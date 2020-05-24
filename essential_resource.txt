@@ -3,6 +3,21 @@ NN: https://www.youtube.com/watch?v=gZmobeGL0Yg&list=PLZbbT5o_s2xq7LwI2y8_QtvuXZ
 
 Code VI: https://deeplizard.com/learn/video/QK_PP_2KgGE
 
+"""
+New Resource:
+(May)
+https://blog.coast.ai
+https://lethain.com/genetic-algorithms-cool-name-damn-simple/
+https://github.com/harvitronix
+https://blog.coast.ai/training-a-deep-learning-model-to-steer-a-car-in-99-lines-of-code-ba94e0456e6a
+
+
+https://blog.coast.ai/using-reinforcement-learning-in-python-to-teach-a-virtual-car-to-avoid-obstacles-6e782cc7d4c6
+https://blog.coast.ai/reinforcement-learning-in-python-to-teach-a-virtual-car-to-avoid-obstacles-part-2-93e614fcd238
+https://blog.coast.ai/reinforcement-learning-in-python-to-teach-an-rc-car-to-avoid-obstacles-part-3-a1d063ac962f
+
+"""
+
 Others:
 https://builtin.com/data-science/reinforcement-learning-python
 https://blog.floydhub.com/an-introduction-to-q-learning-reinforcement-learning/

@@ -65,6 +65,8 @@ Note that the roads are circular (periodic boundary).
 There are three types of rewards and two types of Penalty. 
 
 Best Reward > Better Reward > Good Reward
+
+
 Highest Penalty > Penalty
 
 The reward function working for version 1.0 is as follows:

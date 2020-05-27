@@ -134,7 +134,8 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 ## New Training Plan
 
 ## New To Do/Functionality List
-- [ ] Fix directory (clean up)
+- [x] Fix directory (clean up)
+- [ ] Exit training with qtable saved may be?
 
 ## Study Results/Findings/Questions
 

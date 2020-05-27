@@ -24,7 +24,7 @@ print("Starting simulation...\n")
 PENALTY = -1000
 #define parameters
 SHOW_EVERY = 10
-num_episodes = 2000
+num_episodes = 1000
 max_steps_per_episode = 1500
 learning_rate = 0.1 
 discount_rate = 0.99
@@ -69,11 +69,11 @@ def importQtable(npyfile, new):
     else:
         return  np.load(npyfile)
 
-file1 =  open("outputs.txt","a") 
+file1 =  open("results/outputs.txt","a") 
 #set up qtable from sim program
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
-q_table = importQtable("qtable_2020-05-01_12:31:20.npy",True)
+q_table = importQtable("trained_models/qtable_2020-05-01_12:31:20.npy",True)
 rewards_all_episodes = []
 timesteps = []
 lapTimes = []
@@ -136,7 +136,7 @@ file1.write("\n\nEnd of simulation " + str(end.strftime("%Y-%m-%d %H:%M:%S\n")))
 file1.write("\nSimulation took "+ str((time.time() - start_time)/60.0) + " minutes\n") 
 file1.write("*"*50+str("\n"))
 file1.close() 
-np.save('qtable_'+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
+np.save("trained_models/qtable_numEpisodes_"+str(num_episodes)+ "_"+str(end.strftime("%Y-%m-%d_%H:%M:%S")),q_table)
 print("Simulation is over!")
 
 """
@@ -155,7 +155,7 @@ plt.xlabel("Number of episode")
 plt.title("[lr: {}, dr: {}, er: {:.3f}, dr: {} ]".format(learning_rate,discount_rate,exploration_rate,exploration_decay_rate))
 plt.legend()
 plt.grid()
-plt.savefig("rewards"+str(end.strftime("%Y-%m-%d_%H:%M:%S"))+".png")
+plt.savefig("plots/rewards_"+str(end.strftime("%Y-%m-%d_%H:%M:%S"))+".png")
 plt.show()
 
 plt.plot([i for i in range(num_episodes)],timesteps, label="timesteps")
@@ -163,8 +163,9 @@ plt.ylabel("Timesteps (Units)")
 plt.xlabel("Number of episode")
 plt.legend()
 plt.grid()
-plt.savefig("timeSurvived.png")
+plt.savefig("plots/timeSurvived_"+str(end.strftime("%Y-%m-%d_%H:%M:%S"))+".png")
 plt.show()
+
 
 """
 # Calculate and print the average reward per thousand episodes

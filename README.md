@@ -89,6 +89,15 @@ final_reward = aggregate_reward - timesteps_taken_to_complete_10_cycles
 
 ## Cases and Resolution (Reward Allocation) for version 2.0
 
+```
+Dr. Li Meeting Note: 
+
+Reward Functions should be functions of speed and collision risk.
+Rewards can be some constant times the speed gain from action.
+Need to quantify collision risk and associate it with reward/penalty.
+3 Dimensional action consequences: safetiness, velocity gain, survival.
+```
+
 These are the following cases that may be result of a lane changing action.
 
 1. Action leading to footpath

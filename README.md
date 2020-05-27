@@ -134,6 +134,7 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 ## New Training Plan
 
 ## New To Do/Functionality List
+- [ ] Fix directory (clean up)
 
 ## Study Results/Findings/Questions
 

@@ -1,0 +1,24 @@
+Goal:
+The goal of the virtual self-learning Robocar is to drive around an environment for as long as possible without hitting anything.
+
+Sensor Methodology (State Space):
+So I use a matrix of sensors that fan out the front of the car instead of an entire screen-worth of pixel data. These sensors read the pixel color at their location and convert that into a 0, 1 or 2 depending on if it’s come across an obstacle, a wall, or the open road. Now I realize I can’t get this reading from my apartment, either, but I figure it’s a step closer to the real thing.
+
+Code Files:
+
+nn.py — This is where the Keras neural net lives.
+carmunk.py — This is the game itself. The code is terrible and for that I apologize.
+learning.py — Here lives the heart of the Q-learning process.
+playing.py — Simply takes a trained model and drives!
+
+
+Game controls, state and reward:
+
+The car automatically moves itself forward, faster and faster as the game progresses. If it runs into a wall or an obstacle, the game ends.
+
+There are three available actions at each frame: turn left, turn right, do nothing.
+At every frame, the game returns both a state and a reward.
+
+The state is a 1d array of sensor values, which can be 0, 1 or 2, as stated above.
+
+The reward is -500 if the car runs into something and 30 minus the sum of the sensor values if it doesn’t. The concept here is that the lower the sum of the sensors, the further away it is from running into something, and so we reward that. The -500 is a big punishment. How I came to choose -500, I don’t remember, but I believe it was in one of the code examples I reference in the credits above. I played around with different values and this one seemed to work best.

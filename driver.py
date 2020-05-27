@@ -15,14 +15,15 @@ from simulation.trafficGenerators import *
 import datetime
 import matplotlib.pyplot as plt
 import time
+
 #Initializing Training
 start = datetime.datetime.now()
 start_time = time.time()
 print("Initializing Training...")
 print("Starting simulation...\n")
 
-PENALTY = -1000
 #define parameters
+PENALTY = -1000
 SHOW_EVERY = 10
 num_episodes = 1000
 max_steps_per_episode = 1500
@@ -53,6 +54,7 @@ def reset():
 
 def processInfo(info):
     pass
+
 def comments(new_state, reward, done, action, q_table):
     print("new state ", new_state)
     print("reward ", reward)
@@ -69,16 +71,16 @@ def importQtable(npyfile, new):
     else:
         return  np.load(npyfile)
 
-file1 =  open("results/outputs.txt","a") 
 #set up qtable from sim program
+file1 =  open("results/new_outputs.txt","a") 
 action_space_size = road.actionSpaceSize
 state_space_size = road.stateSpaceSize
 q_table = importQtable("trained_models/qtable_2020-05-01_12:31:20.npy",True)
 rewards_all_episodes = []
 timesteps = []
 lapTimes = []
-#q learnin algorithm
 
+#q learnin algorithm
 file1.write("*"*50)
 file1.write("\nNew simulation started at: " + str(start.strftime("%Y-%m-%d %H:%M:%S\n"))) 
 paramWrite("number of episodes",num_episodes,file1)

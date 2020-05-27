@@ -41,14 +41,33 @@ The default parameters used for qlearning are as below:
   exploration_decay_rate = 0.005
 ```
 
+# Model/Idea (Needs Implementation)
+The new model/idea of the qLearning framework involves a realistic assumption that makes the training much faster (theoretically) and the program more accurate and realistic.
+The new model depends on the concept of visibility; the agent is now aware of vehicles in its vicinity (front, back and sides) and makes its decision of lane changes based on this visibility radius. This reduces the state space by a factor of 10 and thus training speed increases drastically!
+
 ## QState 
-Matrix composed of 300 rows and 3 columns.
-The rows correspond to the state space (300 grids in the road data structure).
+Matrix composed of 32 rows (assuming 5 cell visibility front and back and 2 cells on the sides ) and 3 columns.
+The rows correspond to the state space (32 grids in the road data structure).
 The columns correspond to the action space (change lane up, change lane down, do not change lane)
 
+## Environment
+The environment would be as follows:
+
+Walkway
+Road (lane 1)
+Road (lane 2)
+Road (lane 3)
+Walkway
+
+Note that the roads are circular (periodic boundary).
+
 ## Reward Function Logic
-The current version of the program has the reward function working as follows:
-New version of reward function logic is as follows. 
+There are three types of rewards and two types of Penalty. 
+
+Best Reward > Better Reward > Good Reward
+Highest Penalty > Penalty
+
+The reward function working for version 1.0 is as follows:
 ```python
 action is passed as input to the function guiding the agent's lane change dynamics
     if action results in agent moving to an occupied lane ->  end episode and  high penalty
@@ -65,6 +84,42 @@ Once, the aggregate reward is calculated using the above code block. The final r
 ```python
 final_reward = aggregate_reward - timesteps_taken_to_complete_10_cycles
 ```
+
+## Cases and Resolution (Reward Allocation) for version 2.0
+
+These are the following cases that may be result of a lane changing action.
+
+1. Action leading to footpath
+    * Highest Penalty
+    * End Episode
+2. Action leading to occupied cell (sideswapping collision)
+    * Highest Penalty
+    * End Episode
+3. Action leading to collision from speeding vehicle during lane change (runaway collision)
+    * Highest Penalty
+    * End Episode
+4. Action leading to empty cell
+    * Good Reward
+    * Continue Episode
+5. Action to not change lane and lane change was not possible.
+    * Good Reward
+    * Continue Episode
+6. Action leading to empty cell and not run over (safe lane switch)
+    * Better Reward
+    * Continue Episode
+7. Action leading to safe lane switch which results in better velocity gain (optimal lane switch)
+    * Best Reward
+    * Continue Episode
+8. Action to not change lane which results in better velocity gain (optimal cruise)
+    * Best Reward
+    * Continue Episode
+9. Action to not change lane and lane change was possible and beneficial - velocity gain was possible and not enjoyed (nonaggressive)
+    * Penalty
+    * Continue Episode
+
+## Training Plan
+Training must be done for finite number of episodes and each episode must start with random initial conditions. The training code must allow for models to learn from previous trained models. The training model can include neural networks for efficient training (in the works).
+
 ## Customization
 In order to change the simulation condition, edit the file "config\case.py". 
 ```python
@@ -100,11 +155,17 @@ python3 driver.py
 ## Learning Statistics
 The program records the rewards, qvalues, and timesteps associated with each episode and upon termination creates a text file with these key statistics and generates two plots - rewards vs episodes, and timesteps vs episodes
 
-## Results from 1000 training episode
-![rewards](/images/rewards_trained.png)
-![time](/images/timesteps_trained.png)
 
-## TO DO LIST:
+## To Do/Functionality List
+- [x] Fix directory (clean up)
+- [ ] Implement the new state space
+- [ ] Implement version 2.0
+- [ ] Exit training with qtable saved may be?
+- [ ] Use of Neural Networks in training
+- [ ] Multiple Agent provision from NaSch software
+- [ ] Provision of buses, lorries and different vehicle types in training 
+- [ ] Tracking of P(lc)  [idea in my blue notebook]
+(To do list (version 1.0) )
 - [x] Update Reward Function
 - [ ] Include a parameter to adjust the cooperation vs aggressive nature of the agent
 - [ ] Identify Best Learning Parameters with respect to simulation time 
@@ -117,25 +178,13 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] Reducing the state space to only that of the neighboring cells of the agent
 - [ ] Incorporation of random seed
 
-## ISSUES:
+## ISSUES (version 1.0):
 - [ ] None type return of reward
 - [ ] Factoring in time of lap into rewards
 
-# New Model/Idea (Needs Implementation)
-
-## New State Space
-
-## New Q Table
-
-## New Environment
-
-## Cases and Resolution (Reward Allocation)
-
-## New Training Plan
-
-## New To Do/Functionality List
-- [x] Fix directory (clean up)
-- [ ] Exit training with qtable saved may be?
-
 ## Study Results/Findings/Questions
-
+* The Probability of Lane Change from a trained agent will shed some light into how single opportunistic agent behaves in heterogenous flow of HVs
+* The study will also contribute to Cellular Automata model for traffic simulation as it will show that safetiness and opportune behavior can be derived from the reward functions we introduced
+* We can use this framework to train the agent with more than one class of vehicles for example (buses, different AV models from our previous models)
+* Training in different traffic densities may also shed light on how Probability of Lane Change varies
+* We can use heterogenous classes - opportunisitic and aware AVs with HVs and the agent - to learn more about herding and intelligent herding phenomenon. It would be interesting to see if the agent takes part in those behaviors.

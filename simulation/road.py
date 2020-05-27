@@ -277,8 +277,8 @@ class Road:
                 else: 
                     self.av += 1        
             else:
-                x = random.randint(0,99)
-                y = random.randint(0,2)
+                x = random.randint(0,self.getLength() -1)
+                y = random.randint(0,self.getLanesCount() -1)
      #   print(self.lanes)
 
     def placeObject(self, entity): 

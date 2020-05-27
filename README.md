@@ -48,65 +48,7 @@ The columns correspond to the action space (change lane up, change lane down, do
 
 ## Reward Function Logic
 The current version of the program has the reward function working as follows:
-```python
-    #inputs: action
-    #output: position of car/agent on the road
-    def qUpdateLane(self,act):
-        self.prevPos = self.pos
-        if self.vtype == 1: 
-            Car.laneChangeProbability = (1 -float(data[7]))  #SAS 2020
-            self.updateLaneLogic()
-            return self.pos   
-        else:
-            return self.agentLaneChange(act)
- 
-    #input: action
-    #output: position of agent on the road
-    #purpose: allocate reward based on lane change decision aka the action of the agent and update the position of the agent
-    def agentLaneChange(self, act):
-        if act == 1 and self.AgentLaneChangePossibleUp(): #lane change up
-            self.pos = self.pos[0], max(0,self.pos[1]-1)
-        elif act == 2 and self.AgentLaneChangePossibleDown(): #lane change down
-            self.pos = self.pos[0], min(2,self.pos[1]+2)
-        else: #no lane change and not safe to change lane
-            self.pos = self.pos[0], self.pos[1]
-        self.allocateReward()
-        return self.pos
-
-    #purpose: make sure the periodic boundary conditions don't affect the rewards and allocates rewards
-    def allocateReward(self):
-        if self.pos[0] < (self.road.getLength() - 5) and self.pos[0] >= 0:
-            self.reward = min(max_hv,self.road.distanceToNextThing(self.pos))
-        elif self.pos[0] < self.road.getLength() and self.pos[0] >= (self.road.getLength() - 5):
-            self.reward = min(max_hv, self.road.d2n(self.pos))
-
-    #output: boolean determining if lane change up is possible
-    def AgentLaneChangePossibleUp(self):
-        return self.road.possibleLaneChangeUp(self.pos) and self.safeToChangeLane(self.pos[1], self.pos[1] - 1)
-
-    #output: boolean determining if lane change down is possible
-    def AgentLaneChangePossibleDown(self):
-        return self.road.possibleLaneChangeDown(self.pos) and self.safeToChangeLane(self.pos[1], self.pos[1] + 1)
- 
-    #inputs: current lane, target lane
-    #output: boolean determing if lane change is safe i.e. empty space in target lane and trailing car in target lane will not collide
-    def safeToChangeLane(self, sourceLane, destLane):
-        srcLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], sourceLane) )  #gets max speed at sourcelane
-        destLaneSpeed =  self.road.getMaxSpeedAt( (self.pos[0], destLane) )#gets max speed at destlane
-        prevCar = self.road.findPrevCar( (self.pos[0], destLane) )  #NaSch lane change rule safety
-        if prevCar == None: return True #safety check 1
-        else:
-            distanceToPrevCar = self.pos[0] - prevCar.pos[0] #safety check 2
-            return distanceToPrevCar > prevCar.velocity #True only if no collision
-```
-Once, the aggregate reward is calculated using the above code block. The final reward for the episode is calculated as follows:
-```python
-final_reward = aggregate_reward - timesteps_taken_to_complete_10_cycles
-```
 New version of reward function logic is as follows. 
-```diff
-- Note: this version is yet to be implemented
-```
 ```python
 action is passed as input to the function guiding the agent's lane change dynamics
     if action results in agent moving to an occupied lane ->  end episode and  high penalty
@@ -119,7 +61,10 @@ for each cycle completed, c, record time taken, t.
         -> this would incentivize agent to increase its average speed more
         -> this would also make sure that it completes more cycles
 ```
-
+Once, the aggregate reward is calculated using the above code block. The final reward for the episode is calculated as follows:
+```python
+final_reward = aggregate_reward - timesteps_taken_to_complete_10_cycles
+```
 ## Customization
 In order to change the simulation condition, edit the file "config\case.py". 
 ```python
@@ -176,5 +121,19 @@ The program records the rewards, qvalues, and timesteps associated with each epi
 - [ ] None type return of reward
 - [ ] Factoring in time of lap into rewards
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+# New Model/Idea (Needs Implementation)
+
+## New State Space
+
+## New Q Table
+
+## New Environment
+
+## Cases and Resolution (Reward Allocation)
+
+## New Training Plan
+
+## New To Do/Functionality List
+
+## Study Results/Findings/Questions
+

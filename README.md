@@ -101,8 +101,8 @@ python3 driver.py
 The program records the rewards, qvalues, and timesteps associated with each episode and upon termination creates a text file with these key statistics and generates two plots - rewards vs episodes, and timesteps vs episodes
 
 ## Results from 1000 training episode
-![rewards](rewards_trained.png)
-![time](timesteps_trained.png)
+![rewards](/images/rewards_trained.png)
+![time](/images/timesteps_trained.png)
 
 ## TO DO LIST:
 - [x] Update Reward Function

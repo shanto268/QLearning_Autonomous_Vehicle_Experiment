@@ -1,0 +1,18 @@
+Platoon stablitiy test on classes of vehicles.
+Look at string instability of entire simulation.
+    by plotting space time graphs and doing the math?
+    Add capability for space time diagrams
+Think about starting from equilibrium spacing
+    need to incorporate code that allows starting from uniform spacing
+Length of road as function of number of cars and equilibrium spacing analysis -> Ns*? 
+    need to change length of road as function of cars and equilibrium spacing
+Platoon Stability analysis and get speed at which platoon is stable
+    math and data from sim needed
+Make velocity time graphs for all vehicles
+    -> analyze the results for different AV models
+Control experiment lane change dynamics in SUMO
+Relu on flow?
+Clustering explation: distribution -> the more uniform distribution at start up the more clustering is
+
+Wording:
+Our software allows simulations that contain both learning agents (autonomous vehicles) and vehicles with pre-specified controllers or dynamics. This permits the use of Flow for mixed autonomy experiments. 
